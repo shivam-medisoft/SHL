@@ -17,6 +17,8 @@ and open the template in the editor.
                 try {
                     var backgroundcolor = "", apppath = "",apppage="";
                     cordova.getAppVersion.getAppName(function (name) {
+                    confirm("name="+name);
+                    console.log("name+"+name);
                         if (name === "PatelHospital") {
                             backgroundcolor = "black-opaque";
                             apppath = "http://patel.myemrhub.com/";
@@ -67,10 +69,11 @@ and open the template in the editor.
                            apppath = "http://182.18.149.103:9090/uchapp/";
                            apppage = "ujalacygnus_index.html";
                             localStorage.appname = "ujalacygnus";
-                        } else if (name === "Sahyadri Hospitals") {
+                        } else if (name === "SahyadriHospitals") {
                            //apppath = "http://shl.myemrhub.com/";
-                           apppath = "http://123.63.35.226:8196/APP";
-                           apppage = "sahyadri_index.html";
+                           //apppath = "http://123.63.35.226:8196/APP";
+                             apppath ="https://shpl.sahyadrihospitals.com/APP/";
+                             apppage = "sahyadri_index.html";
                             localStorage.appname = "shl";
                         } else if (name === "SDRC My Health") {
                            //apppath = "http://shl.myemrhub.com/";
@@ -98,10 +101,10 @@ and open the template in the editor.
                 }
             });
             function loading(){
-                localStorage.newappath = "http://192.168.0.213:8080/BAGH/";
-             localStorage.newapppage = "bagh_index.html";
-                localStorage.appname = "bagh";
-                localStorage.apporginalname ="BAGH";
+                localStorage.newappath = "https://shpl.sahyadrihospitals.com/APP/";
+             localStorage.newapppage = "shl_index.html";
+                localStorage.appname = "shl";
+                localStorage.apporginalname ="SHL";
                 location.href = "appintronew.html";
               
             }
