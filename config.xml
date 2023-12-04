@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--https://github.com/phonegap/phonegap-start/blob/master/www/config.xml  P:Shivam123-->
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.shivam.bagh"
+        version="1.0.23"
+        android-versionCode="100028" >
+    <name>Bhailal Amin General Hospital</name>
+    <description>
+        BAGH offers comprehensive clinical services under one roof with an active Transplant Program. The hospital provides round the clock network of Emergency services , Diagnostic services, a Blood Bank facility and a Pharmacy supported by a team of expert senior clinical consultants working in a full-time capacity. The active association with over 150 clinical consultants adds a unique strength to BAGH and enables us to achieve the highest outcomes for our patients capacity.
+    </description>
+    <author email="arun@shivammedisoft.com" href="https://www.baghospital.com/">
+        Shivam Medisoft Services Pvt. Ltd.
+    </author>
+    <content src="app.html"/>
+
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
+    <preference name="prerendered-icon" value="true" />
+
+    <preference name="fullscreen" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="StatusBarBackgroundColor" value="#31708F" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="true" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="AutoHideSplashScr een" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-targetSdkVersion" value="33"/>
+    <preference name="android-minSdkVersion" value="19" />
+    <preference name="android-compileSdkVersion" value="33" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="LoadingDialog" value="Please wait, the app is loading"/>
+    <preference name="AllowInlineMediaPlayback" value="true"/>
+    <preference name="SplashScreenDelay" value="3000"/>
+    <preference name="KeepRunning" value="true"/>
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,assets,root" />
+    <plugin name="cordova.plugins.diagnostic" />
+    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />
+    <!-- Plugins -->
+
+    <!-- Core plugins -->
+    <!--    <plugin name="cordova-plugin-camera" source="git" spec="https://github.com/apache/cordova-plugin-camera.git"/>-->
+    <!--    <plugin name="cordova-plugin-camera" source="git" spec="https://github.com/apache/cordova-plugin-camera.git">-->
+    <!--        <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />-->
+    <!--        &lt;!&ndash;        <variable name="MICROPHONE_USAGE_DESCRIPTION" value="App would like to access the microphone." />&ndash;&gt;-->
+    <!--        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />-->
+    <!--    </plugin>-->
+    <!--    <plugin name="cordova-plugin-media-capture" source="npm"/>-->
+    <!--    <plugin name="cordova-plugin-media-capture" source="npm" >-->
+    <!--        <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />-->
+    <!--        <variable name="MICROPHONE_USAGE_DESCRIPTION" value="App would like to access the microphone." />-->
+    <!--        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />-->
+    <!--    </plugin>-->
+    <plugin name="cordova-plugin-file" source="npm" />
+    <!--    <plugin name="cordova-plugin-file-transfer" source="npm" />-->
+    <plugin name="cordova-plugin-geolocation" source="npm"/>
+
+    <!--    <platform name="ios">-->
+    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+        <string>to take pictures/scan barcodes</string>
+    </edit-config>
+    <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+        <string>to get pictures</string>
+    </edit-config>
+    <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+        <string>need location access to find things nearby</string>
+    </edit-config>
+
+    <edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
+        <string>need photo library access to save pictures there</string>
+    </edit-config>
+    <!--    </platform>-->
+    <!--    for android-->
+    <plugin name="cordova-plugin-badge" source="npm"  />
+    <plugin name="cordova-plugin-phonedialer" source="npm" />
+    <plugin name="cordova-plugin-x-socialsharing" source="npm" />
+    <plugin name= "cordova-plugin-print-pdf" source="npm"/>
+    <!--    <plugin name="cordova-filechooser" spec="https://github.com/ihadeed/cordova-filechooser.git" source="git" />-->
+    <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-device.git" source="git" />
+    <plugin name="cordova-plugin-device-motion" spec="https://github.com/apache/cordova-plugin-device-motion.git" source="git" />
+    <plugin name="cordova-plugin-device-orientation" spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" />
+    <plugin name="cordova-plugin-dialogs" spec="https://github.com/apache/cordova-plugin-dialogs.git" source="git" />
+    <plugin name="cordova-plugin-splashscreen" spec="https://github.com/apache/cordova-plugin-splashscreen.git" source="git" />
+    <plugin name="cordova-plugin-network-information" spec="https://github.com/apache/cordova-plugin-network-information.git" source="git" />
+    <plugin name="NetworkInterfacePlugin" spec="https://github.com/salbahra/NetworkInterfacePlugin.git" source="git" />
+    <plugin name="cordova-plugin-file-transfer" spec="https://github.com/Priyansu431/cordova-plugin-file-transfer.git" />
+    <plugin name="cordova-plugin-androidx" source="npm"/>
+    <plugin name="cordova-plugin-androidx-adapter" source="npm"/>
+    <plugin name="cordova-plugin-advanced-http" source="npm"/>
+    <preference name="Scheme" value="https" />
+    <plugin name="cordova-plugin-app-version" source="npm" />
+    <plugin name="cordova-plugin-datepicker" spec="https://github.com/VitaliiBlagodir/cordova-plugin-datepicker" source="git" />
+    <plugin name="SpinnerDialog" spec="https://github.com/Paldom/SpinnerDialog.git" source="git" />
+    <plugin name="cordova-plugin-inappbrowser" spec="https://github.com/apache/cordova-plugin-inappbrowser.git" source="git" />
+    <plugin name="cordova-plugin-keyboard" spec="https://github.com/cjpearson/cordova-plugin-keyboard" source="git" />
+    <!--    <plugin name="cordova-plugin-openfilenative" spec="https://github.com/andischerer/cordova-plugin-openfilenative.git" source="git" />-->
+    <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" source="git" />
+    <plugin name="cordova-plugin-market" spec="https://github.com/xmartlabs/cordova-plugin-market" source="git" />
+    <plugin name="cordova-plugin-qr-barcode-scanner" source="npm" />
+    <plugin name="cordova-plugin-camera" source="npm"  />
+    <plugin name="cordova-plugin-file-opener2" source="npm" />
+    <plugin name="cordova-plugin-android-permissions" source="npm"/>
+    <plugin name="cordova-plugin-android-permissions" source="npm">
+        <variable name="storage" value="would like to access storage." />
+    </plugin>
+    <platform name="android">
+    <resource-file src="google-services.json" target="app/google-services.json" />
+    <preference name="AndroidInsecureFileModeEnabled" value="true" />
+    <!--        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/uses-permission" xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--            <application android:usesCleartextTraffic="true" />-->
+    <!--        </edit-config>-->
+    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
+        <activity android:hardwareAccelerated="true" />
+        <service android:exported="true"/>
+        <receiver android:exported="true"/>
+        <application android:usesCleartextTraffic="true" />
+        <!--            <application android:usesCleartextTraffic="true" />-->
+        <!--            <application android:requestLegacyExternalStorage="true" />-->
+        <!--            <application android:networkSecurityConfig="@xml/network_security_config" />-->
+    </edit-config>
+    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+        <application android:networkSecurityConfig="@xml/network_security_config" />
+        <application android:usesCleartextTraffic="true" />
+        <application android:requestLegacyExternalStorage="true" />
+    </edit-config>
+    <platform name="android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/activity">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-feature android:name="android.hardware.camera" android:required="true" />
+            <uses-feature android:name="android.hardware.camera.autofocus" />
+        </edit-config>
+    </platform>
+    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+        <application android:usesCleartextTraffic="true"/>
+    </edit-config>
+    <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+        <string>need to photo library access to get pictures from there</string>
+    </edit-config>
+    <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
+    <icon src="resources/baghicons/android/icon.png" />
+    <splash src="resources/baghsplash/android/272by482.png" density="ldpi" />
+    <splash src="resources/baghsplash/android/362by642.png" density="mdpi" />
+    <splash src="resources/baghsplash/android/542by962.png" density="hdpi" />
+    <splash src="resources/baghsplash/android/722by1282.png" density="xhdpi" />
+        <feature name="InAppBrowser">
+            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+        </feature>
+        <feature name="Camera">
+            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+        </feature>
+
+    </platform>
+    <!--    <plugin name="cordova-plugin-file" source="npm" spec="7.0.0"/>-->
+    <!--    <plugin name="cordova-plugin-file-transfer" source="npm" spec="1.7.1"/>-->
+    <plugin name="cordova-plugin-geolocation" source="npm"/>
+
+    <access origin="*"/>
+    <access origin="content:///*" />
+    <access uri="*" subdomains="true" />
+    <access launch-external="yes" origin="whatsapp://*" />
+    <access origin="tel:*" launch-external="yes" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="data:*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-navigation href="*"/>
+    <platform name="android">
+        <allow-intent href="whatsapp:*" />
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <preference name="android-build-tool" value="gradle" />
+    <engine name="android"/>
+</widget>

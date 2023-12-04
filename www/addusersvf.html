@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>Add users Vf</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    <script  src="js/SQLitePlugin.js" type="text/javascript"  ></script>
+    <script src="js/jquery-1.11.3.js" type="text/javascript"></script>
+    <script src="bootstrap/bootstrap.min.js" type="text/javascript"></script>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="cordova.js"></script>
+    <link href="css/FontFamillyloading.css" rel="stylesheet" type="text/css"/>
+    <script>
+
+            function getParameterByName(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+            debugger;
+            var server = getParameterByName("serverpath");
+            var users = getParameterByName("users");
+            var logintype = getParameterByName("logintype");
+            function rightclick(id, div, val, uids, idval) {
+                debugger;
+
+                event.stopPropagation();
+                $('.dropdownCont').hide();
+                $('#' + div).css('display', 'block');
+
+
+                var fn = 'deleteuser("' + div + '","' + val + '","' + uids + '","' + idval + '")';
+                $('#' + div).attr('onclick', fn);
+//    $('.dropdownCont').show();
+                try {
+                    document.getElementById("editor-options").innerHTML = document.getElementById("custom-menu").innerHTML;
+                } catch (error) {
+                }
+                document.getElementById('editor-options').style.display = "block";
+            }
+            function deleteuser(div, k, mrno, idval) {
+                debugger;
+
+
+                localStorage.entrance = '';
+                msg = 'Are you sure you want to delete this user?'
+                if (confirm(msg)) {
+                    $('#' + div).remove();
+                    $('#tr' + k).remove();
+
+                    $('.toggle').hide();
+                    event.stopPropagation();
+                    event.preventDefault();
+                    delUserFrmNotDevLst(mrno,k);
+                  //  deleterecord(mrno,k);
+
+                }
+                else {
+                    $('.toggle').hide();
+                    event.stopPropagation();
+                    event.preventDefault();
+                }
+            }
+            function  deleterecord(idval) {
+                try{
+                    try{
+                      var platform = device.platform.toString();
+                    }catch(err){
+                    var platform = "ios";
+                    }
+                    // for browser    if(platform.toLowerCase() == "android" || platform == "browser"){
+                  if(platform.toLowerCase() == "android"){
+                var db = window.openDatabase("Database", "1.0", "SHIVAMDB", 200000);
+                      var db = JSON.parse(localStorage.getItem('DBIonicnew')).dbIn[k]["mrno"];
+                  } else{
+                    var dbIn = [];
+                    dbIn = JSON.parse(localStorage.getItem('DBIonicnew'));
+                    for(var j=0; j<dbIn.length; j++){
+                        if(j==k){
+                    var db = dbIn[j]["mrno"];
+                        }
+                    }
+                    }
+                }catch(err){
+//                 alert(err);
+                }
+
+                db.transaction(function (tx) {
+
+                    var query = "DELETE FROM patsignupnew WHERE patuid = ?";
+
+                    tx.executeSql(query, [idval], function (tx, res) {
+
+                    },
+                            function (tx, error) {
+//            console.log('DELETE error: ' + error.message);
+                            });
+                }, function (error) {
+                    alert("Failed To Delete User");
+//        console.log('transaction error: ' + error.message);
+                }, function () {
+                    alert("Successfully Deleted User");
+                    retrive();
+//        console.log('transaction ok');
+                });
+
+            }
+            function  ladfun()
+            {
+                $(".dropdownCont").css("display", "none");
+                //  retrive();
+            }
+            function deleteDBIonic(mrno){
+   debugger;
+    var dbIn = [];
+    //confirm(localStorage.getItem('DBIonicnew'));
+                var msg = 'Are you sure you want to delete this user?';
+    try{
+        if(localStorage.getItem('DBIonicnew') != null){
+        dbIn = JSON.parse(localStorage.getItem('DBIonicnew'));
+    for(var k=0;k<dbIn.length;k++){
+  //      confirm(dbIn[k].toString());
+        var mrn = dbIn[k]["mrno"];
+        if(mrn == mrno){
+           if(confirm(msg)){
+               delete dbIn[(k)];
+                 alert("Successfully Deleted User");
+//                dbIn = JSON.parse(localStorage.getItem('DBIonicnew'));
+//                alert("checkcing  "+dbIn[k]["mrno"]);
+           }
+ //    confirm(mrn+"--"+mrno);
+localStorage.setItem('DBIonicnew',JSON.stringify(dbIn).replace("[null]","").replace("null,","").replace(",null",""));
+//    confirm(localStorage.getItem('DBIonicnew'));
+//             dbIn = localStorage.getItem('DBIonicnew');
+//             alert('dbionice     '+dbin.length);
+            try{
+              dbIn = JSON.parse(localStorage.getItem('DBIonicnew'));
+            }catch(err){
+            location.href = "connection.html";
+            }
+           // alert("dbin length   "+dbIn.length);
+for(var k=0;k<dbIn.length;k++){
+  //      confirm(dbIn[k].toString());
+        var mrn = dbIn[k]["mrno"];
+    localStorage.patmrno = mrn;
+    localStorage.mrno = mrn;
+}
+ deldubmrnorec();
+  return false;
+        }
+    }
+        }
+    }catch(err){
+      //  confirm(err);
+    }
+   // confirm(localStorage.getItem('DBIonicnew'));
+   // confirm(dbI+"--"+dbI.length);
+}
+ function login(mrno) {
+            debugger;
+           confirm("in login check");
+            $(btn).button('loading');
+            var mrno = $('#userid').val();
+            var password = $('#password').val();
+            var formid = $('#hdnformid').val();
+            var hdntype = $('#hdnlogintype').val().toUpperCase();
+            if(mrno.trim()===""){
+                alert("Please Enter "+hdntype);
+                $(btn).button('reset');
+                $('#userid').focus();
+                return;
+            }
+            if(password.trim()===""){
+                alert("Please Enter Password");
+                $(btn).button('reset');
+                $('#password').focus();
+                return;
+            }
+//            var path = localStorage.appurl + "/formviewlogin?mrno=" + mrno + "&mobile=login&dynflg=1&formid=" + formid + "&hdntype=" + hdntype + "&password=" + password;
+            var path = localStorage.appurl + "/formviewlogin";
+            $.post(path,{mrno:mrno ,mobile:"login",dynflg:"1",formid:formid,hdntype:hdntype,password:password},function(responseJson){
+                debugger
+                $(btn).button('reset');
+                    if (responseJson.length > 0) {
+                        $('#hdnuserid').val(responseJson[0]["USID"]);
+                        $('#hdnmobile').val(responseJson[0]["MOB"]);
+                        $('#hdnemail').val(responseJson[0]["EMAIL"]);
+                        $('#hdnfname').val(responseJson[0]["FNAME"]);
+                        localStorage.patname = responseJson[0]["FNAME"];
+                        createdb();
+                    } else {
+                        alert("Invalid " + hdntype + " or password");
+                        return;
+                    }
+            });
+        }
+            function deldubmrnorec() {
+                debugger;
+                var str ="";
+                var dbIn = [];
+               // alert("hi");
+                 try{
+                 var platform = device.platform.toString();
+//                  alert("platform    "+platform);
+                 }catch(err){
+                 var platform = 'ios';
+                 }
+                try{
+                 // for browser    if(platform.toLowerCase() == "android" || platform == "browser"){
+                    if(platform.toLowerCase() == "android"){
+                var db = window.openDatabase("Database", "1.0", "SHIVAMDB", 200000);
+                db.transaction(queryDBDEL, errorCB);
+                         }else{
+                    dbIn = JSON.parse(localStorage.getItem('DBIonicnew'));
+                   // var divdatanew = myfamilycount(dbIn);
+                   // alert("divdata"+divdatanew);
+                    var ig = 0;
+                    var color="";
+                    for(var k=0;k<dbIn.length;k++){
+                        if (k % 5 == 0) {
+                            color = "bg-aqua";
+                        } else if (k % 5 == 1) {
+                            color = "bg-red";
+                        } else if (k % 5 == 2) {
+                            color = "bg-blue";
+                        } else if (k % 5 == 3) {
+                            color = "bg-yellow";
+                        } else if (k % 5 == 4) {
+                            color = "bg-green";
+                        }
+                         var name = dbIn[k]["name"];
+                        const nam = name.split(" ");
+                        var initial = nam[0].charAt(0);
+                          var initial2="";
+                          var inName="";
+                        try{
+                         initial2 = nam[1].charAt(0);
+                        inName = initial+""+initial2;
+                       }catch(erre){
+                      // alert(erre);
+                       inName = initial;
+                       }
+//                         alert("name  "+inName);
+//                        document.getElementById('profileimage').innerHTML=initial+initial2;
+                str = str + " <div   class='row mainrow' onclick=\"loginew('','" + dbIn[k]["mrno"] + "','" + dbIn[k]["patpwd"] + "','" + dbIn[k]["name"].trim().replace(/ /g, '&nbsp;').replace(".",". ") + "','1','','')\";> ";
+                    //  str = str + " <div   class='row mainrow' onclick=\"login(dbIn[k]["mrno"] + ',' + dbIn[k]["patpwd"] )\";> ";
+//                         str = str+"<div class='row mainrow'> onclick="\login(dbIn[k]["mrno"])\";>";
+                        str = str + "<div class='col-xs-2 col-sm-1 pad icon-container'>";
+                       // str = <span class=" + color + ">" + toReportCaseTwoWords(dbIn[k]["name"]) + "</span></div>"
+                        if (ig === 1) {
+                            //str = str + " <div class='imgiconp'><img src="  "  class='imgform' alt=''/></div>"
+                        } else {
+                            str = str + "<div class='spantxtclr'>";
+                            str = str + "<span class=" + color + ">"+inName+"</span></div>";
+                          // str = str + "<div class='spantxtclr' id='profileimage'><label>"+inName+"</label></div>";
+                          // str = str + "<span class=" ">"  "</span></div>";
+                        }
+                        str = str + "</div>";
+                        str = str + "<div class='col-xs-8 col-sm-8 pad main-container'>";
+                        str = str + "<div class='col-sm-12 pad divin12' onclick=\"loginnew('','" + dbIn[k]["mrno"] + "','" + dbIn[k]["patpwd"] + "','" + dbIn[k]["name"].trim().replace(/ /g, '&nbsp;') + "','1','',localStorage.appwebformid)\";>";
+                        str = str + "<label class='lblpatientName'>" +dbIn[k]["name"].replace(".",". ").toLowerCase()+ "</label>";
+                       str = str + "<label class='lblmrno'>" + dbIn[k]["mrno"]+ "</label>";
+                       str = str + "<label class='lblpwd' style='display:none'>" + dbIn[k]["patpwd"] + "</label>";
+                       str = str + "<label class='lbllogintype' style='display:none'></label>";
+                        str = str + " </div>";
+                        str = str + "</div>";
+                     //   str = str + "<div class='col-sm-1 iconmark pad ' style='cursor:pointer;' onclick=rightclick(this,'divs" + i + "','" + i + "','" + dbIn[k]["mrno"] + "','" + results.rows.item(i).pid + "') ><span ><i class='glyphicon glyphicon-option-vertical iclr'></span></i>";
+//                        str = str + "<div class='col-sm-1 iconmark pad ' style='cursor:pointer;' onclick=deleteuser('divs" + k + "','" + k + "','" + dbIn[k]["mrno"] + "','')><span ><i class='glyphicon glyphicon-trash iclr'></span></i>";
+                        str = str + "<div class='col-sm-1 iconmark pad ' style='cursor:pointer;' onclick=deleteDBIonic('" + dbIn[k]["mrno"] + "')><span ><i class='glyphicon glyphicon-trash iclr'></span></i>";
+//                 str = str + "<div style='display:none;'  id='divs" +k+"' class='dropdownCont' onclick=deleteuser('divs" + k + "','" + k + "','" + dbIn[k]["mrno"] + "','')><div class='dcWrapper' id='editor-options'><div><label class='lblalrtms'>Delete</label> </div> </div></div>";
+                    str = str + "<div style='display:none;'  id='divs" +k+"' class='dropdownCont' onclick=deleteDBIonic('" + dbIn[k]["mrno"] + "')><div class='dcWrapper' id='editor-options'><div><label class='lblalrtms'>Delete</label> </div> </div></div>";
+                        str = str + "</div>";
+                        str = str + "</div>";
+                    }
+                   $('.container-fluid').html(str);
+                 // document.getElementById('profilecolor').style.backgroundColor='green';
+                  //  document.getElementById('profileimage').innerHTML=inName;
+    for(var k=0;k<dbIn.length;k++){
+    //   confirm(dbIn[k].toString());
+        var mrn = dbIn[k]["mrno"];
+        var patname = dbIn[k]["name"];
+        var patemail = dbIn[k]["patemail"];
+        var patmob = dbIn[k]["patmob"];
+        var patpwd = dbIn[k]["patpwd"];
+        //std = mrn;
+        //std = "<div>"+mrn+"</div>"+"<div>"+patname+"</div>"+;
+    }
+                    }
+                } catch(err){
+                alert("addusersvf :"+err);
+                }
+
+
+            }
+            function queryDBDEL(tx) {
+                debugger;
+                tx.executeSql('CREATE TABLE IF NOT EXISTS patSignUpnew(pid INTEGER PRIMARY KEY AUTOINCREMENT,patname TEXT,patmobile TEXT,patemail TEXT,patuid TEXT,patpwd TEXT,patlogintype TEXT,patloginurl TEXT )');
+                tx.executeSql('select patuid from patSignUpnew     group by  patuid having count(patuid)>1', [], deletedublicateusers, errorCB);
+
+            }
+            function deletedublicateusers(tx, results) {
+                debugger;
+                var len = results.rows.length;
+                tx.executeSql('delete from  patSignUpnew WHERE pid not in (SELECT MIN(pid) FROM patSignUpnew GROUP BY patuid)');
+                retrive();
+            }
+            function getHttp(path) {
+                if(localStorage.isHttp == 1){
+                  if (path.indexOf("http://") < 0) {
+                    path = "http://" + path;
+                }
+                }else{
+                if (path.indexOf("https://") < 0) {
+                    path = "https://" + path;
+                }
+            }
+                return path;
+            }
+            function delUserFrmNotDevLst(userid,k) {
+            try{
+                debugger;
+                var regid = localStorage.deviceregid;
+//			regid='APA91bF7_THTlmjz7rq1rOdo-K_ijje28tjHjks2wGcqlHzLYmYEykDCoWrHkhqvRCLnnQSmGzh78Bng47OBxDl3RQWviJz-1TfMSAXaR7SOin35LAhG8R8GddQGBlFWEZl0XR9UaIQS';
+                var path = localStorage.appurl + "/DeviceRegistrations?type=deleteregidfrmdev&regid=" + regid + "&userid=" + userid + "&apptype=patientapp";
+                $.ajax({
+                    url: getHttp(path),
+                    type: "POST",
+                    dataType: "",
+                    success: function (responseText) {
+                        if (responseText == "1") {
+                            deleterecord(userid,k);
+//                alert("");
+                            debugger;
+                            $(".seldiv").each(function () {
+                                this.remove();
+                                $(".countbtn").html("0");
+                                $(".deltionlongpress").css("display", "none");
+                            });
+//$(evt).parent().parent().parent().parent().remove();
+                        }
+                    },
+                    error: function (error) {
+                        deleterecord(userid,k);
+//            alert(error.responseText);
+
+                    }
+                });
+                }catch(err){}
+
+            }
+            function retrive()
+            {
+                debugger;
+                var db = window.openDatabase("Database", "1.0", "SHIVAMDB", 200000);
+                db.transaction(queryDB, errorCB);
+                //      db.transaction(populateDB,errorCB,successCB);
+
+            }
+
+            function queryDB(tx)
+            {
+                debugger;
+                //PatSignUp(pid INTEGER PRIMARY KEY AUTOINCREMENT,patname TEXT,patmobile TEXT,patemail TEXT,patuid TEXT,patpwd TEXT,patlogintype TEXT ,patloginurl TEXT ) pid INTEGER PRIMARY KEY AUTOINCREMENT,patname TEXT,patmobile TEXT,patemail TEXT,patuid TEXT,patpwd TEXT,patlogintype TEXT ,patloginurl TEXT
+                tx.executeSql('CREATE TABLE IF NOT EXISTS patSignUpnew(pid INTEGER PRIMARY KEY AUTOINCREMENT,patname TEXT,patmobile TEXT,patemail TEXT,patuid TEXT,patpwd TEXT,patlogintype TEXT,patloginurl TEXT )');
+                tx.executeSql('SELECT distinct pid,patname,patmobile,patemail,patuid,patpwd,patlogintype,patloginurl,webformid  FROM patSignUpnew', [], querrySuccessofAddUser, errorCB);
+
+            }
+            function errorCB(err)
+            {
+                debugger;
+                alert("Error processing SQL" + err.code);
+            }
+            function  querrySuccessofAddUser(tx, results) {
+                debugger;
+                var len = 0;
+                var len = results.rows.length;
+                 if(len == 0){
+                localStorage.patname = "";
+                    localStorage.patmrno = "";
+                }else{
+                }
+                var patlogintype, paturl, idval, mobile, email, patmrno, fname, patpassword = "";
+                var str = "", color = "";
+                if (len >= 1) {
+                 //   localStorage.patname = results.rows.item(0).patname;
+                  //  localStorage.patmrno = results.rows.item(0).patuid;
+                     dbIns = JSON.parse(localStorage.getItem('DBIonicnew'));
+//                      for(var k=0;k<dbIns.length;k++){
+//                      var patname = dbIns[k]["name"];
+//                      var mrn = dbIns[k]["mrno"];
+//                      }
+                    //location.href = 'PatientLoginThirdScreen.html';
+//                } else if (len > 1) {
+
+                    debugger;
+//		    var valuen="1";
+//		    File img = new File(dao.gettomcatserverPath1() + "/webapps/" + extPathFolder + "/MRPhotos/" + key_id + ".png");
+//                  var imgurl=localStorage.appurl;
+//		  var imgurl=imgurl.index("/");
+//		        imgurl=imgurl.substr(0,imgurl.index("/"));
+//                         var path = localStorage.appurl+"MRPhotos/"+results.rows.item(0).patuid+".png";
+                    for (var i = 0; i < len; i++) {
+                    localStorage.patname = results.rows.item(i).patname;
+                     var path = localStorage.appurl + "/formviewlogin";
+                     // for name initial
+                               var path = localStorage.appurl + "/formviewlogin";
+                var data = "mrno="+results.rows.item(i).patuid+"&mobile=nameinitial";
+
+                $.ajax({
+                    url: path,
+                    type: "POST",
+                    dataType: "json",
+                    data:data,
+                    async:false,
+                    success: function (resjson) {
+                        debugger;
+                        try{
+                            localStorage.patname = resjson[0]['NAME']
+                        }
+                        catch(err){}
+                    },
+                    error: function (error) {
+                    debugger;
+                        alert("Server Down, Please try later.");
+                }
+            });
+            // ended here
+                        if (i % 5 == 0) {
+                            color = "bg-aqua";
+                        } else if (i % 5 == 1) {
+                            color = "bg-red";
+                        } else if (i % 5 == 2) {
+                            color = "bg-blue";
+                        } else if (i % 5 == 3) {
+                            color = "bg-yellow";
+                        } else if (i % 5 == 4) {
+                            color = "bg-green";
+                        }
+
+                        var str1 = ".png";
+                        var str2 = ".jpg";
+                        var str3 = ".jpeg";
+                        var ig = 0;
+                        var extPathFolder = "";
+                        var ip = "", ind = "", app = "";
+                        debugger;
+                        try {
+                            app = server;
+                            var image_url = app + "/MRPhotos/" + results.rows.item(i).patuid + ".png";
+                            var xhr = new XMLHttpRequest();
+                            xhr.open('HEAD', image_url, false);
+                            xhr.send();
+
+                            if (xhr.status == "404") {
+
+                                ig = 0;
+                                image_url = app + "/MRPhotos/" + results.rows.item(i).patuid + str2;
+
+                                xhr = new XMLHttpRequest();
+                                xhr.open('HEAD', image_url, false);
+                                xhr.send();
+
+                                if (xhr.status == "404") {
+
+                                    ig = 0;
+                                    image_url = app + "/MRPhotos/" + results.rows.item(i).patuid + str3;
+
+                                    var xhr = new XMLHttpRequest();
+                                    xhr.open('HEAD', image_url, false);
+                                    xhr.send();
+
+                                    if (xhr.status == "404") {
+                                        console.log("File doesn't exist");
+                                        ig = 0;
+
+                                    } else {
+
+                                        ig = 1;
+
+                                    }
+
+
+
+                                } else {
+
+                                    ig = 1;
+                                }
+
+                            } else {
+                                console.log("File exists");
+                                ig = 1;
+
+                            }
+
+                        } catch (err) {
+                        }
+
+                        str = str + " <div   class='row mainrow' onclick=\"loginnew('" + results.rows.item(i).patloginurl + "','" + results.rows.item(i).patuid + "','" + results.rows.item(i).patpwd + "','" + localStorage.patname.trim().replace(/ /g, '&nbsp;').replace(".",". ")+ "','1','" + results.rows.item(i).patlogintype + "','" + results.rows.item(i).webformid + "')\";> ";
+                        str = str + "<div class='col-xs-2 col-sm-1 pad icon-container'>";
+
+                        if (ig === 1) {
+
+                            str = str + " <div class='imgiconp'><img src=" + image_url + "  class='imgform' alt=''/></div>"
+                        } else {
+                            str = str + "<div class='spantxtclr'>";
+                            str = str + "<span class=" + color + ">" + toReportCaseTwoWords(results.rows.item(i).patname) + "</span></div>";
+                        }
+                        str = str + "</div>";
+                        str = str + "<div class='col-xs-8 col-sm-8 pad main-container'>";
+                        str = str + "<div class='col-sm-12 pad divin12'>";
+                        str = str + "<label class='lblpatientName'>" + results.rows.item(i).patname.replace(".",". ").toLowerCase() + "</label>";
+                        str = str + "<label class='lblmrno'>" + results.rows.item(i).patuid + "</label>";
+                        str = str + "<label class='lblpwd' style='display:none'>" + results.rows.item(i).patpwd + "</label>";
+                        str = str + "<label class='lbllogintype' style='display:none'>" + results.rows.item(i).patlogintype + "</label>";
+                        str = str + " </div>";
+                        str = str + "</div>";
+
+                     //   str = str + "<div class='col-sm-1 iconmark pad ' style='cursor:pointer;' onclick=rightclick(this,'divs" + i + "','" + i + "','" + results.rows.item(i).patuid + "','" + results.rows.item(i).pid + "') ><span ><i class='glyphicon glyphicon-option-vertical iclr'></span></i>";
+                       str = str + "<div class='col-sm-1 iconmark pad ' style='cursor:pointer;' onclick=deleteuser('divs" + i + "','" + i + "','" + results.rows.item(i).patuid + "','" + results.rows.item(i).pid + "')><span ><i class='glyphicon glyphicon-trash iclr'></span></i>";
+                str = str + "<div style='display:none;'  id='divs" + i + "' class='dropdownCont' onclick=deleteuser('divs" + i + "','" + i + "','" + results.rows.item(i).patuid + "','" + results.rows.item(i).pid + "')><div class='dcWrapper' id='editor-options'><div><label class='lblalrtms'>Delete</label> </div> </div></div>";
+                        str = str + "</div>";
+                        str = str + "</div>";
+
+                    }
+                } else {
+
+                   location.href = 'connection.html';
+//                    debugger;
+//                    if (localStorage.appname === 'mah') {
+//                        location.href = 'mah.html';
+//                    } else if (localStorage.appname === 'fernandez') {
+//                        location.href = 'fh.html';
+//                    } else if (localStorage.appname === 'patel') {
+//                        location.href = 'patel.html';
+//                    } else if (localStorage.appname === 'bvc') {
+//                        location.href = 'belve.html';
+//                    } else if (localStorage.appname === 'ankura') {
+//                        location.href = 'ankura_index_1.html';
+//                    }else if (localStorage.appname === 'ujalacygnus') {
+//                        location.href = 'ujalacygnus.html';
+//                    }else if (localStorage.appname === 'shl') {
+//                        location.href = 'sahyadri.html';
+//                    }else if (localStorage.appname === 'sdrc') {
+//                        location.href = 'connection.html';
+//                    } else {
+//                        location.href = 'PatientLoginSecondScreen.html';
+//                }
+                }
+                $('.container-fluid').html(str);
+                if (localStorage.appname === 'mah') {
+                    $('.lblhospitalname').html("Maharaja Agrasen Hospital")
+                } else if (localStorage.appname === 'fernandez') {
+                    $('.lblhospitalname').html("Users List")
+                } else if (localStorage.appname === 'patel') {
+                    $('.lblhospitalname').html("Patel Hospital")
+                } else if (localStorage.appname === 'bvc') {
+                    $('.lblhospitalname').html("Bellevue Clinic")
+                } else if (localStorage.appname === 'ankura') {
+                    $('.lblhospitalname').html("Ankura Hospital")
+                } else if (localStorage.appname === 'ujalacygnus') {
+                    $('.lblhospitalname').html("Family Members List")
+                } else if (localStorage.appname === 'shl') {
+                    $('.lblhospitalname').html("Family Members List")
+                }else if (localStorage.appname === 'sdrc') {
+                    $('.lblhospitalname').html("Family Members List")
+                }else if (localStorage.appname === 'bagh') {
+                    $('.lblhospitalname').html("Family Members List")
+                } else {
+                    $('.lblhospitalname').html("Add users")
+                }
+                try {
+                    setTimeout(function () {
+//                   window.plugins.spinnerDialog.hide();
+                        SpinnerDialog.hide();
+                    }, 800);
+
+                } catch (err) {
+                    alert(err);
+                }
+            }
+            function  toReportCaseTwoWords(name) {
+                debugger;
+                if (name == null) {
+                    return null;
+                }
+                var i = 0;
+                var ret = "";
+                var word = name.split(" ");
+                for (var j = 0; j < word.length; j++) {
+                    if (word[j] != "") {
+                        ret = ret + word[j].substring(0, 1).toUpperCase();
+                        i++;
+                    }
+                    if (i > 1) {
+                        break;
+                    }
+                }
+                return ret.toString();
+            }
+            function onLoad() {
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+            $(document).ready(function () {
+                document.addEventListener("backbutton", function (e) {
+                    exitapp()
+                }, false);
+                var appName =  localStorage.appname;
+               if(appName === 'fernandez'){
+                loadcssfile("fh-addusersVF.css");
+            } else if(appName === 'ujalacygnus'){
+                loadcssfile("ujalacygnus-addusersVF.css");
+            } else if(appName === 'shl'){
+                loadcssfile("sahyadri-addusersVF.css?version=1");
+            }else if(appName === 'sdrc'){
+                loadcssfile("sdrc-addusersVF.css?version=1");
+            }else if(appName === 'bagh'){
+                loadcssfile("bagh-addusersVF.css?version=1");
+                var appurli = localStorage.appurl;
+                var imgsrc = 'images/baghpatlogo.png';
+                var totalsrc = appurli+imgsrc;
+                $('.brandicon').attr('src',totalsrc);
+            }
+            });
+            function loadcssfile(filename) {
+                var appName =  localStorage.appname;
+                if(appName === 'fernandez' || appName === 'ujalacygnus' || appName === 'shl' || appName === 'sdrc' || appName === 'bagh'){
+    filename = localStorage.ipadrs + "/css/" + filename;
+    $('<link rel="stylesheet" href="' + filename + '?version=6">').appendTo("head");
+                }
+}
+            function exitapp() {
+                var exitappname = "";
+                if (localStorage.appname === 'fernandez') {
+                    exitappname = "Feranandez";
+                } else if (localStorage.appname === 'patel') {
+                    exitappname = "Patel Hospital";
+                } else if (localStorage.appname === 'bvc') {
+                    exitappname = "Bellevue Clinic";
+                } else if (localStorage.appname === 'ankura') {
+                    exitappname = "Ankura Hospital";
+                } else if (localStorage.appname === 'mah') {
+                    exitappname = "Maharaja Agrasen Hospital";
+                } else if (localStorage.appname === 'ujalacygnus') {
+                    exitappname = "UCH MyHealth";
+                } else if (localStorage.appname === 'shl') {
+                    exitappname = "Sahyadri Hospitals";
+                } else if (localStorage.appname === 'sdrc') {
+                    exitappname = "SDRC My Health";
+                } else if (localStorage.appname === 'bagh') {
+                    exitappname = "BAGH";
+                }
+                try {
+                    playBeep();
+                    navigator.notification.confirm(
+                            'Do you want to exit the app?', // message
+                            onConfirm, // callback to invoke with index of button pressed
+                            exitappname, // title
+                            ['No', 'Yes']         // buttonLabels
+                            );
+                } catch (err) {
+                    alert(err)
+                }
+
+            }
+            function onConfirm(buttonIndex) {
+                if (buttonIndex === 2) {
+                    navigator.app.exitApp();
+                }
+            }
+            function playBeep() {
+                navigator.notification.beep(1);
+            }
+
+        </script>
+
+    <style>
+            .bg-aqua{
+                background-color: #00c0ef !important;
+            }
+            .bg-yellow {
+                background-color: #f39c12 !important;
+            }
+            .bg-green {
+                background-color: #00a65a !important;
+            }
+            .bg-red {
+                background-color: #dd4b39 !important;
+            }
+            .bg-blue {
+                background-color: #3c8dbc !important;
+            }
+            body {
+                overflow: hidden;
+            }
+            html {height: 100%;}
+            html body { height: 100%; overflow: hidden;}
+            html body .body-content {
+                position: absolute;
+                /*background-color:#E2E2E2;*/
+                /*                background-color: #F5F2F2;*/
+                background: #FFF;
+                width: 100%;
+                top:45px;
+                bottom:45px;
+                padding-bottom: 10px;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+             body {
+padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+padding-top: env(safe-area-inset-top); /* iOS 11.2 */
+}
+            footer{
+margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
+margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
+}
+            header {
+                position: absolute;
+                height:45px;
+                left: 0;
+                right: 0;
+                top: 0;
+                background: #367fa9;
+                color: #FFF;
+            }
+            footer {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom:0;
+                background: #C60;
+                height:45px;
+            }
+            .lblpatientName{
+                width:95%;
+                padding:0px;
+                text-align: center;
+                font-size:16px;
+                float: left;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding-bottom: 0px;
+                font-weight: 500;
+                margin: 0px;
+                line-height:1;
+                color: #000;
+                text-transform: capitalize;
+            }
+            .lblmrno{
+                width: 100%;
+                padding:0px;
+                text-align: center;
+                font-weight: normal;
+                font-size:14px;
+                margin:0px;
+                color:#000;
+                text-transform: capitalize;
+            }
+            .glphicon{font-size: 35px;}
+            .row{margin: 0px;padding: 0px;}
+            .glphicon{color:#337ab7;}
+            .usericon{height: 70px;background: transparent;border: none;}
+        </style>
+
+    <style>
+            .lblpatientName1{font-weight: normal;}
+            .pad{padding: 0px;}
+            .container-fluid{padding: 0px;}
+            #multiusers{
+                text-align: center;
+                font-weight: bold;
+                color: #367fa9;
+                /*                margin-top: 25px;*/
+            }
+
+            .test:after {
+                content: '\2807';
+                font-size: 25px;
+                float: right;
+            }
+            div.dropdownCont{
+                padding:7px;
+                background: #fff;
+                font-weight: normal;
+                padding-left: 25px;
+                padding-right: 25px;
+                border: 1px solid #d3d3d3;
+                box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+                transform: scale(0,0);
+                -webkit-animation: bummer 2s;
+                -moz-animation: bummer 0.5s;
+                -webkit-animation: bummer 0.5s;
+                -o-animation: bummer 0.5s;
+                animation: bummer 0.5s;
+                -moz-animation-fill-mode: forwards;
+                -webkit-animation-fill-mode: forwards;
+                -o-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+            @-webkit-keyframes bummer {
+
+                100% {
+                    transform: scale(1,1);
+                }
+            }
+            .iclr{color:#d3d3d3;font-size: 20px;}
+            .mainrow{
+                position: relative;
+                float: left;
+                width:25%;
+                background: #FFF;
+                border-bottom: 1px solid #EEEEEE;
+                border-right: 1px solid #EEEEEE;
+            }
+            .main-container{width: 100%;display: table-cell;}
+            .icon-container{width: 100%;text-align:center;height:50px;}
+            .iconmark{
+                text-align: center;
+                position: absolute;
+                right: 0px;
+                padding-top: 5px;
+                width: 40px;
+                display: inline-block;
+                height: 60px;
+                z-index: 9999;
+            }
+
+            div.dropdownCont {
+                position: absolute;
+                z-index: 500;
+                display: none;
+                right:25px;
+                top:10px;
+                border: 1px solid #d3d3d3;
+                border-radius: 3px;
+                box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+            }
+
+            div.dropdownCont .dcWrapper {
+                background-color: #fff;
+                padding:3px;
+                margin: 0;
+                color:#d3d3d3;
+                white-space:nowrap;
+                list-style: none;
+                font-size: 13px;
+            }
+            .dcWrapper div{padding: 3px;  color:#000;text-align: left;}
+            .dcWrapper div:hover{background: #ececec;}
+
+            .dcWrapper div:hover{
+                background: #FFF;
+            }
+            div.dropdownCont:hover{
+                cursor: pointer;
+            }
+
+            .dcWrapper div .lblalrtms{
+                margin: 0px;
+                font-weight: normal;
+                padding-left: 2px;
+                padding-right: 2px;
+                cursor: pointer;
+                color:red;
+            }
+            .hedrlbl{
+                margin: 0px;
+                padding: 0px;
+                font-size: 20px;
+                font-weight: 500;
+                text-align: left;
+                padding-left: 10px;
+                width: 100%;
+                padding-top: 7px;
+                text-transform: capitalize;
+            }
+            .Adduserfooter{text-align: center;}
+
+            .btnaddusr{
+                width: auto;
+                border-radius: 0px;
+                background: transparent;
+                border: 0px solid #d3d3d3;
+                outline: none;
+                padding: 0px;
+                color: #FFF;
+                padding-top: 6px;
+            }
+            .btnaddusr:hover{background: transparent;color: #FFF;outline:none;;}
+            btnaddusr:active{background: transparent;color: #FFF;outline:none;border:0px;}
+            btnaddusr:focus{background: transparent;color: #FFF;outline:none;border:0px;}
+            .txtaddusr{
+                float: left;
+                padding: 0px;
+                font-size:14px;
+                line-height: 1;
+            }
+            .addusricon{
+                top: 0px;
+                font-size: 18px;
+            }
+            .spantxtclr{
+                display: inline-block;
+                padding-top: 5px;
+                padding-bottom: 3px;
+            }
+            .spantxtclr span{
+                display:inline-block;
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+                padding-top: 5px;
+                font-weight: 500;
+                color: #FFF;
+                background: rgb(255, 0, 228);
+                border-radius: 50px;
+            }
+        </style>
+    <style>
+            @media only screen and (max-width:1085px){
+            }
+            @media only screen and (max-width:815px){
+            }
+            @media only screen and (max-width:800px){
+            }
+            @media only screen and (max-width: 768px) {
+                .mainrow{width: 33.33%;}
+            }
+            @media only screen and (max-width:650px){
+                .mainrow{width:50%;}
+            }
+            @media only screen and (max-width:480px) {
+                .mainrow{width:100%;height:50px;}
+                .icon-container{width:60px;}
+                .main-container{width: 75%;}
+                .lblpatientName{text-align: left;font-size: 14px;}
+                .lblmrno{text-align: left;}
+                .iconmark{height: 50px;padding-top: 10px}
+                .spantxtclr span{font-size: 16px;padding-top: 10px;}
+                .divin12{height: 50px;vertical-align: middle;display: table-cell;width: 100%;}
+
+            }
+            @media only screen and (max-width:364px) {
+                .iconmark{width:8%;}
+            }
+            .imgiconp{
+                text-align: center;
+
+            }
+            .imgform{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-top: 5PX;
+                margin-bottom: 3px;
+            }
+            .addusericon{
+                display: block;
+                width: 100%;
+            }
+            .fhwelcomebtn{display: none;}
+            .fh-headertop, .uch-headertop, .sdrc-headertop, .bagh-headertop{display: none;}
+            .back_01 {
+    display: none;
+    outline: none;
+    border: 0px;
+    padding: 0px 10px;
+    font-size: 30px;
+    background: transparent;
+    color: #fff;
+    float: left;
+}
+.uchtxtaddusr, .uchiconlft{display: none;}
+.brandicon{height: 100%; width: 15rem;}
+        </style>
+    <link href="css/shivam-addusersVF.css" rel="stylesheet" type="text/css"/>
+    <!-- <link href="css/fh-addusersVF.css" rel="stylesheet" type="text/css"/>-->
+</head>
+
+<body onload="deldubmrnorec();" onclick="ladfun()">
+<header class="fh-headertop">
+    <label class="fh-lblsptalnm" id="fh-hospname">Fernandez Healthcare</label>
+</header>
+<header class="uch-headertop">
+    <label class="fh-lblsptalnm" id="fh-hospname">Sahyadri Hospitals</label>
+</header>
+<header class="uch-headertop sdrc-headertop">
+    <label class="fh-lblsptalnm" id="fh-hospname">SDRC</label>
+</header>
+<header class="uch-headertop bagh-headertop">
+    <!--                <label class="fh-lblsptalnm" id="fh-hospname">BAGH</label>-->
+    <img class="brandicon" />
+</header>
+<header class="headerforall">
+    <div class="row">
+        <div class="col-xs-12  col-sm-12 pad">
+            <label class="lblhospitalname hedrlbl"> </label>
+        </div>
+    </div>
+</header>
+<div class="body-content">
+    <div class="row" id="multiusers">
+
+    </div>
+    <div class="container-fluid">
+
+    </div>
+</div>
+<footer class="Adduserfooter">
+    <div class="row">
+        <div class="col-sm-12 pad">
+            <button type="button" class="back_01 fhwelcomebtn" onclick="location.href='appintronew.html';">
+                <span class="fa fa-hospital-o iconlft"></span>
+                <span class="glyphicon glyphicon-home iconlft uchiconlft"></span>
+            </button>
+            <button type="button" class="btnaddusr" value=" Add Users" onclick="adduser()">
+                <span class="addusericon"><i class="fa fa-user-plus addusricon"></i></span>
+                <span class="txtaddusr"> Add Users</span>
+                <span class="txtaddusr uchtxtaddusr"> Add Family Member</span>
+            </button>
+        </div>
+    </div>
+</footer>
+<script>
+                          try{
+                        if (localStorage.appname === 'fernandez'){
+                            debugger;
+                    $('.headerforall').css('background','#aa1014');
+                     $('.Adduserfooter').css('background','rgba(255,255,255,.9)');
+                } else if (localStorage.appname === 'ujalacygnus'){
+                            debugger;
+                    $('.headerforall').css('background','#b8246e');
+                     $('.Adduserfooter').css('background','rgba(255,255,255,.9)');
+                } else if (localStorage.appname === 'shl'){
+                            debugger;
+                    $('.headerforall').css('background','linear-gradient(44.35deg, #0094cd 0%, #2a7aab 28.799999999999997%, #8d3e5c 70.6%, #c51c2f 100%)');
+                     $('.Adduserfooter').css('background','rgba(255,255,255,.9)');
+                }else if (localStorage.appname === 'sdrc'){
+                            debugger;
+                    $('.headerforall').css('background','#349084');
+                     $('.Adduserfooter').css('background','rgba(255,255,255,.9)');
+                }else if (localStorage.appname === 'bagh'){
+                            debugger;
+                    $('.headerforall').css('background','#349084');
+                     $('.Adduserfooter').css('background','rgba(255,255,255,.9)');
+                }
+                else{
+                     $('.headerforall').css('background','#367fa9');
+                      $('.Adduserfooter').css('background','rgba(255,255,255,.9)');
+                }}catch(err){}
+            function adduser() {
+                debugger;
+                localStorage.adduser = '1';
+                location.href = 'connection.html';
+            }
+            function loginnew(url,username,pwd,type,adduser,logintype,webformid){
+                debugger;
+                 event.stopPropagation();
+                    localStorage.patmrno = username;
+                 localStorage.patname = type;
+                    localStorage.isNewLogin= adduser;
+                    localStorage.appwebformid = webformid;
+                    location.href = 'PatientLoginThirdScreen.html';
+            }
+        </script>
+</body>
+</html>

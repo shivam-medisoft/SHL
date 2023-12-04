@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "226676633297",
+    "project_id": "bagh-e195a",
+    "storage_bucket": "bagh-e195a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226676633297:android:7950f9f9067aa91c80dff0",
+        "android_client_info": {
+          "package_name": "com.shivam.bagh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226676633297-s8b7f2ons6k10agfbmq9rq0tcsg0soro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt6S91H9a6BbLZc8KLaIanmdAhAyYL2qI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226676633297-s8b7f2ons6k10agfbmq9rq0tcsg0soro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
