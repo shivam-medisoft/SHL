@@ -17,8 +17,6 @@ and open the template in the editor.
                 try {
                     var backgroundcolor = "", apppath = "",apppage="";
                     cordova.getAppVersion.getAppName(function (name) {
-                     confirm("name="+name);
-                     console.log("name="+name);
                         if (name === "PatelHospital") {
                             backgroundcolor = "black-opaque";
                             apppath = "http://patel.myemrhub.com/";
@@ -69,7 +67,7 @@ and open the template in the editor.
                            apppath = "http://182.18.149.103:9090/uchapp/";
                            apppage = "ujalacygnus_index.html";
                             localStorage.appname = "ujalacygnus";
-                        } else if (name === "Sahyadris Hospitals") {
+                        } else if (name === "Sahyadri Hospitals") {
                            //apppath = "http://shl.myemrhub.com/";
                            apppath = "http://123.63.35.226:8196/APP";
                            apppage = "sahyadri_index.html";
@@ -84,11 +82,6 @@ and open the template in the editor.
                              apppath = "https://hms.baghospital.com:8443/APP11/";
                            apppage = "bagh_index.html";
                            localStorage.appname = "bagh";
-                        }else if(name==="SahyadriHospitals")
-                        {
-                         apppath="https://shpl.sahyadrihospitals.com/APP/";
-                         apppage = "sahyadri_index.html";
-                         localStorage.appname = "shl";
                         }
                         else {
                             alert("No app with name " + name);
@@ -101,7 +94,7 @@ and open the template in the editor.
                         location.href = "appintronew.html";
                     });
                 } catch (err) {
-                    alert(err);
+                    //        alert(err);
                 }
             });
             function loading(){

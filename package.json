@@ -1,8 +1,8 @@
 {
-  "name": "SahyadriHospitals",
+  "name": "Bhailal Amin General Hospital",
   "version": "1.0.23",
   "homepage": "app.html",
-  "description": "SHl Patient App",
+  "description": "BAGH Patient App",
   "dependencies": {
     "cordova-android": "^10.1.2"
   },
@@ -10,7 +10,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shivam-medisoft/SHL.git"
+    "url": "git+https://github.com/shivam-medisoft/BAGH.git"
   },
   "keywords": [
     "crm"
@@ -18,9 +18,9 @@
   "author": "Shivam",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shivam-medisoft/SHL/issues"
+    "url": "https://github.com/shivam-medisoft/BAGH/issues"
   },
-  "homepage": "https://github.com/shivam-medisoft/SHL#readme",
+  "homepage": "https://github.com/shivam-medisoft/BAGH#readme",
   "cordova": {
     "platforms": [
       "android"
