@@ -6,11 +6,11 @@
         id="com.shivam.bagh"
         version="1.0.23"
         android-versionCode="100028" >
-    <name>Bhailal Amin General Hospital</name>
+    <name>SahyadriHospitals</name>
     <description>
-        BAGH offers comprehensive clinical services under one roof with an active Transplant Program. The hospital provides round the clock network of Emergency services , Diagnostic services, a Blood Bank facility and a Pharmacy supported by a team of expert senior clinical consultants working in a full-time capacity. The active association with over 150 clinical consultants adds a unique strength to BAGH and enables us to achieve the highest outcomes for our patients capacity.
+        SHL offers comprehensive clinical services under one roof with an active Transplant Program. The hospital provides round the clock network of Emergency services , Diagnostic services, a Blood Bank facility and a Pharmacy supported by a team of expert senior clinical consultants working in a full-time capacity. The active association with over 150 clinical consultants adds a unique strength to BAGH and enables us to achieve the highest outcomes for our patients capacity.
     </description>
-    <author email="arun@shivammedisoft.com" href="https://www.baghospital.com/">
+    <author email="arun@shivammedisoft.com" href="https://sahyadrihospital.com/">
         Shivam Medisoft Services Pvt. Ltd.
     </author>
     <content src="app.html"/>
@@ -146,11 +146,11 @@
         <string>need to photo library access to get pictures from there</string>
     </edit-config>
     <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
-    <icon src="resources/baghicons/android/icon.png" />
-    <splash src="resources/baghsplash/android/272by482.png" density="ldpi" />
-    <splash src="resources/baghsplash/android/362by642.png" density="mdpi" />
-    <splash src="resources/baghsplash/android/542by962.png" density="hdpi" />
-    <splash src="resources/baghsplash/android/722by1282.png" density="xhdpi" />
+    <icon src="resources/shlicons/android/icon.png" />
+    <splash src="resources/shlsplash/android/272by482.png" density="ldpi" />
+    <splash src="resources/shlsplash/android/362by642.png" density="mdpi" />
+    <splash src="resources/shlsplash/android/542by962.png" density="hdpi" />
+    <splash src="resources/shlsplash/android/722by1282.png" density="xhdpi" />
         <feature name="InAppBrowser">
             <param name="android-package" value="org.apache.cordova.InAppBrowser" />
         </feature>
