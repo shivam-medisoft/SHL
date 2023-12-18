@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "226676633297",
-    "project_id": "bagh-e195a",
-    "storage_bucket": "bagh-e195a.appspot.com"
+    "project_id": "shl-e195a",
+    "storage_bucket": "shl-e195a.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:226676633297:android:7950f9f9067aa91c80dff0",
         "android_client_info": {
-          "package_name": "com.shivam.bagh"
+          "package_name": "com.shivam.shl"
         }
       },
       "oauth_client": [
