@@ -16,7 +16,7 @@
     <content src="app.html"/>
 
     <preference name="permissions" value="none" />
-    <preference name="orientation" value="default" />
+    <preference name="orientation" value="false" />
     <preference name="target-device" value="universal" />
     <preference name="prerendered-icon" value="true" />
 
