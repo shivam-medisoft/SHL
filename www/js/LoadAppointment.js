@@ -1,17 +1,17 @@
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
- 
+
             function loaddate(){
 //                $("#txtfromdate").datepicker({dateFormat: 'dd/mm/yy', minDate: 0});
-//            
-//            
+//
+//
 //                $("#txttodate").datepicker({dateFormat: 'dd/mm/yy', minDate: 0});
             }
-            
+
              function displayalert() {
                 $(function() {
                     debugger;
@@ -31,7 +31,7 @@
                     //document.getElementById("txtmrnum").focus();
                 });
             }
-        
+
 $(document).ready(function () {
     debugger;
 //    alert("hi");
@@ -52,7 +52,7 @@ localStorage.pageNo = "1" ;
 //        showAppoitment1(payDoc,flg,speid);
 //        localStorage.payBack = "0";
 //    }
-    
+
    var path = localStorage.ipadrs;
     var formid = localStorage.webformid;
     var locid = localStorage.locid;
@@ -64,9 +64,9 @@ localStorage.pageNo = "1" ;
         document.getElementById("formdiv").innerHTML=responseText;
         loadform();
         }catch(err){
-            
+
         }
-        
+
 //        $("#Date1").datepicker({
 //            dateFormat: 'dd/mm/yy'
 //        });
@@ -86,7 +86,7 @@ function loadappointments() {
 //        $('#formdiv').html(responseText);
         document.getElementById("divFrame").innerHTML=responseText;
         loadform();
-        
+
 //        $("#Date1").datepicker({
 //            dateFormat: 'dd/mm/yy'
 //        });
@@ -95,7 +95,7 @@ function loadappointments() {
 
 
 function loadform(){
-    
+
     loaddate();
     document.getElementById("head1").innerHTML=document.getElementById("headdata").value;
     if("patapp" in localStorage){
@@ -104,7 +104,7 @@ function loadform(){
         }
     }
                 document.getElementById("popdiv1").innerHTML=document.getElementById("divdatasch").value;
-                
+
                  var resdata=document.getElementById("scrdata").value;
                 if(resdata.indexOf("-->")>=0){
                     var data=resdata.split("-->");
@@ -115,10 +115,10 @@ function loadform(){
                 }
                 if(document.getElementById("txtlocation").value!="null"){
                     var lid=document.getElementById("locid").value;
-                    
+
                     document.getElementById(lid).value=document.getElementById("txtlocation").value;
                 }
-                var docid = document.getElementById('hdnDocid').value ; 
+                var docid = document.getElementById('hdnDocid').value ;
                 var speid = document.getElementById('hdnSpeid').value;
                 try{
                 if(docid!="null"){
@@ -127,16 +127,16 @@ function loadform(){
                      document.getElementById(_docid).value = docid;
                 }
                 if(speid!="null"){
-                    
+
                      var _speid =document.getElementById("speid").value;
                      document.getElementById(_speid).value = speid;
                 }
             }catch (errr){
-                
+
             }
                 document.getElementById("btnavl").onclick();
-                
-              
+
+
 }
 
 function getAvalDates1(id){
@@ -163,7 +163,7 @@ function getAvalDates1(id){
                 var todate=document.getElementById("txttodate").value;
          var fromnotification=  getParameterByName("fromnotification");
          if(fromnotification=="1"){
-         
+
          }else{
                 //                document.getElementById("mydiv1").style.display="block";
 //                 try{ var htldo = window.innerHeight;
@@ -189,8 +189,8 @@ function getAvalDates1(id){
 //                         //                    document.getElementById("mydiv1").style.dispaly="none";
 //                     }
 //                 });
- 
- // started here 
+
+ // started here
       path =path+'/TestingSchedule';
                  var  data = 'patmobile='+patmobile+'&patilocid='+patselectedlocid+'&type=getavldates&webid='+webid+'&condition='+condition+'&colsqry='+colsqry+'&scrdata='+scrdata+'&fromdate='+fromdate+'&todate='+todate+'&mobile=1';
                      $.ajax({
@@ -241,13 +241,13 @@ function getAvalDates1(id){
                     }
                  }
                  });
- 
- 
+
+
  // ended here
                var het2 = $(".tophed").css("height");
                var het3 = $("header").css("height");
 //               var het4 = $(".headrowht").css("height");
-                $('.bdcontaant').css("margin-top",parseInt(het2)+1+"px"); 
+                $('.bdcontaant').css("margin-top",parseInt(het2)+1+"px");
                 $('.btnrow1').css("margin-top",parseInt(het3)+1+"px");
 //                $('.btnrow1').css("margin-top",parseInt(het4)+1+"px");
                 $(".rowdisplayf").css("overflow-x","hidden");
@@ -266,7 +266,7 @@ function getAvalDates1(id){
                 var fid=document.getElementById("webid").value;
                 var theme = "";
                 if(condition=="loadcolums"){
-            
+
                     var s=document.getElementById("s").value;
                     var s1=s.split("@");
                     var data="";
@@ -276,7 +276,7 @@ function getAvalDates1(id){
                     var locid=document.getElementById("txtlocation").value;
                     var mrno=document.getElementById("txtMrno").value;
                     var url=path+'admin/ScheduleDivPopMobile.jsp?webid='+fid+''+data+'&locid='+locid+'&mrno='+mrno;
-            
+
 //                    path = path + "admin/ScheduleDivPop.jsp?webid="+fid+""+data+"&locid="+locid+"&mrno="+mrno+
     $.post(url, function (responseText) {
         debugger;
@@ -325,15 +325,15 @@ function getAvalDates1(id){
                                         }
                                     }
                                 }
-                        
-                        
-                        
+
+
+
                             }
                         }
                     });
                 }
-                
-        
+
+
                 if(id.title.indexOf("SH:QRY")>=0){
                     var webid=document.getElementById("webid").value;
                     var scrdata=document.getElementById("scrdata").value;
@@ -356,14 +356,14 @@ function getAvalDates1(id){
                                     }
                                      else if(res[1].indexOf("$EXECUTE")>=0){
                                         var qry=res[1].split("$EXECUTE");
-                                        
+
                                             var r = confirm(qry[0]);
                                                     if (r == true) {
 //                                                         displayalert();
                                                          fillcondition(id.id,flg,'',1,qry[1]);
-                                                        
+
                                                         return;
-                                                        
+
                                                     } else {
                                                         return;
                                                     }
@@ -373,12 +373,12 @@ function getAvalDates1(id){
                                     displayalert();
                                     fillcondition(id.id,flg);
                                     }
-                                    
+
 //                                    alert(res[1]);
 //                                    document.getElementById(id.id).value="";
-//                                
+//
 //                                    return;
-                                      
+
                                 }
                                 else{
                                     fillcondition(id.id,flg);
@@ -395,8 +395,8 @@ function getAvalDates1(id){
                     //            fillcondition(id.id,flg);
                 }
             }
-            
-            
+
+
             function showPopup(id,flg){
                 debugger;
                   $(".fotr").css("display","none");
@@ -441,7 +441,7 @@ function getAvalDates1(id){
                     if(responcejson!="" && responcejson!=null){
                         debugger;
                         document.getElementById("id_From_Time").value=id.title;
-                        
+
                         if(flg=="1"){
                             var iddata=id.id;
                             var iddata1=iddata.split("@");
@@ -460,7 +460,7 @@ function getAvalDates1(id){
                         for(var i=0;i<fields.length-1;i++){
                             if(fields[i].indexOf("<>")>=0){
                                 var a=fields[i].split("<>");
-                             
+
                                 if(a[1].indexOf("$")>=0){
                                     var v=a[1].replace("$","").trim();
                                     //                                 alert(document.getElementById("id_From_Time").value);
@@ -477,7 +477,7 @@ function getAvalDates1(id){
                                     v=v.replace("SERVERTIME",servertm);
                                     v=v.replace("TERMINALID","");
                                     v=v.replace("TERMINAL",document.getElementById("terminal").value);
-                                 
+
                                     v=v.replace("USERID",localStorage.userid);
                                     document.getElementById(a[0]).value=v;
                                 }
@@ -496,38 +496,38 @@ function getAvalDates1(id){
                         //                document.getElementById("id_Mrno").onchenge();
                         //                     }
 
-                
+
                     }
                 });
              try{
                 if(document.getElementById("txtMrno").value!="null"){
-                    
+
                                 var mrnoid=document.getElementById("mrno").value;
 //                                alert(id);
                     document.getElementById(mrnoid).value=document.getElementById("txtMrno").value;
                     document.getElementById(mrnoid).onchange();
                 }
             }catch(err){
-                
+
             }
                     try{
                        var data = $('#head2').css("height");
-                     
+
                 data = data.replace("px","");
                        $('#popdiv1').css("margin-top",parseInt(data)+6+"px");
                    }
                    catch(ee){
-                       
+
                    }
                }
                else{
                 alert("Appoitments Are not Allowed For this time today..,Already Time is over.");
                     return;
                 }
-               });  
-                    
+               });
+
             }
-            
+
              function popgenid(){
                  var path = localStorage.ipadrs;
                 var locid="";
@@ -546,7 +546,7 @@ function getAvalDates1(id){
                 }
                 //                alert(data);
                 var webid=document.getElementById("webid").value;
-                $.get(path+'/TestingSchedule?popdt='+popdt+'&webid='+webid+'&type=popgenid&locid='+locid+'&data='+data,function(responcejson1){
+                $.get(path+'/TestingScheduleN?popdt='+popdt+'&webid='+webid+'&type=popgenid&locid='+locid+'&data='+data+"&keyidcloud="+localStorage.keyidcloud+"&cloudhospnm="+localStorage.hospname,function(responcejson1){
                     if(responcejson1!=null){
                         document.getElementById("txtunicid").value=responcejson1;
                         //                        populatesc();
@@ -555,8 +555,8 @@ function getAvalDates1(id){
                         //                        populatesc();
                     }
                 });
-              
-              // started here 
+
+              // started here
               var path = path+'/TestingSchedule';
                 var data1 ='popdt='+popdt+'&webid='+webid+'&type=popgenid&locid='+locid+'&data='+data;
                  $.ajax({
@@ -573,7 +573,7 @@ function getAvalDates1(id){
                     else{
                         //                        populatesc();
                     }
-                
+
                 },
                  error: function (error) {
                   //   alert("i am error"+error);
@@ -587,11 +587,11 @@ function getAvalDates1(id){
                             document.getElementById("txtunicid").value=respo;
                  }
                  });
-              
+
               // ended here
             }
-            
-            
+
+
              function displaymsg12() {
 //                $(function() {
 //                    debugger;
@@ -601,7 +601,7 @@ function getAvalDates1(id){
 //                        height: 'auto',
 //                        width: '95%',
 //                        modal: true,
-//                        
+//
 //                        buttons: {
 //                            "Cancel": function() {
 //                                $(this).dialog("close");
@@ -619,7 +619,7 @@ function getAvalDates1(id){
                 document.getElementById("head3").style.display="block";
                 document.getElementById("popdiv1").style.display="none";
             }
-            
+
              function fillcondition(id,flg,kid,exeflg,exeqry){
                 debugger;
                 var path = localStorage.ipadrs;
@@ -652,10 +652,10 @@ function getAvalDates1(id){
                     scrdata=scrdata+"-->"+s1[k]+"@"+v;
                 }
                // $.get(path+'/TestingSchedule?type=chkcondition&webid='+webid+'&id='+id+'&rval='+rval+'&flg='+flg+'&scrdata='+scrdata+'&kid='+kid+'&kval='+kval,function(responcejson){
-              $.post(path+'/TestingSchedule?type=chkcondition&webid='+webid+'&id='+id,{rval:rval,flg:flg,scrdata:scrdata,kid:kid,kval:kval},function(responcejson){   
+              $.post(path+'/TestingSchedule?type=chkcondition&webid='+webid+'&id='+id,{rval:rval,flg:flg,scrdata:scrdata,kid:kid,kval:kval},function(responcejson){
               if(responcejson!="" && responcejson!=null){
                         debugger;
-                        
+
                         //                        var res=responcejson.split("@@");
                         //                        document.getElementById(res[1]).value=res[0];
                         //                        document.getElementById(res[1]).onchange();
@@ -666,7 +666,7 @@ function getAvalDates1(id){
                             document.getElementById(res[1]).value=res[0];
                         }
                         catch(eee){
-                            
+
                         }
                             //                        document.getElementById(res[1]).onchange();
                             if(res[2]=="1"){
@@ -674,7 +674,7 @@ function getAvalDates1(id){
                                 document.getElementById(res[1]).onchange();
                             }
                             catch(eee){
-                                
+
                             }
                             }
                         }
@@ -686,13 +686,13 @@ function getAvalDates1(id){
                     }
                 });
             }
-            
+
             function save(flg,exeqry){
                 document.getElementById("txttypevalue").value="new";
                 chkmandatory(flg,exeqry);
-                
+
             }
-            
+
             function chkmandatory(flg,exeqry){
               debugger;
             localStorage.drillwebchain = "1";
@@ -724,7 +724,7 @@ function getAvalDates1(id){
                     }
                 });
             }
-            
+
             function save1(flg,exeqry){
                 debugger;
                 var mai=$('#id_pgmail').val();
@@ -739,7 +739,7 @@ function getAvalDates1(id){
                 }
             }
             catch(ee){
-                
+
             }
                 document.getElementById("btnaptsave").disabled=true;
                 var path = localStorage.ipadrs;
@@ -771,12 +771,12 @@ function getAvalDates1(id){
                             }
                             else if(data2[0]=="radio"){
                                 if(document.getElementById(data2[1]).checked==true){
-                                    finaldata=finaldata+"-->"+document.getElementById(data2[1]).value+"@"+data2[2]+"@"+data2[3]+"@"+data2[0]; 
+                                    finaldata=finaldata+"-->"+document.getElementById(data2[1]).value+"@"+data2[2]+"@"+data2[3]+"@"+data2[0];
                                 }
                             }
                         }
                     }
-                    
+
                      var notsave=document.getElementById("txtnotsave").value;
 //                    alert(notsave);
                     if(notsave.indexOf("@")>=0){
@@ -801,7 +801,7 @@ function getAvalDates1(id){
                     var data=path+'/TestingSchedule?type=save&webid='+webid+'&finaldata='+finaldata+'&typevalue='+typevalue+'&genune='+genune+'&formtype='+formtype+'&duration='+duration+'&fromtm='+fromtm+'&totm='+totm+'&unicid='+unicid+'&flg='+flg+'&scrdata='+scrdata+'&smsdata='+smsdata;
 //                    alert(flg);
                     if(flg=="5"){
-                        
+
                         var fname=$('#id_pgfname').val();
                         var lname=$('#id_pglname').val();
                         var email=$('#id_pgmail').val();
@@ -829,24 +829,24 @@ function getAvalDates1(id){
                             }
                         }
                     }
-                                             
+
                                              if (smsdata.indexOf("-->")>=0) {
                         var scr = smsdata.split("-->");
                         for (var n = 1; n < scr.length; n++) {
                             var scr1 = scr[n].split("@@");
                             savealert = savealert.replace(scr1[0].trim(), scr1[1].trim()).replace("$", "");
-                            
+
                         }
                     }
-                    
+
                     alert(savealert);
                                              }
                                              else{
                                                  alert("Booked Successfully");
                                              }
-                                         
-                                             
-                                
+
+
+
                                 if(flg=="15"){
                                 executeupdate(exeqry);
                             }
@@ -858,8 +858,8 @@ function getAvalDates1(id){
                                 $('.identify').attr('disabled',true);
                                $('.identify').css("background","#ff9c9c");
                                $('.identify').removeClass('identify');
-                                   
-                               
+
+
 //                                getAvalDates1(document.getElementById("btnavl"));
 //                                document.getElementById("btnavl").onclick();
                             }
@@ -882,20 +882,20 @@ function getAvalDates1(id){
                                document.getElementById("head3").style.display="block";
                             }
 
-                              
-                               
+
+
                         }
                     });
                     }
-                    
+
                 });
-                
+
             }
-            
+
             function closeappt(){
             debugger;
             gotodoctors();
-             
+
         }
 function gotodoctorsnew() {
     document.getElementById("displayforms").style.display = "block";
@@ -905,7 +905,7 @@ function gotodoctorsnew() {
                         {
                              // $(".divbtn").click();
                              closebutton();
-                              
+
                         }
     document.getElementById("displayappts").style.display = "none";
     var sdata = document.getElementById("id_scrdata").value.split("@");
@@ -933,7 +933,7 @@ function gotodoctorsnew() {
 ////    alert("formid=="+ formid);
 //    var locid = "";
 //    //document.getElementById("mydiv").style.display = "block";
-//   
+//
 ////    var sdata = document.getElementById("id_scrdata").value.split("@");
 ////      alert("sdata=="+ sdata);
 ////    var scrdata1 = "";
