@@ -13,10 +13,8 @@
     <author email="arun@shivammedisoft.com" href="https://www.baghospital.com/">
         Shivam Medisoft Services Pvt. Ltd.
     </author>
-    <content src="app.html"/>
-
-    <preference name="permissions" value="none" />
-    <preference name="orientation" value="false" />
+    <content src="patientLogin.html"/>
+    <preference name="permissions" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="prerendered-icon" value="true" />
 
@@ -88,7 +86,7 @@
     <plugin name="cordova-filechooser" spec="https://github.com/ihadeed/cordova-filechooser.git" source="git" />
     <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-device.git" source="git" />
     <plugin name="cordova-plugin-device-motion" spec="https://github.com/apache/cordova-plugin-device-motion.git" source="git" />
-    <!-- <plugin name="cordova-plugin-device-orientation" spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" /> -->
+    <plugin name="cordova-plugin-device-orientation" spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" />
     <plugin name="cordova-plugin-dialogs" spec="https://github.com/apache/cordova-plugin-dialogs.git" source="git" />
     <plugin name="cordova-plugin-splashscreen" spec="https://github.com/apache/cordova-plugin-splashscreen.git" source="git" />
     <plugin name="cordova-plugin-network-information" spec="https://github.com/apache/cordova-plugin-network-information.git" source="git" />
