@@ -36,8 +36,8 @@ function loadFiles() {
  
             var res =responseText;
              $('#displayforms').html(res);
-             
-             
+
+
              document.getElementById("formname").innerHTML = localStorage.formname.toLowerCase();
                       $('#formname').css('text-transform','capitalize');
 
