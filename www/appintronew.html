@@ -56,7 +56,7 @@ debugger;
                             debugger;
                             data = data.substring(data.indexOf("frame src")).replace('frame src="', "");
                             var dqts = data.indexOf('"');
-                            url = data.substring(0, dqts).trim();
+                            url = data.substring(0, dqts).trim()+"/";
                             localStorage.mahappurl = url;
                             localStorage.mah = '1';
                             localStorage.appurl = url;
