@@ -45,36 +45,6 @@ debugger;
             }
             function convert(path, appname, apppath) {
                 debugger;
-                 if (localStorage.appname === "ujalacygnus"){
-<!--                  if(navigator.onLine){-->
-<!--alert("your are back online");-->
-<!--                  }else{-->
-<!--                  alert("no internet connection);-->
-<!--                  }-->
-                     localStorage.mahappurl = path;
-                            localStorage.mah = '1';
-                            localStorage.appurl = path;
-                            localStorage.ipadrs = path;
-                            getIntro(localStorage.appurl);
-                }else  if (localStorage.appname === "shl"){
-                     localStorage.mahappurl = path;
-                            localStorage.mah = '1';
-                            localStorage.appurl = path;
-                            localStorage.ipadrs = path;
-                            getIntro(localStorage.appurl);
-                }else  if (localStorage.appname === "sdrc"){
-                     localStorage.mahappurl = path;
-                            localStorage.mah = '1';
-                            localStorage.appurl = path;
-                            localStorage.ipadrs = path;
-                            getIntro(localStorage.appurl);
-                }else  if (localStorage.appname === "bagh"){
-                     localStorage.mahappurl = path;
-                            localStorage.mah = '1';
-                            localStorage.appurl = path;
-                            localStorage.ipadrs = path;
-                            getIntro(localStorage.appurl);
-                }else{
                 $.ajax({
                     url: path,
                     type: "GET",
@@ -137,7 +107,7 @@ debugger;
                     }
 
                 });
-            }
+
             }
             function getIntro(url) {
 <!--            alert("getintro loading");-->
