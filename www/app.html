@@ -19,74 +19,14 @@ and open the template in the editor.
                     cordova.getAppVersion.getAppName(function (name) {
                     //confirm("name="+name);
                     console.log("name+"+name);
-                        if (name === "PatelHospital") {
-                            backgroundcolor = "black-opaque";
-                            apppath = "http://patel.myemrhub.com/";
-                            apppage = "patel_index.html";
-                            localStorage.appname = "patel";
-                        } else if (name === "MAH") {
-                            apppath = "http://mah.myemrhub.com/";
-                            apppage = "mah_index.html";
-                            localStorage.appname = "mah";
-                        }
-                        else if (name === "Kamalnayan Bajaj Hospital") {
-                            apppath = "http://kbh.myemrhub.com/";
-                            apppage = "kbh_index.html";
-                            localStorage.appname = "kbh";
-
-                        } else if (name === "Johal Hospital") {
-                            apppath = "http://johal.myemrhub.com/";
-                            apppage = "johal_index.html";
-                            localStorage.appname = "johal";
-
-                        } else if (name === "Fernandez") {
-//                            apppath = "http://fh.myemrhub.com/";
-                             apppath = "https://emr.fernandezhospital.com:8443/neosoft8/";
-                            apppage = "fh_index.html";
-                            localStorage.appname = "fernandez";
-
-                        } else if (name === "Belle VUE Clinic") {
-                            apppath = "http://bvc.myemrhub.com/";
-                            apppage = "belve_index.html";
-                            localStorage.appname = "bvc";
-
-                        } else if (name === "Ankura Hospitals") {
-                            apppath = "http://ankura.myemrhub.com/";
-                            apppage = "ankura_index.html";
-                            localStorage.appname = "ankura";
-                        } else if (name === "Mehta Hospitals") {
-                            apppath = "http://mehta.myemrhub.com/";
-//                            apppath = "http://123.201.142.71:9999/MEHTAST";
-//                            apppage = "mehta_index.html";
-                            localStorage.appname = "mehta";
-                        } else if (name === "SMF Hospital") {
-                            apppath = "http://smf.myemrhub.com/";
-//                            apppath = "http://180.151.69.2:9999/shivam";
-//                            apppage = "mehta_index.html";
-                            localStorage.appname = "smf";
-                        } else if (name === "UCH MyHealth") {
-                        //    apppath = "http://ujalacygnus.myemrhub.com/";
-                           apppath = "http://182.18.149.103:9090/uchapp/";
-                           apppage = "ujalacygnus_index.html";
-                            localStorage.appname = "ujalacygnus";
-                        } else if (name === "SahyadriHospitals") {
-                          // apppath = "http://shl.myemrhub.com/";
+                     if (name === "SahyadriHospitals") {
+                           apppath = "http://shl.myemrhub.com/";
                            //apppath = "http://123.63.35.226:8196/APP";
                             //apppath = "https://shpl.sahyadrihospitals.com/APP/";
-                             apppath = "https://hdpuat.sahyadrihospitals.com/uat2/";
+                            // apppath = "https://hdpuat.sahyadrihospitals.com/uat2/";
                           //   apppath = "https://hms.baghospital.com:8443/APP2/";
                              apppage = "sahyadri_index.html";
                             localStorage.appname = "shl";
-                        } else if (name === "SDRC My Health") {
-                           //apppath = "http://shl.myemrhub.com/";
-                           apppath = "http://120.138.8.111:8080/sdrcapp/";
-                           apppage = "sdrc_index.html";
-                            localStorage.appname = "sdrc";
-                        }else if (name === "Bhailal Amin General Hospital") {
-                            //apppath = "https://hms.baghospital.com:8443/APP1/";
-                             apppath = "https://hms.baghospital.com:8443/APP11/";
-                           apppage = "bagh_index.html";
-                           localStorage.appname = "bagh";
                         }
                         else {
                             alert("No app with name " + name);
