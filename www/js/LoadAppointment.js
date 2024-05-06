@@ -52,7 +52,7 @@ localStorage.pageNo = "1" ;
 //        showAppoitment1(payDoc,flg,speid);
 //        localStorage.payBack = "0";
 //    }
-
+   $('#mydiv').show();
    var path = localStorage.ipadrs;
     var formid = localStorage.webformid;
     var locid = localStorage.locid;
