@@ -67,7 +67,7 @@
     <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-device.git" source="git" />
     <plugin name="cordova-plugin-device-motion" spec="https://github.com/apache/cordova-plugin-device-motion.git" source="git" />
     <!-- <plugin name="cordova-plugin-device-orientation" spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" /> -->
-    <plugin name="cordova-plugin-device-orientation" spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" />
+    <!-- <plugin name="cordova-plugin-device-orientation" spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" /> -->
     <plugin name="cordova-plugin-dialogs" spec="https://github.com/apache/cordova-plugin-dialogs.git" source="git" />
     <plugin name="cordova-plugin-splashscreen" spec="https://github.com/apache/cordova-plugin-splashscreen.git" source="git" />
     <plugin name="cordova-plugin-network-information" spec="https://github.com/apache/cordova-plugin-network-information.git" source="git" />
@@ -102,67 +102,67 @@
         <preference name="AndroidInsecureFileModeEnabled" value="true" />
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
 
-            <activity android:hardwareAccelerated="true" />
-            <service android:exported="true"/>
-            <receiver android:exported="true"/>
-            <application android:usesCleartextTraffic="true" />
-        </edit-config>
-        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-            <application android:networkSecurityConfig="@xml/network_security_config" />
-            <application android:usesCleartextTraffic="true" />
-            <application android:requestLegacyExternalStorage="true" />
-        </edit-config>
-        <platform name="android">
-            <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/activity">
-                <uses-permission android:name="android.permission.CAMERA" />
-                <uses-feature android:name="android.hardware.camera" android:required="true" />
-                <uses-feature android:name="android.hardware.camera.autofocus" />
-                <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-            </edit-config>
-        </platform>
-        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-            <application android:usesCleartextTraffic="true"/>
-        </edit-config>
-        <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
-            <string>need to photo library access to get pictures from there</string>
-        </edit-config>
-        <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
-        <icon src="resources/baghicons/android/icon.png" />
-        <splash src="resources/baghsplash/android/272by482.png" density="ldpi" />
-        <splash src="resources/baghsplash/android/362by642.png" density="mdpi" />
-        <splash src="resources/baghsplash/android/542by962.png" density="hdpi" />
-        <splash src="resources/baghsplash/android/722by1282.png" density="xhdpi" />
-        <feature name="InAppBrowser">
-            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
-        </feature>
-        <feature name="Camera">
-            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
-        </feature>
+             <activity android:hardwareAccelerated="true" />
+             <service android:exported="true"/>
+             <receiver android:exported="true"/>
+             <application android:usesCleartextTraffic="true" />
+         </edit-config>
+         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+             <application android:networkSecurityConfig="@xml/network_security_config" />
+             <application android:usesCleartextTraffic="true" />
+             <application android:requestLegacyExternalStorage="true" />
+         </edit-config>
+         <platform name="android">
+             <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/activity">
+                 <uses-permission android:name="android.permission.CAMERA" />
+                 <uses-feature android:name="android.hardware.camera" android:required="true" />
+                 <uses-feature android:name="android.hardware.camera.autofocus" />
+                 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+             </edit-config>
+         </platform>
+         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+             <application android:usesCleartextTraffic="true"/>
+         </edit-config>
+         <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+             <string>need to photo library access to get pictures from there</string>
+         </edit-config>
+         <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
+         <icon src="resources/baghicons/android/icon.png" />
+         <splash src="resources/baghsplash/android/272by482.png" density="ldpi" />
+         <splash src="resources/baghsplash/android/362by642.png" density="mdpi" />
+         <splash src="resources/baghsplash/android/542by962.png" density="hdpi" />
+         <splash src="resources/baghsplash/android/722by1282.png" density="xhdpi" />
+         <feature name="InAppBrowser">
+             <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+         </feature>
+         <feature name="Camera">
+             <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+         </feature>
 
-    </platform>
-    <access origin="*"/>
-    <access origin="content:///*" />
-    <access uri="*" subdomains="true" />
-    <access launch-external="yes" origin="whatsapp://*" />
-    <access origin="tel:*" launch-external="yes" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-navigation href="http://*/*" />
-    <allow-navigation href="https://*/*" />
-    <allow-navigation href="data:*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-    <allow-navigation href="*"/>
-    <platform name="android">
-        <allow-intent href="whatsapp:*" />
-        <allow-intent href="market:*" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
-    <preference name="android-build-tool" value="gradle" />
-    <engine name="android"/>
-</widget>
+     </platform>
+     <access origin="*"/>
+     <access origin="content:///*" />
+     <access uri="*" subdomains="true" />
+     <access launch-external="yes" origin="whatsapp://*" />
+     <access origin="tel:*" launch-external="yes" />
+     <allow-intent href="http://*/*" />
+     <allow-intent href="https://*/*" />
+     <allow-navigation href="http://*/*" />
+     <allow-navigation href="https://*/*" />
+     <allow-navigation href="data:*" />
+     <allow-intent href="tel:*" />
+     <allow-intent href="sms:*" />
+     <allow-intent href="mailto:*" />
+     <allow-intent href="geo:*" />
+     <allow-navigation href="*"/>
+     <platform name="android">
+         <allow-intent href="whatsapp:*" />
+         <allow-intent href="market:*" />
+     </platform>
+     <platform name="ios">
+         <allow-intent href="itms:*" />
+         <allow-intent href="itms-apps:*" />
+     </platform>
+     <preference name="android-build-tool" value="gradle" />
+     <engine name="android"/>
+ </widget>
