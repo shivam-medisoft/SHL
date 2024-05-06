@@ -13,7 +13,6 @@ $(document).ready(function () {
 //     $('#mydiv .imgnload').css("margin-top",parseInt(asgnmrgn)+-50+"px");
 //}catch(err){}
     debugger;
-    $('#mydiv').show();
     var ipads = localStorage.ipadrs;
     var formid = localStorage.currentformid;
     var locid = localStorage.locid;

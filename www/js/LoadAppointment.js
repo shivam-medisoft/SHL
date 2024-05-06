@@ -52,10 +52,7 @@ localStorage.pageNo = "1" ;
 //        showAppoitment1(payDoc,flg,speid);
 //        localStorage.payBack = "0";
 //    }
-   $('#mydiv').addClass('ldrFrDrillPg');
-   $('.displayformbody').addClass('displayformbodyldrFrDrillPg');
-   $('.displayformbodyldrFrDrillPg').show();
-   $('.ldrFrDrillPg').css('cssText','z-index: 99999999;display:block')
+   $('#mydiv').show();
    var path = localStorage.ipadrs;
     var formid = localStorage.webformid;
     var locid = localStorage.locid;
