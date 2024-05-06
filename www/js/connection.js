@@ -100,7 +100,9 @@ function fillViews(forms, displaytypes) {
     var url = localStorage.appurl + '/admin/LoginFrameWorkScreen.jsp';
     $.post(url,{forms:forms,displaytypes:displaytypes,appName:appName}, function (data) {
         debugger;
+        $('#data').hide();
         $('#data').html(data);
+        setTimeout($('#data').show(), 350);
         if (localStorage.appname === "fernandez") {
             debugger;
             $('.lblsptalnm').html("Fernandez Healthcare");
