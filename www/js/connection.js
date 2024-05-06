@@ -102,7 +102,7 @@ function fillViews(forms, displaytypes) {
         debugger;
         $('#data').hide();
         $('#data').html(data);
-        setTimeout($('#data').show(), 350);
+        setTimeout($('#data').show(), 500);
         if (localStorage.appname === "fernandez") {
             debugger;
             $('.lblsptalnm').html("Fernandez Healthcare");
