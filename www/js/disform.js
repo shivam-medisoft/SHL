@@ -21,7 +21,8 @@ $(document).ready(function () {
             $('#mydiv').hide();
         });
     } catch (err) {
-        $('#mydiv').hide();
+        // $('#mydiv').hide();
+        $('#mydiv').show();
        // alert(err);
     }
 });
