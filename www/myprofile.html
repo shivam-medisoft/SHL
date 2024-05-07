@@ -10,8 +10,8 @@ and open the template in the editor.
         <title>My Profile</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
-        <script  type="text/javascript"  src="js/jquery-1.9.1.js"></script>   
-        <script  type="text/javascript" src="js/jquery-ui.js"></script> 
+        <script  type="text/javascript"  src="js/jquery-1.9.1.js"></script>
+        <script  type="text/javascript" src="js/jquery-ui.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -70,7 +70,7 @@ and open the template in the editor.
         </style>
         <script>
             $(document).ready(function (){
-                
+
                     try{
                         if (localStorage.appname === 'fernandez'){
                             debugger;
@@ -81,7 +81,7 @@ and open the template in the editor.
                     $('.commonloadimg').css('display','none');
                       $('.ucloadimg').css('display','inline-block');
                 } else if (localStorage.appname === 'shl'){
-                            debugger;
+                             $('.herad').css('display', 'none');
                 }else if (localStorage.appname === 'sdrc'){
                             debugger;
                              $('.commonloadimg').css('display','none');
@@ -96,7 +96,7 @@ and open the template in the editor.
                 else{
                      $('.herad').css('background','#367fa9');
                 }}catch(err){}
-            });   
+            });
         </script>
     </head>
     <body style="" onclick="rightclick();">
@@ -109,8 +109,8 @@ and open the template in the editor.
                 <div class="body-containt">
                     <div class="row" style='margin: 0px;'>
                         <div class="col-md-12" style="padding: 0px">
-                            <div id="displayforms"> 
-                                
+                            <div id="displayforms">
+
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@ and open the template in the editor.
              <button type="button" class="back_01" onclick="location.href='appintronew.html';" style="display:inline-block;">
                     <span class="fa fa-hospital-o iconlft"></span>
                 </button>
-        <span onclick="closebutton();" style="" class="glyphicon glyphicon-home glarrow"></span>
+        <span onclick="closebutton();" style="display:none;" class="glyphicon glyphicon-home glarrow"></span>
         </footer>
 
     </body>
