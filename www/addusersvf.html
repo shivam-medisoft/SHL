@@ -58,6 +58,7 @@ and open the template in the editor.
                     $('.toggle').hide();
                     event.stopPropagation();
                     event.preventDefault();
+                    sessionStorage.isdelete="1";
                     delUserFrmNotDevLst(mrno,k);
                   //  deleterecord(mrno,k);
 
@@ -554,8 +555,10 @@ for(var k=0;k<dbIn.length;k++){
 //                }
                 }
                 $('.container-fluid').html(str);
-                if(len==1){
+                if(len==1 && sessionStorage.isdelete=="1"){
+                    sessionStorage.isdelete="0";
                     $('.row.mainrow').click();
+
                 }
                 if (localStorage.appname === 'mah') {
                     $('.lblhospitalname').html("Maharaja Agrasen Hospital")
