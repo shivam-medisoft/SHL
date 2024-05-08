@@ -554,6 +554,9 @@ for(var k=0;k<dbIn.length;k++){
 //                }
                 }
                 $('.container-fluid').html(str);
+                if(len==1){
+                    $('.row.mainrow').click();
+                }
                 if (localStorage.appname === 'mah') {
                     $('.lblhospitalname').html("Maharaja Agrasen Hospital")
                 } else if (localStorage.appname === 'fernandez') {
@@ -1062,7 +1065,9 @@ margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
             }
             function loginnew(url,username,pwd,type,adduser,logintype,webformid){
                 debugger;
+                try{
                  event.stopPropagation();
+                 }catch(error){}
                     localStorage.patmrno = username;
                  localStorage.patname = type;
                     localStorage.isNewLogin= adduser;
