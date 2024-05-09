@@ -61,7 +61,11 @@ var appName = localStorage.appname;
         
     }
     try{
+    if(sessionStorage.billdata=="1"){
+        loaddata_new();
+    }else{
         loaddata();
+    }
     }
     catch(ee){
        // document.getElementById("mydiv").style.display="none";
