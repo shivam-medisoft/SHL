@@ -76,6 +76,9 @@ var appName = localStorage.appname;
             document.getElementById("tolabel").style.display="none";
             document.getElementById("settbutton").style.display="none";
             document.getElementById("btnRefresh").style.display="none";
+            if (localStorage.formname=="my reports"){
+                $('#mydiv').hide();
+            }
         }
       //  else{
         try{
