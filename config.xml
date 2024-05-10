@@ -169,38 +169,44 @@
         <splash src="resources/splash/ios/2732by2732.png"  width="2732" height="2732" />
         <splash src="resources/splash/ios/2732by2732.png" width="2732" height="2732" />
         <!--ios spalsh end-->
-        <icon src="resources/icons/ios/icon-60@3x.png"   width="180" height="180" />
-        <!-- iPhone / iPod Touch  -->
-        <!--        <icon src="resources/icons/ios/icon-60@3x.png"  width="180" height="180" />-->
-        <!-- iPhone / iPod Touch  -->
-        <icon src="resources/icons/ios/icon-60.png"  width="60" height="60" />
-        <icon src="resources/icons/ios/icon-60@2x.png"  width="120" height="120" />
-        <!-- iPad -->
-        <icon src="resources/icons/ios/icon-76.png"   width="76" height="76" />
-        <icon src="resources/icons/ios/icon-76@2x.png"  width="152" height="152" />
-        <!-- Settings Icon -->
-        <icon src="resources/icons/ios/icon-small.png"  width="29" height="29" />
-        <icon src="resources/icons/ios/icon-small@2x.png"  width="58" height="58" />
-        <!-- Spotlight Icon -->
-        <icon src="resources/icons/ios/icon-40.png"   width="40" height="40" />
-        <icon src="resources/icons/ios/icon-40@2x.png"  width="80" height="80" />
-        <icon src="resources/icons/ios/icon-Small-40@3x.png"   width="120" height="120" />
-        <icon src="resources/icons/ios/icon.png" width="57" height="57" />
-        <icon src="resources/icons/ios/icon@2x.png"   width="114" height="114" />
-        <!-- iPad -->
-        <icon src="resources/icons/ios/icon-72.png"  width="72" height="72" />
-        <icon src="resources/icons/ios/icon-57.png"  width="57" height="57" />
-        <icon src="resources/icons/ios/icon-72@2x.png" width="144" height="144" />
-        <!-- iPhone Spotlight and Settings Icon -->
-        <icon src="resources/icons/ios/icon-small.png"  width="29" height="29" />
-        <icon src="resources/icons/ios/icon-small@2x.png"  width="58" height="58" />
-        <icon src="resources/icons/ios/icon-Small@3x.png"   width="87" height="87" />
-        <!-- iPad Spotlight and Settings Icon -->
-        <icon src="resources/icons/ios/50by50.png"  width="50" height="50" />
-        <icon src="resources/icons/ios/100by100.png"  width="100" height="100" />
-        <icon src="resources/icons/ios/1024by1024.png"   width="1024" height="1024" />
 
-        <icon src="resources/icons/ios/icon-83.5@2x.png"   width="167" height="167" />
+
+
+<!--        <icon src="resources/icons/ios/icon-60@3x.png"   width="180" height="180" />-->
+<!--        &lt;!&ndash; iPhone / iPod Touch  &ndash;&gt;-->
+<!--        &lt;!&ndash;        <icon src="resources/icons/ios/icon-60@3x.png"  width="180" height="180" />&ndash;&gt;-->
+<!--        &lt;!&ndash; iPhone / iPod Touch  &ndash;&gt;-->
+<!--        <icon src="resources/icons/ios/icon-60.png"  width="60" height="60" />-->
+<!--        <icon src="resources/icons/ios/icon-60@2x.png"  width="120" height="120" />-->
+<!--        &lt;!&ndash; iPad &ndash;&gt;-->
+<!--        <icon src="resources/icons/ios/icon-76.png"   width="76" height="76" />-->
+<!--        <icon src="resources/icons/ios/icon-76@2x.png"  width="152" height="152" />-->
+<!--        &lt;!&ndash; Settings Icon &ndash;&gt;-->
+<!--        <icon src="resources/icons/ios/icon-small.png"  width="29" height="29" />-->
+<!--        <icon src="resources/icons/ios/icon-small@2x.png"  width="58" height="58" />-->
+<!--        &lt;!&ndash; Spotlight Icon &ndash;&gt;-->
+<!--        <icon src="resources/icons/ios/icon-40.png"   width="40" height="40" />-->
+<!--        <icon src="resources/icons/ios/icon-40@2x.png"  width="80" height="80" />-->
+<!--        <icon src="resources/icons/ios/icon-Small-40@3x.png"   width="120" height="120" />-->
+<!--        <icon src="resources/icons/ios/icon.png" width="57" height="57" />-->
+<!--        <icon src="resources/icons/ios/icon@2x.png"   width="114" height="114" />-->
+<!--        &lt;!&ndash; iPad &ndash;&gt;-->
+<!--        <icon src="resources/icons/ios/icon-72.png"  width="72" height="72" />-->
+<!--        <icon src="resources/icons/ios/icon-57.png"  width="57" height="57" />-->
+<!--        <icon src="resources/icons/ios/icon-72@2x.png" width="144" height="144" />-->
+<!--        &lt;!&ndash; iPhone Spotlight and Settings Icon &ndash;&gt;-->
+<!--        <icon src="resources/icons/ios/icon-small.png"  width="29" height="29" />-->
+<!--        <icon src="resources/icons/ios/icon-small@2x.png"  width="58" height="58" />-->
+<!--        <icon src="resources/icons/ios/icon-Small@3x.png"   width="87" height="87" />-->
+<!--        &lt;!&ndash; iPad Spotlight and Settings Icon &ndash;&gt;-->
+<!--        <icon src="resources/icons/ios/50by50.png"  width="50" height="50" />-->
+<!--        <icon src="resources/icons/ios/100by100.png"  width="100" height="100" />-->
+<!--        <icon src="resources/icons/ios/1024by1024.png"   width="1024" height="1024" />-->
+
+<!--        <icon src="resources/icons/ios/icon-83.5@2x.png"   width="167" height="167" />-->
+
+
+        -->
 
     </platform>
 
