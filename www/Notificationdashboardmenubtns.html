@@ -233,41 +233,14 @@ margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
                     }
                 }catch(err){}
                     try{
-                        if (localStorage.appname === 'fernandez'){
-                            debugger;
-                    $('.main-header').css('background','#aa1014');
-                    $('.footer').css('background','rgba(255,255,255,.9)');
-                } else if (localStorage.appname === 'ujalacygnus'){
-                            debugger;
-                            $('.commonloadimg').css('display','none');
-                      $('.ucloadimg').css('display','inline-block');
-                    $('.main-header').css('background','#b8246e');
-                    $('.footer').css('background','#f9f9f9');
-                } else if (localStorage.appname === 'shl'){
+                        if (localStorage.appname === 'shl'){
                             debugger;
                          //   $('.footer.setfooter.nofoot').hide();
                     $('.main-header').css('background','#0094cd radial-gradient(circle, transparent 1%, #0094cd 1%) center/15000%');
                     $('.footer').css('background','#f9f9f9');
-                }else if (localStorage.appname === 'sdrc'){
-                            debugger;
-                              $('.commonloadimg').css('display','none');
-                      $('.ucloadimg').css('display','inline-block');
-                    $('.main-header').css('background','#349084');
-                    $('.footer').css('background','#f9f9f9');
-                }else if (localStorage.appname === 'bagh'){
-                            debugger;
-//                              $('.commonloadimg').css('display','none');
-//                      $('.ucloadimg').css('display','inline-block');
-                    $('.main-header').css('background','#349084');
-                    $('.footer').css('background','#f9f9f9');
                 }
-                else{
-                     $('.main-header').css('background','#367fa9');
-                    $('.footer').css('background','rgba(255,255,255,.9)');
-                }
-//            var htldo = window.innerHeight;
-//                        var asgnmrgn=htldo/2;
-//                        $('#mydiv .imgnload').css("margin-top",parseInt(asgnmrgn)+-50+"px");
+
+
                   }catch(err){}
             });   
             function test(){
@@ -305,7 +278,7 @@ margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
 
                     </div>
 	 
-	<footer class="footer setfooter nofoot"  style="">
+	<footer class="footer setfooter nofoot"  style="display:none">
              <button type="button" class="back_01 homeiconbtn" onclick="location.href='appintronew.html';" style="display:none;">
                     <span class="fa fa-hospital-o iconlft"></span>
                 </button>
