@@ -110,7 +110,7 @@
     <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm">
         <variable name="GOOGLE_API_KEY_FOR_ANDROID" value="{AIzaSyAYwD4_K3fGYusp8Oth3MNBJ_Okf73keq8}" />
     </plugin>
-    <icon src="resources/icons/ios/icon.png" />
+<!--    <icon src="resources/icons/ios/icon.png" />-->
     <platform name="android">
         <resource-file src="google-services.json" target="app/google-services.json" />
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application"
@@ -120,7 +120,7 @@
         </edit-config>
         <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
         <allow-intent href="market:*" />
-        <icon src="resources/icons/ios/icon.png" />
+<!--        <icon src="resources/icons/ios/icon.png" />-->
         <splash density="ldpi" src="resources/splash/android/272by482-ldpi.png" />
         <splash density="mdpi" src="resources/splash/android/362by642-mdpi.png" />
         <splash density="hdpi" src="resources/splash/android/542by962-hdpi.png" />
