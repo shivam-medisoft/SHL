@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!--https://github.com/phonegap/phonegap-start/blob/master/www/config.xml  P:Soujanya1!-->
+<!--https://github.com/phonegap/phonegap-start/blob/master/www/config.xml   -->
 <widget xmlns="http://www.w3.org/ns/widgets"
         xmlns:cdv="http://cordova.apache.org/ns/1.0"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.shivam.neosoftlite"
-        version="1.0.2"
-        android-versionCode="10002" >
-    <name>Neosoft Lite</name>
+        id="com.shivam.bagh"
+        version="1.1.0"
+        android-versionCode="10010" >
+    <name>Sahydri hospitals</name>
     <description>
-        Neosoft Lite Dashboard application
+        SHL offers comprehensive clinical services under one roof with an active Transplant Program. The hospital provides round the clock network of Emergency services , Diagnostic services, a Blood Bank facility and a Pharmacy supported by a team of expert senior clinical consultants working in a full-time capacity. The active association with over 150 clinical consultants adds a unique strength to BAGH and enables us to achieve the highest outcomes for our patients capacity.
     </description>
-    <author email="saagarbethi@gmail.com" href="http://shivammedisoft.com">
-        Shivam Research and Development Team
+    <author email="arun@shivammedisoft.com" href="https://www.baghospital.com/">
+        Shivam Medisoft Services Pvt. Ltd.
     </author>
-    <content src="app.html" />
+    <content src="app.html"/>
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
@@ -45,7 +46,9 @@
     <preference name="scheme" value="app" />
     <preference name="hostname" value="localhost" />
     <!-- Plugins -->
-
+    <feature name="http://api.phonegap.com/1.0/file" />
+    <feature name="http://api.phonegap.com/1.0/network" />
+    <feature name="http://api.phonegap.com/1.0/notification" />
     <!-- Core plugins -->
     <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1"/>
     <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1">
@@ -78,7 +81,7 @@
     <!--    for android-->
     <plugin name="cordova-plugin-badge" source="npm"  spec="0.8.8"/>
     <plugin name="cordova-plugin-phonedialer" source="npm" spec="0.3.1"/>
-    <plugin name="cordova-plugin-x-socialsharing" source="npm" spec="6.0.4"/>
+    <plugin name="cordova-plugin-x-socialsharing" source="npm" spec="6.0.3"/>
     <plugin name= "cordova-plugin-print-pdf" source="npm" spec="4.0.2"/>
     <plugin name="cordova-plugin-androidx" source="npm"/>
     <plugin name="cordova-plugin-advanced-http" source="npm" spec="3.1.0"/>
@@ -99,33 +102,50 @@
     <plugin name= "cordova-plugin-market" source="npm" spec="1.2.0"/>
     <plugin name= "cordova-plugin-nativestorage" source="npm" spec="2.3.2"/>
     <plugin name="cordova-plugin-wkwebview-file-xhr" source="npm" version="3.0.0" />
-
     <plugin name= "cordova-plugin-splashscreen" source="npm" spec="6.0.0"/>
-    <plugin name="cordova-plugin-file-transfer-latest" source="npm"  spec="2.0.2-dev" />
-
+    <plugin name= "cordova-plugin-splashscreen" source="npm" spec="6.0.0"/>
+    <plugin name="cordova-plugin-file-transfer-latest"  source="npm" spec="2.0.2-dev" />
     <plugin name="cordova-plugin-qr-barcode-scanner" source="npm"  spec="8.0.3"/>
     <plugin name= "cordova-plugin-filepicker" source="npm" spec="1.1.6"/>
 
-
     <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm">
-        <variable name="GOOGLE_API_KEY_FOR_ANDROID" value="{AIzaSyAYwD4_K3fGYusp8Oth3MNBJ_Okf73keq8}" />
+        <variable  name="GOOGLE_API_KEY_FOR_ANDROID" value="{AIzaSyCt6S91H9a6BbLZc8KLaIanmdAhAyYL2qI}"/>
     </plugin>
-<!--    <icon src="resources/icons/ios/icon.png" />-->
+    <plugin name="phonegap-plugin-push" spec="~1.10.0">
+        <variable name="SENDER_ID" value="1:226676633297:android:7950f9f9067aa91c80dff0" />
+    </plugin>
+
+    <!-- default-->
+    <icon src="resources/baghicons/android/icon.png" />
     <platform name="android">
         <resource-file src="google-services.json" target="app/google-services.json" />
-        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application"
-                     xmlns:android="http://schemas.android.com/apk/res/android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
             <application android:usesCleartextTraffic="true" />
+            <application android:requestLegacyExternalStorage="true" />
+            <application android:requestLegacyExternalStorage="@xml/storage" />
+            <!--            <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />-->
+            <!--            <application android:permission.WRITE_EXTERNAL_STORAGE="true" />-->
+            <!--            <application android:permission.READ_EXTERNAL_STORAGE="true" />-->
             <application android:networkSecurityConfig="@xml/network_security_config" />
+            <!--            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+            <!--            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+        </edit-config>
+        <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+            <string>need to photo library access to get pictures from there</string>
         </edit-config>
         <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
-        <allow-intent href="market:*" />
-<!--        <icon src="resources/icons/ios/icon.png" />-->
-        <splash density="ldpi" src="resources/splash/android/272by482-ldpi.png" />
-        <splash density="mdpi" src="resources/splash/android/362by642-mdpi.png" />
-        <splash density="hdpi" src="resources/splash/android/542by962-hdpi.png" />
-        <splash density="xhdpi" src="resources/splash/android/722by1282-xhdpi.png" />
+        <resource-file src="resources/android/xml/storage.xml" target="app/src/main/res/xml/storage.xml" />
+        <!-- <resource-file src="resources/android/xml/network_security_config.xml" target="res/xml/network_security_config.xml" />-->
+        <icon src="resources/baghicons/android/icon.png" />
+        <!--
+    android spalsh -->
+
+
+        <feature name="InAppBrowser">
+            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+        </feature>
     </platform>
+
     <platform name="ios">
         <preference name="WKWebViewOnly" value="true" />
 
@@ -141,72 +161,11 @@
         <preference name="allowFileAccessFromFileURLs" value="true" />
         <preference name="allowUniversalAccessFromFileURLs" value="true" />
 
-        <!--ios spalsh -->
-        <splash src="resources/splash/ios/320by480.png"  width="320" height="480" />
-        <splash src="resources/splash/ios/480by320.png"  width="480" height="320" />
-        <splash src="resources/splash/ios/640by960.png" width="640" height="960" />
-        <splash src="resources/splash/ios/960by640.png"  width="960" height="640" />
-        <!-- iPhone 5 / iPod Touch (5th Generation) -->
-        <splash src="resources/splash/ios/640by1136.png"  width="640" height="1136" />
-        <splash src="resources/splash/ios/1136by640.png"  width="1136" height="640" />
 
-        <splash src="resources/splash/ios/750by1334.png"  width="750" height="1334" />
-        <splash src="resources/splash/ios/1334by750.png"  width="1334" height="750" />
-        <!-- iPad -->
-        <splash src="resources/splash/ios/768by1024.png"  width="768" height="1024" />
-        <splash src="resources/splash/ios/1024by768.png"  width="1024" height="768" />
-        <splash src="resources/splash/ios/1024by1024.png"  width="1024" height="1024" />
-        <!-- Retina iPad -->
-        <splash src="resources/splash/ios/1242by2208.png"  width="1242" height="2208" />
-        <splash src="resources/splash/ios/2208by1242.png"  width="2208" height="1242" />
-
-        <splash src="resources/splash/ios/1536by2048.png"  width="1536" height="2048" />
-        <splash src="resources/splash/ios/2048by1536.png"  width="2048" height="1536" />
-        <splash src="resources/splash/ios/1242by2688.png"  width="1242" height="2688" />
-        <splash src="resources/splash/ios/2688by1242.png"  width="2688" height="1242" />
-        <splash src="resources/splash/ios/1125by2436.png"  width="1125" height="2436" />
-        <splash src="resources/splash/ios/2436by1125.png"  width="2436" height="1125" />
-        <splash src="resources/splash/ios/2732by2732.png"  width="2732" height="2732" />
-        <splash src="resources/splash/ios/2732by2732.png" width="2732" height="2732" />
-        <!--ios spalsh end-->
+        <!--     iPhone 5 / iPod Touch (5th Generation) -->
 
 
 
-<!--        <icon src="resources/icons/ios/icon-60@3x.png"   width="180" height="180" />-->
-<!--        &lt;!&ndash; iPhone / iPod Touch  &ndash;&gt;-->
-<!--        &lt;!&ndash;        <icon src="resources/icons/ios/icon-60@3x.png"  width="180" height="180" />&ndash;&gt;-->
-<!--        &lt;!&ndash; iPhone / iPod Touch  &ndash;&gt;-->
-<!--        <icon src="resources/icons/ios/icon-60.png"  width="60" height="60" />-->
-<!--        <icon src="resources/icons/ios/icon-60@2x.png"  width="120" height="120" />-->
-<!--        &lt;!&ndash; iPad &ndash;&gt;-->
-<!--        <icon src="resources/icons/ios/icon-76.png"   width="76" height="76" />-->
-<!--        <icon src="resources/icons/ios/icon-76@2x.png"  width="152" height="152" />-->
-<!--        &lt;!&ndash; Settings Icon &ndash;&gt;-->
-<!--        <icon src="resources/icons/ios/icon-small.png"  width="29" height="29" />-->
-<!--        <icon src="resources/icons/ios/icon-small@2x.png"  width="58" height="58" />-->
-<!--        &lt;!&ndash; Spotlight Icon &ndash;&gt;-->
-<!--        <icon src="resources/icons/ios/icon-40.png"   width="40" height="40" />-->
-<!--        <icon src="resources/icons/ios/icon-40@2x.png"  width="80" height="80" />-->
-<!--        <icon src="resources/icons/ios/icon-Small-40@3x.png"   width="120" height="120" />-->
-<!--        <icon src="resources/icons/ios/icon.png" width="57" height="57" />-->
-<!--        <icon src="resources/icons/ios/icon@2x.png"   width="114" height="114" />-->
-<!--        &lt;!&ndash; iPad &ndash;&gt;-->
-<!--        <icon src="resources/icons/ios/icon-72.png"  width="72" height="72" />-->
-<!--        <icon src="resources/icons/ios/icon-57.png"  width="57" height="57" />-->
-<!--        <icon src="resources/icons/ios/icon-72@2x.png" width="144" height="144" />-->
-<!--        &lt;!&ndash; iPhone Spotlight and Settings Icon &ndash;&gt;-->
-<!--        <icon src="resources/icons/ios/icon-small.png"  width="29" height="29" />-->
-<!--        <icon src="resources/icons/ios/icon-small@2x.png"  width="58" height="58" />-->
-<!--        <icon src="resources/icons/ios/icon-Small@3x.png"   width="87" height="87" />-->
-<!--        &lt;!&ndash; iPad Spotlight and Settings Icon &ndash;&gt;-->
-<!--        <icon src="resources/icons/ios/50by50.png"  width="50" height="50" />-->
-<!--        <icon src="resources/icons/ios/100by100.png"  width="100" height="100" />-->
-<!--        <icon src="resources/icons/ios/1024by1024.png"   width="1024" height="1024" />-->
-
-<!--        <icon src="resources/icons/ios/icon-83.5@2x.png"   width="167" height="167" />-->
-
-
-        -->
 
     </platform>
 
@@ -233,10 +192,9 @@
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
-        <access origin="*" />
-        <allow-intent href="*" />
+        <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
     <preference name="android-build-tool" value="gradle" />
-    <engine name="ios" />
+    <engine name="ios"/>
 </widget>

@@ -1,17 +1,16 @@
 {
-  "name": "Neosoft Lite",
-  "version": "1.0.2",
-  "main": "index.html",
-  "description": "Shivam HIS",
+  "name": "Sayhadri hospitals",
+  "version": "1.1.0",
+  "homepage": "app.html",
+  "description": "SHL Patient App",
   "dependencies": {
-    "cordova-ios": "^6.2.0"
+    "cordova-ios": "^1.1.0"
   },
-
   "devDependencies": {},
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shivam-medisoft/ShivamDashboard.git"
+    "url": "git+https://github.com/shivam-medisoft/shl.git"
   },
   "keywords": [
     "crm"
@@ -19,13 +18,17 @@
   "author": "Shivam",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shivam-medisoft/ShivamDashboard/issues"
+    "url": "https://github.com/shivam-medisoft/shl/issues"
   },
-  "homepage": "https://github.com/shivam-medisoft/ShivamDashboard#readme",
+  "homepage": "https://github.com/shivam-medisoft/shl#readme",
   "cordova": {
     "platforms": [
       "ios"
-    ]
-  }
+    ],
+    "plugins":{
+      "cordova-plugin-networkinterfaces": {},
+      "cordova-plugin-android-permissions": {}
+    }
 
+  }
 }
