@@ -2,12 +2,11 @@
 <!--https://github.com/phonegap/phonegap-start/blob/master/www/config.xml  P:Shivam123-->
 <widget xmlns="http://www.w3.org/ns/widgets"
         xmlns:cdv="http://cordova.apache.org/ns/1.0"
-        xmlns:gap   = "http://phonegap.com/ns/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="com.shivam.sah"
         version="1.0.24"
         android-versionCode="10010" >
-    <name>Sayhadri hospitals</name>
+    <name>SahyadriHospitals</name>
     <description>
         SHL offers comprehensive clinical services under one roof with an active Transplant Program. The hospital provides round the clock network of Emergency services , Diagnostic services, a Blood Bank facility and a Pharmacy supported by a team of expert senior clinical consultants working in a full-time capacity. The active association with over 150 clinical consultants adds a unique strength to BAGH and enables us to achieve the highest outcomes for our patients capacity.
     </description>
@@ -46,9 +45,6 @@
     <preference name="scheme" value="app" />
     <preference name="hostname" value="localhost" />
     <!-- Plugins -->
-    <feature name="http://api.phonegap.com/1.0/file" />
-    <feature name="http://api.phonegap.com/1.0/network" />
-    <feature name="http://api.phonegap.com/1.0/notification" />
     <!-- Core plugins -->
     <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1"/>
     <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1">
@@ -108,12 +104,6 @@
     <plugin name="cordova-plugin-qr-barcode-scanner" source="npm"  spec="8.0.3"/>
     <plugin name= "cordova-plugin-filepicker" source="npm" spec="1.1.6"/>
 
-    <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm">
-        <variable  name="GOOGLE_API_KEY_FOR_ANDROID" value="{AIzaSyCt6S91H9a6BbLZc8KLaIanmdAhAyYL2qI}"/>
-    </plugin>
-    <plugin name="phonegap-plugin-push" spec="~1.10.0">
-        <variable name="SENDER_ID" value="1:226676633297:android:7950f9f9067aa91c80dff0" />
-    </plugin>
 
     <!-- default-->
 <!--    <icon src="resources/baghicons/android/icon.png" />-->
