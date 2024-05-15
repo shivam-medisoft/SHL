@@ -4,12 +4,12 @@
         xmlns:cdv="http://cordova.apache.org/ns/1.0"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.shivam.bagh"
+        id="com.shivam.shl"
         version="1.1.0"
         android-versionCode="10010" >
     <name>Sahydri hospitals</name>
     <description>
-        SHL offers comprehensive clinical services under one roof with an active Transplant Program. The hospital provides round the clock network of Emergency services , Diagnostic services, a Blood Bank facility and a Pharmacy supported by a team of expert senior clinical consultants working in a full-time capacity. The active association with over 150 clinical consultants adds a unique strength to BAGH and enables us to achieve the highest outcomes for our patients capacity.
+        SHL offers comprehensive clinical services under one roof with an active Transplant Program. The hospital provides round the clock network of Emergency services , Diagnostic services, a Blood Bank facility and a Pharmacy supported by a team of expert senior clinical consultants working in a full-time capacity. The active association with over 150 clinical consultants adds a unique strength to shl and enables us to achieve the highest outcomes for our patients capacity.
     </description>
     <author email="arun@shivammedisoft.com" href="https://www.baghospital.com/">
         Shivam Medisoft Services Pvt. Ltd.
@@ -116,7 +116,7 @@
     </plugin>
 
     <!-- default-->
-    <icon src="resources/baghicons/android/icon.png" />
+
     <platform name="android">
         <resource-file src="google-services.json" target="app/google-services.json" />
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
@@ -136,7 +136,7 @@
         <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
         <resource-file src="resources/android/xml/storage.xml" target="app/src/main/res/xml/storage.xml" />
         <!-- <resource-file src="resources/android/xml/network_security_config.xml" target="res/xml/network_security_config.xml" />-->
-        <icon src="resources/baghicons/android/icon.png" />
+
         <!--
     android spalsh -->
 
