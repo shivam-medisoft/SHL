@@ -106,7 +106,7 @@
 
 
     <!-- default-->
-    <!--    <icon src="resources/baghicons/android/icon.png" />-->
+        <icon src="resources/baghicons/android/icon.png" />
     <platform name="android">
         <resource-file src="google-services.json" target="app/google-services.json" />
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
@@ -125,6 +125,12 @@
         </edit-config>
         <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
         <resource-file src="resources/android/xml/storage.xml" target="app/src/main/res/xml/storage.xml" />
+        <icon src="resources/baghicons/android/icon.png" width="180" height="180" />
+
+        <icon src="resources/baghicons/android/icon.png" density="ldpi"/>
+        <icon src="resources/baghicons/android/icon.png" density="mdpi"/>
+        <icon src="resources/baghicons/android/icon.png" density="hdpi"/>
+        <icon src="resources/baghicons/android/icon.png" density="xhdpi"/>
         <!-- <resource-file src="resources/android/xml/network_security_config.xml" target="res/xml/network_security_config.xml" />-->
         <!--        <icon src="resources/baghicons/android/icon.png" />-->
         <!--
@@ -154,6 +160,12 @@
         <preference name="allowFileAccessFromFileURLs" value="true" />
         <preference name="allowUniversalAccessFromFileURLs" value="true" />
         <icon src="resources/baghicons/android/icon.png" width="180" height="180" />
+
+        <icon src="resources/baghicons/android/icon.png" density="ldpi"/>
+        <icon src="resources/baghicons/android/icon.png" density="mdpi"/>
+        <icon src="resources/baghicons/android/icon.png" density="hdpi"/>
+        <icon src="resources/baghicons/android/icon.png" density="xhdpi"/>
+<!--        <icon src="resources/baghicons/android/icon.png" width="180" height="180" />-->
         <!--        <splash src="resources/baghsplash/ios/320by480.png" width="320" height="480" />-->
         <!--        <splash src="resources/baghsplash/ios/480by320.png" width="480" height="320" />-->
         <!--        <splash src="resources/baghsplash/ios/640by960.png" width="640" height="960" />-->
