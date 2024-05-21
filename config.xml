@@ -153,7 +153,7 @@
 
         <preference name="allowFileAccessFromFileURLs" value="true" />
         <preference name="allowUniversalAccessFromFileURLs" value="true" />
-
+        <icon src="resources/baghicons/android/icon.png" />
         <!--        <splash src="resources/baghsplash/ios/320by480.png" width="320" height="480" />-->
         <!--        <splash src="resources/baghsplash/ios/480by320.png" width="480" height="320" />-->
         <!--        <splash src="resources/baghsplash/ios/640by960.png" width="640" height="960" />-->
