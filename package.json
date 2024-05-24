@@ -2,9 +2,9 @@
   "name": "SahyadriHospitals",
   "version": "1.0.24",
   "homepage": "app.html",
-  "description": "BAGH Patient App",
+  "description": "SHL Patient App",
   "dependencies": {
-    "cordova-ios": "^6.2.0"
+    "cordova-android": "^10.1.2"
   },
   "devDependencies": {},
   "scripts": {},
@@ -23,11 +23,13 @@
   "homepage": "https://github.com/shivam-medisoft/SHL#readme",
   "cordova": {
     "platforms": [
-      "ios"
+      "android"
     ],
     "plugins":{
       "cordova-plugin-networkinterfaces": {},
-      "cordova-plugin-android-permissions": {}
+      "cordova-plugin-android-permissions": {},
+      "cordova-plugin-android-device-information":{},
+      "cordova-plugin-camera" : {}
     }
 
   }
