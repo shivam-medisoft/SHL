@@ -107,7 +107,7 @@
 
 
     <!-- default-->
-    <icon src="resources/baghicons/android/icon.png" />
+        <icon src="resources/baghicons/android/icon.png" />
     <platform name="android">
         <resource-file src="google-services.json" target="app/google-services.json" />
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
@@ -160,67 +160,36 @@
 
         <preference name="allowFileAccessFromFileURLs" value="true" />
         <preference name="allowUniversalAccessFromFileURLs" value="true" />
-        <icon src="resources/baghicons/android/icon.png" width="180" height="180" />
 
-        <icon src="resources/baghicons/android/icon.png" density="ldpi"/>
-        <icon src="resources/baghicons/android/icon.png" density="mdpi"/>
-        <icon src="resources/baghicons/android/icon.png" density="hdpi"/>
-        <icon src="resources/baghicons/android/icon.png" density="xhdpi"/>
-        <!--        <icon src="resources/baghicons/android/icon.png" width="180" height="180" />-->
-        <!--        <splash src="resources/baghsplash/ios/320by480.png" width="320" height="480" />-->
-        <!--        <splash src="resources/baghsplash/ios/480by320.png" width="480" height="320" />-->
-        <!--        <splash src="resources/baghsplash/ios/640by960.png" width="640" height="960" />-->
-        <!--        <splash src="resources/baghsplash/ios/960by640.png" width="960" height="640" />-->
-        <!--        &lt;!&ndash;     iPhone 5 / iPod Touch (5th Generation) &ndash;&gt;-->
-        <!--        <splash src="resources/baghsplash/ios/640by1136.png" width="640" height="1136" />-->
-        <!--        <splash src="resources/baghsplash/ios/1136by640.png" width="1136" height="640" />-->
 
-        <!--        <splash src="resources/baghsplash/ios/750by1334.png" width="750" height="1334" />-->
-        <!--        <splash src="resources/baghsplash/ios/1334by750.png" width="1334" height="750" />-->
-        <!--        &lt;!&ndash;     iPad &ndash;&gt;-->
-        <!--        <splash src="resources/baghsplash/ios/768by1024.png" width="768" height="1024" />-->
-        <!--        <splash src="resources/baghsplash/ios/1024by768.png" width="1024" height="768" />-->
-        <!--        <splash src="resources/baghsplash/ios/1024by1024.png" width="1024" height="1024" />-->
-        <!--        &lt;!&ndash;     Retina iPad &ndash;&gt;-->
-        <!--        <splash src="resources/baghsplash/ios/1242by2208.png" width="1242" height="2208" />-->
-        <!--        <splash src="resources/baghsplash/ios/2208by1242.png" width="2208" height="1242" />-->
 
-        <!--        <splash src="resources/baghsplash/ios/1536by2048.png" width="1536" height="2048" />-->
-        <!--        <splash src="resources/baghsplash/ios/2048by1536.png" width="2048" height="1536" />-->
+        <icon src="resources/baghicons/ios/shl 180.png" width="180" height="180" />
+        <!-- iPhone / iPod Touch  -->
+<!--        <icon src="resources/baghicons/ios/Icon-App-60x60@3x.png" width="180" height="180" />-->
+        <!-- iPhone / iPod Touch  -->
+        <icon src="resources/baghicons/ios/shl 60.png" width="60" height="60" />
+        <icon src="resources/baghicons/ios/shl 120.png" width="120" height="120" />
+        <!-- iPad -->
+        <icon src="resources/baghicons/ios/shl 76.png"  width="76" height="76" />
+        <icon src="resources/baghicons/ios/shl 152.png" width="152" height="152" />
+        <!-- Settings Icon -->
+        <icon src="resources/baghicons/ios/shl 29.png" width="29" height="29" />
+        <icon src="resources/baghicons/ios/shl 58.png" width="58" height="58" />
+        <!-- Spotlight Icon -->
+        <icon src="resources/baghicons/ios/shl 40.png" width="40" height="40" />
+        <icon src="resources/baghicons/ios/shl 80.png" width="80" height="80" />
+        <icon src="resources/baghicons/ios/shl 120.png" width="120" height="120" />
 
-        <!--        <splash src="resources/baghsplash/ios/1242by2688.png" width="1242" height="2688" />-->
-        <!--        <splash src="resources/baghsplash/ios/2688by1242.png" width="2688" height="1242" />-->
-        <!--        <splash src="resources/baghsplash/ios/1125by2436.png" width="1125" height="2436" />-->
-        <!--        <splash src="resources/baghsplash/ios/2436by1125.png" width="2436" height="1125" />-->
-        <!--        <splash src="resources/baghsplash/ios/2732by2732.png" width="2732" height="2732" />-->
-
-        <!--        <icon src="resources/baghicons/ios/Icon-App-60x60@3x.png" width="180" height="180" />-->
-        <!--        &lt;!&ndash; iPhone / iPod Touch  &ndash;&gt;-->
-        <!--        <icon src="resources/baghicons/ios/Icon-App-60x60@3x.png" width="180" height="180" />-->
-        <!--        &lt;!&ndash; iPhone / iPod Touch  &ndash;&gt;-->
-        <!--        <icon src="resources/baghicons/ios/Icon-App-60x60@1x.png" width="60" height="60" />-->
-        <!--        <icon src="resources/baghicons/ios/Icon-App-60x60@2x.png" width="120" height="120" />-->
-        <!--        &lt;!&ndash; iPad &ndash;&gt;-->
-        <!--        <icon src="resources/baghicons/ios/Icon-App-76x76@1x.png"  width="76" height="76" />-->
-        <!--        <icon src="resources/baghicons/ios/Icon-App-76x76@2x.png" width="152" height="152" />-->
-        <!--        &lt;!&ndash; Settings Icon &ndash;&gt;-->
-        <!--        <icon src="resources/baghicons/ios/Icon-App-29x29@1x.png" width="29" height="29" />-->
-        <!--        <icon src="resources/baghicons/ios/Icon-App-29x29@2x.png" width="58" height="58" />-->
-        <!--        &lt;!&ndash; Spotlight Icon &ndash;&gt;-->
-        <!--        <icon src="resources/baghicons/ios/Icon-App-40x40@1x.png" width="40" height="40" />-->
-        <!--        <icon src="resources/baghicons/ios/Icon-App-40x40@2x.png" width="80" height="80" />-->
-        <!--        <icon src="resources/baghicons/ios/Icon-App-40x40@3x.png" width="120" height="120" />-->
-
-        <!--        <icon src="resources/baghicons/ios/Icon-App-83.5x83.5@2x.png"  width="167" height="167" />-->
-        <!--        <icon src="resources/baghicons/ios/57by57.png" width="57" height="57" />-->
-        <!--        <icon src="resources/baghicons/ios/114by114.png"  width="114" height="114" />-->
-        <!--        &lt;!&ndash; iPad &ndash;&gt;-->
-        <!--        <icon src="resources/baghicons/ios/72by72.png" width="72" height="72" />-->
-        <!--        <icon src="resources/baghicons/ios/87by87.png" width="87" height="87" />-->
-        <!--        &lt;!&ndash; iPad Spotlight and Settings Icon &ndash;&gt;-->
-        <!--        <icon src="resources/baghicons/ios/50by50.png" width="50" height="50" />-->
-        <!--        <icon src="resources/baghicons/ios/100by100.png" width="50" height="50" />-->
-        <!--        <icon src="resources/baghicons/ios/1024by1024.png" width="1024" height="1024" />-->
+<!--        <icon src="resources/baghicons/ios/Icon-App-83.5x83.5@2x.png"  width="167" height="167" />-->
+<!--<icon src="resources/baghicons/ios/57by57.png" width="57" height="57" />-->
+        <icon src="resources/baghicons/ios/shl 114.png"  width="114" height="114" />
+        <!-- iPad -->
+        <icon src="resources/baghicons/ios/shl 72.png" width="72" height="72" />
+        <icon src="resources/baghicons/ios/shl 87.png" width="87" height="87" />
+        <!-- iPad Spotlight and Settings Icon -->
+        <icon src="resources/baghicons/ios/shl 50.png" width="50" height="50" />
+<!--        <icon src="resources/baghicons/ios/100by100.png" width="50" height="50" />-->
+<!--        <icon src="resources/baghicons/ios/1024by1024.png" width="1024" height="1024" />-->
 
     </platform>
 
