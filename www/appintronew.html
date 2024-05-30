@@ -26,6 +26,7 @@ and open the template in the editor.
             }
             function convert(path, appname, apppath) {
                 debugger;
+                if(localStorage.newurl==undefined){
                 $.ajax({
                     url: path,
                     type: "GET",
@@ -41,6 +42,7 @@ and open the template in the editor.
                             localStorage.mahappurl = url;
                             localStorage.mah = '1';
                             localStorage.appurl = url;
+                            localStorage.newurl = url;
                             localStorage.ipadrs = url;
                         } else {
                             localStorage.mahappurl = path;
@@ -82,6 +84,9 @@ and open the template in the editor.
                 }
 
                 });
+                }else{
+                  getIntro(localStorage.appurl);
+                }
 
             }
             function getIntro(url) {
