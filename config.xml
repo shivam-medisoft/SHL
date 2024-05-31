@@ -3,7 +3,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets"
         xmlns:cdv="http://cordova.apache.org/ns/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.shivam.shl"
+        id="com.shivam.sah"
         version="1.0.24"
         android-versionCode="10010" >
     <name>Sahyadri Hospitals</name>
