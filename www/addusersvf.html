@@ -1068,7 +1068,9 @@ margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
             }
             function loginnew(url,username,pwd,type,adduser,logintype,webformid){
                 debugger;
-                sessionStorage.setItem("newloginsel", "1");
+                if(localStorage.patmrno==username){
+                  sessionStorage.setItem("newloginsel", "1");
+                }
                 sessionStorage.removeItem("profile");
                 try{
                  event.stopPropagation();
