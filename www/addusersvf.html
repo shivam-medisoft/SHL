@@ -1023,7 +1023,7 @@ margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
 <footer class="Adduserfooter">
     <div class="row">
         <div class="col-sm-12 pad">
-            <button type="button" class="back_01 fhwelcomebtn" onclick="location.href='appintronew.html';">
+            <button type="button" class="back_01 fhwelcomebtn" onclick="backtohome()">
                 <span class="fa fa-hospital-o iconlft"></span>
                 <span class="glyphicon glyphicon-home iconlft uchiconlft"></span>
             </button>
@@ -1066,6 +1066,9 @@ margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
                 debugger;
                 localStorage.adduser = '1';
                 location.href = 'connection.html';
+            }
+            function  backtohome(){
+            $('.row.mainrow')[0].click();
             }
             function loginnew(url,username,pwd,type,adduser,logintype,webformid){
                 debugger;
