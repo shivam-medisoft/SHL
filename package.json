@@ -1,6 +1,6 @@
 {
   "name": "Sahyadri Hospitals",
-  "version": "1.0.24",
+  "version": "1.0.1",
   "homepage": "app.html",
   "description": "SHL Patient App",
   "dependencies": {

@@ -4,8 +4,8 @@
         xmlns:cdv="http://cordova.apache.org/ns/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="com.shivam.sah"
-        version="1.0.24"
-        android-versionCode="100029" >
+        version="1.0.1"
+        android-versionCode="100001" >
     <name>Sahyadri Hospitals</name>
     <description>
         SHL offers comprehensive clinical services under one roof with an active Transplant Program. The hospital provides round the clock network of Emergency services , Diagnostic services, a Blood Bank facility and a Pharmacy supported by a team of expert senior clinical consultants working in a full-time capacity. The active association with over 150 clinical consultants adds a unique strength to BAGH and enables us to achieve the highest outcomes for our patients capacity.
