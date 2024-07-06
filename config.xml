@@ -172,6 +172,8 @@
         <!-- iPad -->
         <icon src="resources/baghicons/ios/shl 76.png"  width="76" height="76" />
         <icon src="resources/baghicons/ios/shl 152.png" width="152" height="152" />
+        <icon src="resources/baghicons/ios/shl 152.png" width="167" height="167" />
+        <icon src="resources/baghicons/ios/shl 152.png" width="1024" height="1024" />
         <!-- Settings Icon -->
         <icon src="resources/baghicons/ios/shl 29.png" width="29" height="29" />
         <icon src="resources/baghicons/ios/shl 58.png" width="58" height="58" />
