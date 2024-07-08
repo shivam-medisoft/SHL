@@ -191,8 +191,7 @@
         <!-- iPad Spotlight and Settings Icon -->
         <icon src="resources/baghicons/ios/shl50.png" width="50" height="50" />
 <!--        <icon src="resources/baghicons/ios/100by100.png" width="50" height="50" />-->
-        <icon src="resources/baghicons/ios/1024by1024.png" width="1024" height="1024" />
-
+<!--        <icon src="resources/baghicons/ios/1024by1024.png" width="1024" height="1024" />-->
     </platform>
 
     <access origin="content:///*" />
