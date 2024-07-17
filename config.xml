@@ -30,7 +30,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-targetSdkVersion" value="34"/>
     <preference name="android-minSdkVersion" value="19" />
-    <preference name="android-compileSdkVersion" value="34" />
+    <preference name="android-compileSdkVersion" value="33" />
     <preference name="android-installLocation" value="auto" />
     <preference name="LoadingDialog" value="Please wait, the app is loading"/>
     <preference name="AllowInlineMediaPlayback" value="true"/>
