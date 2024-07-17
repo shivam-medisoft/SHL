@@ -511,7 +511,11 @@ for(var k=0;k<dbIn.length;k++){
                             str = str + " <div class='imgiconp'><img src=" + image_url + "  class='imgform' alt=''/></div>"
                         } else {
                             str = str + "<div class='spantxtclr'>";
-                            str = str + "<span class=" + color + ">" + toReportCaseTwoWords(results.rows.item(i).patname) + "</span></div>";
+                            var pname =results.rows.item(i).patname;
+                            if(results.rows.item(i).patname==undefined || results.rows.item(i).patname.trim()==""){
+                              pname = localStorage.patname;
+                            }
+                            str = str + "<span class=" + color + ">" + toReportCaseTwoWords(pname) + "</span></div>";
                         }
                         str = str + "</div>";
                         str = str + "<div class='col-xs-8 col-sm-8 pad main-container'>";
