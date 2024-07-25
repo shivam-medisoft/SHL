@@ -26,7 +26,6 @@ and open the template in the editor.
             }
             function convert(path, appname, apppath) {
                 debugger;
-                if(localStorage.newurl==undefined){
                 $.ajax({
                     url: path,
                     type: "GET",
@@ -85,9 +84,7 @@ and open the template in the editor.
                 }
 
                 });
-                }else{
-                  getIntro(localStorage.appurl);
-                }
+
 
             }
             function getIntro(url) {
