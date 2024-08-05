@@ -49,6 +49,11 @@ and open the template in the editor.
                background-color: #f4f4f4;
                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
            }
+           .main-content {
+               text-align: center;
+               padding: 43px;
+               margin-top: 23px;
+           }
         </style>
         <script>
             document.addEventListener("deviceready",function onDeviceReady() {
@@ -74,7 +79,6 @@ and open the template in the editor.
                         localStorage.newappath = apppath;
                         localStorage.newapppage =apppage;
                         localStorage.apporginalname =name;
-                        alert("bbnhg");
                         location.href = "login.html";
                     });
                 } catch (err) {
