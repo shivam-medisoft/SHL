@@ -88,11 +88,11 @@ and open the template in the editor.
 
             window.addEventListener('load', function() {
             const loadingScreen = document.getElementById('loading-screen');
-            const appContent = document.getElementById('app-content');
+            const appContent = document.getElementById('main-content');
 
             // Hide the loading screen and show the main content
-            loadingScreen.style.display = 'block';
-            appContent.style.display = 'block';
+            loadingScreen.style.display = 'none';
+            main-content.style.display = 'block';
              });
         </script>
     </head>
@@ -101,12 +101,16 @@ and open the template in the editor.
         <img src="images/shl.gif" alt="">
     </div>
     <!-- Main App Content -->
-    <div id="app-content" style="display: block;">
-        <div class="login_page_main_container">
-            <div class="img_contnr">
-                <img class="shl_img_cntnr" src="/images/shl_img_main_contnr.svg">
+    <div id="main-content">
+        <!-- Header -->
+        <header>
+            <img src="images/shl_img_main_contnr.svg" alt="" class="header-image">
+            <h1>Welcome to My One-Page App</h1>
+            <div class="buttons">
+                <button class="btn">Button 1</button>
+                <button class="btn">Button 2</button>
             </div>
-        </div>
+        </header>
     </div>
     </body>
 </html>
