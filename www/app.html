@@ -74,7 +74,8 @@ and open the template in the editor.
                         localStorage.newappath = apppath;
                         localStorage.newapppage =apppage;
                         localStorage.apporginalname =name;
-                        location.href = "appintronew.html";
+                        location.href = "login.html";
+                     //   location.href = "appintronew.html";
                     });
                 } catch (err) {
                     //        alert(err);
@@ -96,23 +97,9 @@ and open the template in the editor.
             const appContent = document.getElementById('app-content');
 
             // Hide the loading screen and show the main content
-             setTimeout(() =>{
             loadingScreen.style.display = 'block';
             appContent.style.display = 'block';
-
-            loadAdditionalContent();
-            }, 2000);
              });
-
-            function loadAdditionalContent() {
-            fetch('additional-content.html')
-                .then(response => response.text())
-                .then(data => {
-                    const contentDiv = document.getElementById('content');
-                    contentDiv.innerHTML = data;
-                })
-                .catch(error => console.error('Error loading additional content:', error));
-        }
         </script>
     </head>
     <body>
@@ -122,12 +109,6 @@ and open the template in the editor.
     <!-- Main App Content -->
     <div id="app-content" style="display: none;">
     </div>
-    <div id="main-content">
-            <img src="images/shl_img_main_contnr.svg" alt="" class="header-image">
-            <div class="buttons">
-                <button class="btn">Button 1</button>
-                <button class="btn">Button 2</button>
-            </div>
-    </div>
+
     </body>
 </html>
