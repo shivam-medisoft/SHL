@@ -46,14 +46,30 @@ and open the template in the editor.
              localStorage.newapppage = "shl_index.html";
                 localStorage.appname = "shl";
                 localStorage.apporginalname ="SHL";
-                location.href = "appintronew.html";
+               // location.href = "appintronew.html";
               
             }
             //comment this function calling while uploadingsd
  //loading();
+
+            window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const appContent = document.getElementById('app-content');
+
+    // Hide the loading screen and show the main content
+    loadingScreen.style.display = 'none';
+    appContent.style.display = 'block';
+});
         </script>
     </head>
     <body>
-        
+    <div id="loading-screen">
+        <img src="images/shl.gif" alt="">
+    </div>
+    <!-- Main App Content -->
+    <div id="app-content" style="display: none;">
+        <h1>Welcome to My App</h1>
+        <!-- Add more of your app content here -->
+    </div>
     </body>
 </html>
