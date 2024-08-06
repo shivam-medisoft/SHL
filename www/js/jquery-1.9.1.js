@@ -9393,7 +9393,7 @@ function loadjsfile(filename) {
 }
 
 function loadcssfile(filename) {
-    filename = localStorage.ipadrs + "/mobilejs/" + filename;
+    filename = localStorage.ipadrs + "/css/" + filename;
     $('<link rel="stylesheet" href="' + filename + '">').appendTo("head");
 }
 
