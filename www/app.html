@@ -81,9 +81,12 @@ and open the template in the editor.
             const appContent = document.getElementById('app-content');
 
             // Hide the loading screen and show the main content
-               setTimeout(function() {
-            loadingScreen.style.display = 'block';
+            loadingScreen.style.display = 'none';
             appContent.style.display = 'block';
+
+             setTimeout(function() {
+                loadingScreen.style.display = 'none';
+                appContent.style.display = 'block';
                }, 4000);
              });
         </script>
