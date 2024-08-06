@@ -6,6 +6,102 @@
     <link rel="stylesheet" type="text/css" href="css/Sahyadri_login_page.css"/>
     <script  type="text/javascript"  src="js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <style>
+        #app-content {
+               width: 100%;
+               height: 100%;
+               text-align: center;
+               display: none;
+           }
+           #loading-screen img {
+               width: 100vw;
+               height: 100vh;
+           }
+           #loading-screen {
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               background-color: #fff;
+               z-index: 1000;
+           }
+           body, html {
+               margin: 0;
+               padding: 0;
+               width: 100%;
+               height: 100%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+           }
+           header {
+               text-align: center;
+               padding: 2em;
+               background-color: #f4f4f4;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+           }
+           .img_container {
+               text-align: center;
+               padding: 43px;
+               margin-top: 23px;
+           }
+           .hdng {
+               margin-left: 4%;
+               width: 92%;
+               font-size: 21px;
+               margin-top: 61px;
+               line-height: 33.5px;
+               font-family: poppins, sans-serif;
+           }
+           .hding_container {
+               text-align: center;
+               color: #2A93C7;
+           }
+           .btn_lgn_rgstr::before {
+               content: "";
+               left: 0;
+               right: 0;
+               bottom: 0;
+               background: url(images/shl_bg_img.svg);
+               position: absolute;
+               top: 45vh;
+               width: 100vw;
+               height: 61vh;
+               background-size: cover;
+               z-index: -1;
+           }
+           .btn_lgn_rgstr {
+               width: 56%;
+               display: inline-flex;
+               float: left;
+               align-items: center;
+               flex-direction: row;
+           }
+           .btn_login {
+               color: #4220AD !important;
+               background: #fff !important;
+               padding: 16px 20px !important;
+               width: 147px !important;
+               font-size: 12pt !important;
+               box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+               border-radius: 50px;
+               border: none;
+           }
+           .btn_rgstr {
+               color: #4220AD !important;
+               background: #fff !important;
+               padding: 16px 20px !important;
+               width: 147px !important;
+               font-size: 12pt !important;
+               box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+               border-radius: 50px;
+               border: none;
+           }
+    </style>
     <script>
         loadcssfile("Sahyadri_login_page.css?version="+Math.floor(Math.random() * 10) + 1");
     </script>
