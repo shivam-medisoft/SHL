@@ -8,15 +8,19 @@
     <script type="text/javascript" src="cordova.js"></script>
     <style>
         body {
-          background-image: url(/images/shl_login_bg.svg);
+          background-image: url(images/shl_login_bg.svg);
           background-size: 100%;
           background-repeat: no-repeat;
           overflow: auto;
           height: 100%;
+          background-color: #505050;
+          background-blend-mode: multiply;
         }
         .imgbtn {
            list-style-type: none;
            display: flex;
+           margin-top: 3vh;
+           padding-left: 3vw;
         }
         .login-contents-shl {
            text-align: center;
@@ -24,6 +28,8 @@
            width: 100%;
            background: #F3FCFF;
            border-radius: 8px !important;
+           margin-top: 36vh;
+           padding: 10px 0px;
         }
         .lst-itm-grp {
            background-color: #F3FCFF;
@@ -36,6 +42,9 @@
            background: #F3FCFF;
            color: #1A3981 !important;
            font-size: 1.2em;
+           border-radius: 8px;
+           height: 4vh;
+           font-weight: 500;
         }
         .typeofcls {
            background: #ffffff;
@@ -45,11 +54,12 @@
         }
         .type-list {
            text-decoration: none;
+           padding: 1vh;
         }
         .shl-type-mbl {
            color: #167BAD;
            font-family: poppins, Arial, sans-serif;
-           font-size: 1em;
+           font-size: 1.1em;
            font-weight: 500;
         }
     </style>
@@ -59,6 +69,7 @@
 </head>
 <body>
       <div class="login-contents-shl">
+          <div>
          <h2 class="hd-section">Login Options</h2>
                  <ul class="imgbtn">
                      <li class="lst-itm-grp">
@@ -92,6 +103,7 @@
                          </a>
                      </li>
                  </ul>
+          </div>
              </div>
 </body>
 </html>
