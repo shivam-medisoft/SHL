@@ -3,31 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <title>title</title>
-    <link rel="stylesheet" type="text/css" href="css/Sahyadri_login_page.css"/>
+    <link rel="stylesheet" type="text/css" href="css/Sahyadri_login_page.css?version=01"/>
     <script  type="text/javascript"  src="js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
-    <style></style>
+    <style>
+        #app-content {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: none;
+        }
+        #loading-screen img {
+            width: 100vw;
+            height: 100vh;
+        }
+        #loading-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            z-index: 1000;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header {
+            text-align: center;
+            padding: 2em;
+            background-color: #f4f4f4;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .img_container {
+            text-align: center;
+            padding: 43px;
+            margin-top: 23px;
+        }
+        .hdng {
+            margin-left: 4%;
+            width: 92%;
+            font-size: 21px;
+            margin-top: 61px;
+            line-height: 33.5px;
+            font-family: poppins, sans-serif;
+            font-weight: 500;
+        }
+        .hding_container {
+            text-align: center;
+            color: #2A93C7;
+        }
+        .btn_lgn_rgstr::before {
+            content: "";
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url(images/shl_bg_img.svg);
+            position: absolute;
+            top: 44vh;
+            width: 100vw;
+            height: 56vh;
+            background-size: cover;
+            z-index: -1;
+        }
+        .btn_lgn_rgstr {
+            width: 100vw;
+            display: inline-flex;
+            float: left;
+            align-items: center;
+            flex-direction: row;
+            height: 57vh;
+            gap: 30px;
+            justify-content: center;
+        }
+        .btn_login {
+            font-family: poppins, Arial, sans-serif;
+            color: #000 !important;
+            background: #fff !important;
+            padding: 16px 20px !important;
+            width: 37vw !important;
+            font-size: 13pt !important;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            border-radius: 50px;
+            border: none;
+            margin-bottom: -9vh;
+            font-weight: 400;
+        }
+        .btn_rgstr {
+            color: #000000 !important;
+            background: #fff !important;
+            padding: 16px 20px !important;
+            width: 37vw !important;
+            font-size: 13pt !important;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            border-radius: 50px;
+            border: none;
+            margin-bottom: -9vh;
+            font-family: poppins, Arial, sans-serif;
+            font-weight: 400;
+        }
+        .main_page_container {
+            height: 100vh;
+            width: 100vw;
+        }
+     @media only screen and (min-width: 420px) and (max-width: 450px){
+        .hdng {
+            font-size: 25px;
+            margin-top: 8vh;
+        }
+        .btn_lgn_rgstr::before{
+            top: 47vh;
+            height: 53vh;
+        }
+        .btn_login{
+            margin-bottom: -22vh;
+            font-size: 14pt !important;
+            padding: 17px 20px !important;
+        }
+        .btn_rgstr{
+            margin-bottom: -22vh;
+            font-size: 14pt !important;
+            padding: 17px 20px !important;
+        }
+     }
+     @media only screen and (min-width: 390px) and (max-width: 400px){
+     .hdng{
+        font-size: 1.5rem;
+      }
+      .btn_login{
+        margin-bottom: -16vh;
+      }
+      .btn_rgstr{
+        margin-bottom: -16vh;
+      }
+      .img_container{
+        margin-top: 6vh;
+      }
+     }
+    </style>
     <script>
         loadcssfile("Sahyadri_login_page.css?version="+Math.floor(Math.random() * 10) + 1");
     </script>
 </head>
 <body>
-         <div class="optionsforlogin">
-           <div class="hdng_for_btns">
-             <div class="btn_divs">
-               <ul>
-                   <span>
-                       <img>
-                   </span>
-                   <span>
-                       <img>
-                   </span>
-                   <span>
-                       <img>
-                   </span>
-               </ul>
+      <div class="lgn-for-optn">
+         <div class="hdng-for-option">
+             <div class="btn-img-div">
+                 <ul class="imgbtn">
+                     <li>
+                        <span class="clsimg">
+
+                        </span>
+                     </li>
+                     <li>
+                         <span class="clsimg">
+
+                         </span>
+                     </li>
+                     <li>
+                         <span class="clsimg">
+
+                         </span>
+                     </li>
+                 </ul>
              </div>
-           </div>
          </div>
+      </div>
 </body>
 </html>
