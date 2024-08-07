@@ -81,14 +81,15 @@ and open the template in the editor.
             const appContent = document.getElementById('app-content');
 
             // Hide the loading screen and show the main content
-            loadingScreen.style.display = 'none';
-            appContent.style.display = 'block';
-
              setTimeout(function() {
                 loadingScreen.style.display = 'none';
                 appContent.style.display = 'block';
                }, 4000);
              });
+
+            function redirectToNewPage() {
+               window.location.href = 'Sahyadrilogin.html';
+        }
         </script>
     </head>
     <body>
