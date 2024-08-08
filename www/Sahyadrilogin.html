@@ -73,6 +73,11 @@
     </style>
     <script>
         loadcssfile("Sahyadri_login_page.css?version="+Math.floor(Math.random() * 10) + 1");
+
+
+        function redirectToNewPage() {
+       location.href = 'mobilelogin.html';
+       }
     </script>
 </head>
 <body>
@@ -84,7 +89,7 @@
                         <span class="clsimg">
                           <img class="typeofcls" alt="" src="images/SHL_Phone.svg">
                         </span>
-                         <a href="#" class="type-list" onclick="">
+                         <a href="#" class="type-list" onclick="redirectToNewPage()">
                         <span class="shl-type-mbl">
                             Mobile No
                         </span>
