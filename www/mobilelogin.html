@@ -3,6 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        body {
+           margin: 0;
+        }
+        .brandlogoshl {
+           border-bottom: 3px solid;
+           border-image: linear-gradient(to right, #0094CD 70%, #C4122F 30%, #C4122F 0%) 1;
+           height: 8vh;
+           padding: 1rem;
+        }
+        .brandlogocntnr {
+           height: 7vh;
+           width: 61vw;
+        }
+        .mainhdnd {
+           font-family: 'Montserrat', sans-serif;
+           font-weight: 500;
+           font-size: 1.17em;
+           color: #181818;
+           margin-bottom: 1.9vh;
+        }
+        .login-page-container {
+           transform: translateX(1.5rem);
+        }
+        .lblprgh{
+           font-family: 'Roboto', sans-serif;
+           font-size: 0.78em;
+           font-weight: 400;
+        }
+        .prntinptcls {
+           margin-top: -1vh;
+        }
+        .emailinputcontnr {
+           display: flex;
+           flex-direction: column;
+           width: 85vw;
+           margin-top: 5vh;
+        }
+        .mailidcntnr {
+           height: 4.89vh;
+           border: 1px solid #CECECE;
+           border-radius: 4px;
+           padding: 1%;
+        }
+        .mail-label{
+           color: #4B4B4B;
+           font-family: 'Lato', sans-serif;
+           font-size: 1.08em;
+           margin-bottom: 1vh;
+        }
+        .mailidcntnr::placeholder {
+           padding: 3%;
+           color: #A5A5A5;
+           font-family: 'Lato', sans-serif;
+           font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
          <div class="hdr-brnd">
@@ -13,9 +70,9 @@
      <div class="login-page-container">
         <div class="prntinptcls">
             <h5 class="mainhdnd">Login with Email</h5>
-            <label>One time password will be sent to your Email </label>
+            <label class="lblprgh">One time password will be sent to your Email </label>
           <div class="emailinputcontnr">
-            <label>Enter Email ID</label>
+            <label class="mail-label">Enter Email ID</label>
               <input class="mailidcntnr" placeholder="Example@gmail.com">
           </div>
         </div>
