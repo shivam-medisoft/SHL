@@ -83,17 +83,16 @@
         }
     </style>
     <script>
-        function validateEmail() {
-    var email = document.getElementById('email_input').value;
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    var getOtpButton = document.getElementById('btn-for-otp');
-
-    if (emailPattern.test(email)) {
-        getOtpButton.style.display = 'block'; // Show the button if email is valid
-    } else {
-        getOtpButton.style.display = 'none'; // Hide the button if email is invalid
-    }
-}
+        const emailInput = document.querySelector('.mailidcntnr');
+const getOtpButton = document.querySelector('.btn-for-otp');
+emailInput.addEventListener('input', () => {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (emailRegex.test(emailInput.value)) {
+    getOtpButton.style.display = 'block';
+  } else {
+    getOtpButton.style.display = 'none';
+  }
+});
     </script>
 </head>
 <body>
@@ -121,9 +120,9 @@
             <div class="otp-page-contnr">
                 <div class="">
                     <h5 class="mainhdnd">Verify</h5>
-                    <label class="lblprgh">One time password will be sent to your Email </label>
+                    <label class="lblprgh">Enter the OTP sent to</label>
                     <div class="emailinputcontnr">
-                        <label class="mail-label">Enter Email ID</label>
+                        <label class="mail-label">Service224@gmail.com</label>
                         <input class="mailidcntnr" placeholder="Example@gmail.com">
                     </div>
                 </div>
