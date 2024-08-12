@@ -82,20 +82,21 @@
            width: 31vw;
         }
     </style>
-    <script>
-        const emailInput = document.querySelector('.mailidcntnr');
-const getOtpButton = document.querySelector('.btn-for-otp');
-emailInput.addEventListener('input', () => {
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  if (emailRegex.test(emailInput.value)) {
-    getOtpButton.style.display = 'block';
-  } else {
-    getOtpButton.style.display = 'none';
-  }
-});
-    </script>
+
 </head>
 <body>
+<script>
+    const emailInput = document.querySelector('.mailidcntnr');
+const getOtpButton = document.querySelector('.btn-for-otp');
+emailInput.addEventListener('input', () => {
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+if (emailRegex.test(emailInput.value)) {
+getOtpButton.style.display = 'block';
+} else {
+getOtpButton.style.display = 'none';
+}
+});
+</script>
     <div class="main-page-container">
          <div class="hdr-brnd">
        <header class="brandlogoshl">
@@ -113,7 +114,7 @@ emailInput.addEventListener('input', () => {
         </div>
      </div>
       <div class="prnt-btn">
-          <button class="btn-for-otp" id="btn-for-otp" onclick="" style="display: none;">Get OTP</button>
+          <button class="btn-for-otp" id="btn-for-otp" onclick="">Get OTP</button>
       </div>
     </div>
         <div class="cntnr-main-page">
