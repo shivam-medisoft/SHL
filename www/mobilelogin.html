@@ -38,7 +38,7 @@
            display: flex;
            flex-direction: column;
            width: 85vw;
-           margin-top: 5vh;
+           margin-top: 2vh;
         }
         .mailidcntnr {
            height: 4.89vh;
@@ -51,7 +51,7 @@
            font-family: 'Lato', sans-serif;
            font-size: 1.06em;
            margin-bottom: 1.1vh;
-           letter-spacing: 1.4px;
+           letter-spacing: 0.5px;
            font-weight: 500;
         }
         .mailidcntnr::placeholder {
@@ -82,6 +82,19 @@
            width: 31vw;
         }
     </style>
+    <script>
+        function validateEmail() {
+    var email = document.getElementById('email_input').value;
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var getOtpButton = document.getElementById('btn-for-otp');
+
+    if (emailPattern.test(email)) {
+        getOtpButton.style.display = 'block'; // Show the button if email is valid
+    } else {
+        getOtpButton.style.display = 'none'; // Hide the button if email is invalid
+    }
+}
+    </script>
 </head>
 <body>
     <div class="main-page-container">
@@ -101,8 +114,20 @@
         </div>
      </div>
       <div class="prnt-btn">
-          <button class="btn-for-otp" id="btn-for-otp" onclick="">Get OTP</button>
+          <button class="btn-for-otp" id="btn-for-otp" onclick="" style="display: none;">Get OTP</button>
       </div>
     </div>
+        <div class="cntnr-main-page">
+            <div class="otp-page-contnr">
+                <div class="">
+                    <h5 class="mainhdnd">Verify</h5>
+                    <label class="lblprgh">One time password will be sent to your Email </label>
+                    <div class="emailinputcontnr">
+                        <label class="mail-label">Enter Email ID</label>
+                        <input class="mailidcntnr" placeholder="Example@gmail.com">
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
