@@ -123,15 +123,28 @@
       </div>
     </div>
         <div class="cntnr-main-page">
-            <div class="otp-page-contnr">
-                <div class="">
-                    <h5 class="mainhdnd">Verify</h5>
-                    <label class="lblprgh">Enter the OTP sent to</label>
-                    <div class="emailinputcontnr">
-                        <label class="mail-label">Service224@gmail.com</label>
-                        <input class="mailidcntnr" placeholder="Example@gmail.com">
-                    </div>
-                </div>
+            <div class="btn-verify">
+                <button class="btnforbck" id="btnforbck">
+                    <img src="images/backicon.png" alt="" style="">
+                </button>
+                <h5 class="hdngsdbtn">Verify</h5>
+            </div>
+            <div class="dtlsforotp">
+                <label class="sentotpdtls"></label>
+            </div>
+            <div class="mailhdngcntnr">
+                <input value="Service224@gmail.com" class="inptformailid" readonly="">
+                <button class="numbereditforemail" type="button" onclick="">Edit</button>
+            </div>
+            <div class="email-otp-cntnr">
+                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box">
+                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box">
+                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box">
+                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box">
+            </div>
+            <div class="confirmation-for-mail-otp">
+               <label>Didn’t you receive the OTP?</label>
+                <button class="resend_container" type="button" onclick="">Resend OTP</button>
             </div>
         </div>
 </body>
