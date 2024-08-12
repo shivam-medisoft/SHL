@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
            margin: 0;
@@ -87,11 +88,18 @@
 <body>
 <script>
     function validateEmail() {
-    debugger;
-    var email = $('#emailvalue').val();
-   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-   return emailPattern.test(email);
-}
+            var email = document.getElementById('emailvalue').value;
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            var isValid = emailPattern.test(email);
+            var otpButton = document.getElementById('btn-for-otp');
+
+            if (isValid) {
+                otpButton.style.display = 'block';
+            } else {
+                otpButton.style.display = 'none';
+            }
+        }
+
 
 </script>
     <div class="main-page-container">
@@ -106,7 +114,7 @@
             <label class="lblprgh">One time password will be sent to your Email </label>
           <div class="emailinputcontnr">
             <label class="mail-label">Enter Email ID</label>
-              <input class="mailidcntnr" id="emailvalue" onkeyup="validateEmail();" placeholder="Example@gmail.com">
+              <input class="mailidcntnr" id="emailvalue" onkeyup="validateEmail();" placeholder="Example@gmail.com" style="display: none;">
           </div>
         </div>
      </div>
