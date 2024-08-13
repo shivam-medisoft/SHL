@@ -72,6 +72,8 @@
         .prnt-btn{
            text-align: center;
            margin-top: 9vh;
+           justify-content: center;
+           display: flex;
         }
         .btn-for-otp {
            height: 6.2vh;
@@ -169,6 +171,9 @@
             }
         }
 
+    function hideEmailInput() {
+    document.getElementById('emailinputcontnr').style.display = 'none';
+    }
 
 </script>
     <div class="main-page-container">
@@ -189,7 +194,7 @@
         </div>
          </div>
       <div class="prnt-btn">
-          <button class="btn-for-otp" id="btn-for-otp" onclick="" style="display: none;">Get OTP</button>
+          <button class="btn-for-otp" id="btn-for-otp" onclick="hideEmailInput();" style="display: none;">Get OTP</button>
       </div>
      </div>
     </div>
