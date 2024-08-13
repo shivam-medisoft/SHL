@@ -91,46 +91,65 @@
         }
         .inptformailid {
            border: 0px;
-           border-right: 2px solid #7e7e7e;
+           border-right: 1px solid #909090;
            background: transparent;
-           width: 41vw;
+           width: 51vw;
            height: 2.3vh;
-           font-size: 0.8em;
-           font-family: "Lato", sans-serif;
-           font-weight: 600;
+           font-size: 1em;
+           font-family: 'Montserrat', sans-serif;
+           font-weight: bold;
            color: #263238;
            cursor: auto;
         }
         .numbereditforemail {
-           color: #0475ad;
-           font-family: "Lato", sans-serif;
-           font-size: 0.8rem;
-           font-style: normal;
-           font-weight: 600;
-           line-height: normal;
-           letter-spacing: 0.222px;
-           border: 0;
-           background: transparent;
-           margin-left: 0.5vh;
-           cursor: pointer;
+          color: #0475ad;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 1em;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: 0.222px;
+          border: 0;
+          background: transparent;
+          margin-left: 0.5vh;
+          cursor: pointer;
         }
         .block-email-box-fourth.email_container_box {
-           width: 10vw;
-           height: 5vh;
-           border-radius: 4px;
-           border: 1px solid #ccc;
-           margin: 1vh 1vh;
+          width: 10vw;
+          height: 5vh;
+          border-radius: 4px;
+          border: 1px solid #CECECE;
+          margin: 1vh 1vh;
           font-size: 16px;
           text-align: center;
           margin-left: 0.5vh;
         }
         .resend_container {
-          color: #0475ad;
+          color: #1D3BFF;
           font-size: 1em;
-          font-weight: 600;
+          font-weight: 400;
           border: none;
           background: transparent;
           cursor: pointer;
+        }
+        .backiconforprvspg {
+          width: 4vw;
+          height: 2.5vh;
+        }
+        .hdngsdbtn {
+          color: #181818;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 0.9em;
+        }
+        .sentotpdtls {
+          font-family: 'Montserrat', sans-serif;
+          color: #3A3A3A;
+          font-size: 1em;
+        }
+        .lbl-hdng{
+          color: #777777;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 1em;
         }
     </style>
 
@@ -193,7 +212,7 @@
                 <input type="text" maxlength="1" class="block-email-box-fourth email_container_box">
             </div>
             <div class="confirmation-for-mail-otp">
-               <label>Didn’t you receive the OTP?</label>
+               <label class="lbl-hdng">Didn’t you receive the OTP?</label>
                 <button class="resend_container" type="button" onclick="">Resend OTP</button>
             </div>
         </div>
