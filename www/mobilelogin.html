@@ -156,6 +156,15 @@
         .cntnr-main-page {
           display: none;
         }
+        .otppageforemail {
+          position: relative;
+          left: 4vh;
+        }
+        .btn-verify {
+          display: flex;
+          position: relative;
+          left: -2vh;
+        }
     </style>
 
 </head>
@@ -214,6 +223,7 @@
             <div class="dtlsforotp">
                 <label class="sentotpdtls">Enter the OTP sent to</label>
             </div>
+          <div class="mail-hdng-parent">
             <div class="mailhdngcntnr">
                 <input value="Service224@gmail.com" class="inptformailid" readonly="">
                 <button class="numbereditforemail" type="button" onclick="">Edit</button>
@@ -224,6 +234,7 @@
                 <input type="text" maxlength="1" class="block-email-box-fourth email_container_box">
                 <input type="text" maxlength="1" class="block-email-box-fourth email_container_box">
             </div>
+          </div>
             <div class="confirmation-for-mail-otp">
                <label class="lbl-hdng">Didn’t you receive the OTP?</label>
                 <button class="resend_container" type="button" onclick="">Resend OTP</button>
