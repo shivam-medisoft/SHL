@@ -207,6 +207,10 @@
         document.querySelector('.cntnr-main-page').style.display = 'block';
     }
 
+    function goBack() {
+        window.history.back();
+    }
+
 </script>
     <div class="main-page-container">
          <div class="hdr-brnd">
@@ -233,7 +237,7 @@
         <div class="cntnr-main-page">
           <div class="otppageforemail">
             <div class="btn-verify">
-                <button class="btnforbck" id="btnforbck">
+                <button class="btnforbck" id="btnforbck" onclick="goBack()">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
                 <h5 class="hdngsdbtn">Verify</h5>
