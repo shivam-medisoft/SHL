@@ -256,10 +256,10 @@
                 <button class="numbereditforemail" type="button" onclick="">Edit</button>
             </div>
             <div class="email-otp-cntnr">
-                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box">
-                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box">
-                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box">
-                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box">
+                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
             </div>
           </div>
             <div class="confirmation-for-mail-otp">
