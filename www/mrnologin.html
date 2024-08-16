@@ -86,11 +86,30 @@
            font-size: 1.08em;
            font-weight: 500;
         }
+        .main-page-sndmrnologin-container{
+           display: none;
+        }
     </style>
 </head>
 <body>
 <script>
+    function validateMRNumber() {
+           var mrno = document.getElementById('mrnovalue').value;
+          const mrnoPattern = /^[A-Za-z0-9]+$/;
+           var isValid = mrnoPattern.test(mrno);
+           var otpButton = document.getElementById('btn-for-otp-for-mrno');
 
+           if (isValid) {
+               otpButton.style.display = 'block';
+           } else {
+               otpButton.style.display = 'none';
+           }
+       }
+
+   function hideMRNoInput() {
+           document.querySelector('.main-page-mrnologin-container').style.display = 'none';
+           document.querySelector('.main-page-sndmrnologin-container').style.display = 'block';
+       }
 </script>
 <div class="main-page-mrnologin-container">
     <div class="hdr-for-mrno">
