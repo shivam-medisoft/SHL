@@ -56,7 +56,7 @@
           color: #4B4B4B !important;
           font-weight: 400;
           margin-top: 1vh;
-          margin-top: 1vh;
+          width: 100%;
         }
         .mrno-label {
           color: #4B4B4B;
@@ -110,6 +110,41 @@
         </div>
         <div class="prnt-btn-mrno">
             <button class="btn-for-otp-for-mrno" id="btn-for-otp-for-mrno">Get OTP</button>
+        </div>
+    </div>
+    <div class="main-page-sndmrnologin-container">
+        <div class="hdr-for-mrnosndscreen">
+            <header class="brandlogoshlformrnosndscreen">
+                <img class="mrnobrandlogocntnrsndscrn" alt="" src="images/shl_brand_logo.svg">
+            </header>
+        </div>
+    <div class="cntnr-main-page-for-mrno">
+        <div class="otppageformrno">
+            <div class="btn-verify-mrno">
+                <button class="mrnobtnforbck" id="mrnobtnforbck" onclick="goBack()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <h5 class="hdngsdbtnmsndscrn">Verify</h5>
+            </div>
+            <div class="dtlsforotpmrno">
+                <label class="sentotpdtlsformrno">Enter the OTP sent to  Mobile Number linked with</label>
+            </div>
+            <div class="mail-hdng-parent-mrno">
+                <div class="mailhdngcntnr-mrno">
+                    <input value="MR No M1254136" class="inptformrno" readonly="">
+                    <button class="numbereditformrno" type="button" onclick="">Edit</button>
+                </div>
+                <div class="mrno-otp-cntnr">
+                    <input type="text" maxlength="1" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="text" maxlength="1" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="text" maxlength="1" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="text" maxlength="1" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                </div>
+            </div>
+            <div class="confirmation-for-mrno-otp">
+                <label class="lbl-hdng-mrno">Didn’t you receive the OTP?</label>
+                <button class="resend_container-mrno" type="button" onclick="">Resend OTP</button>
+            </div>
         </div>
     </div>
 </div>
