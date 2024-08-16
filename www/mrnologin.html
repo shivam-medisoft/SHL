@@ -91,6 +91,7 @@
         }
         .btn-verify-mrno {
            display: flex;
+           margin-left: -2vh;
         }
         .mrnobtnforbck {
            border: none;
@@ -102,7 +103,7 @@
            border: 0px;
            border-right: 1px solid #909090;
            background: transparent;
-           width: 51vw;
+           width: 39vw;
            height: 2.3vh;
            font-size: 1em;
            font-family: 'Montserrat', sans-serif;
@@ -111,7 +112,7 @@
            cursor: auto;
         }
         .numbereditformrno {
-           color: #0475ad;
+           color: #0788C1;
            font-family: 'Montserrat', sans-serif;
            font-size: 0.9em;
            font-style: normal;
@@ -136,6 +137,30 @@
         .sentotpdtlsformrno {
            font-size: 0.8em;
         }
+        .resend_container-mrno{
+           color: #1D3BFF;
+           font-size: 13px;
+           font-weight: 600;
+           border: none;
+           background: transparent;
+           cursor: pointer;
+        }
+        .lbl-hdng-mrno{
+          color: #373535;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 0.9em;
+          font-weight: 300;
+        }
+        .confirmation-for-mrno-otp {
+          padding-top: 1.2vh;
+        }
+        .mrno-otp-cntnr {
+          padding-top: 1.5vh;
+        }
+        .dtlsforotpmrno {
+          margin-top: -1.5vh;
+          margin-left: 0.5vh;
+        }
     </style>
 </head>
 <body>
@@ -157,6 +182,9 @@
            document.querySelector('.mrno-cntnrlogin').style.display = 'none';
            document.querySelector('.cntnr-main-page-for-mrno').style.display = 'block';
        }
+   function goBack() {
+        window.history.back(-1);
+    }
 </script>
 <div class="main-page-mrnologin-container">
     <div class="hdr-for-mrno">
