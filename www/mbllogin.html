@@ -90,6 +90,35 @@
             </div>
         </div>
     </div>
+    <div class="cntnr-main-page-for-mbl">
+        <div class="otppageformbl">
+            <div class="btn-verify-mbl">
+                <button class="mblbtnforbck" id="mblbtnforbck" onclick="goBack()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <h5 class="hdngsdbtnmformbllogin">Verify</h5>
+            </div>
+            <div class="dtlsforotpmob">
+                <label class="sentotpdtlsformbl">Enter the OTP sent to</label>
+            </div>
+            <div class="mbllogin-hdng-parent">
+                <div class="mblhdngcntnr">
+                    <input value="+917287872704" class="inptformbl" readonly="">
+                    <button class="numbereditformbl" type="button" onclick="">Edit</button>
+                </div>
+                <div class="mbl-otp-cntnr">
+                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                </div>
+            </div>
+            <div class="confirmation-for-mbl-otp">
+                <label class="lbl-hdng-mbl">Didn’t you receive the OTP?</label>
+                <button class="resend_container-mbl" type="button" onclick="">Resend OTP</button>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
