@@ -144,6 +144,78 @@
          background: transparent;
          cursor: pointer;
       }
+      .selected-option {
+         border-radius: .3rem;
+         overflow: hidden;
+         height: 37px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         border: 1.031px solid #FF725E;
+      }
+      .countryCodeSel {
+         display: flex;
+         gap: 3px;
+         justify-content: center;
+         align-items: center;
+      }
+      .selected-option div {
+         position: relative;
+         padding: 5px;
+         text-align: center;
+         cursor: pointer;
+      }
+      .selected-option div::after {
+         margin-top: 6PX;
+         content: "";
+         border-right: .12rem solid #FF725E;
+         transform: translateY(-13%) rotate(358deg);
+         transition: .2s;
+         margin-left: 5px;
+         height: 19px;
+      }
+      #passwordSecond:focus {
+         border: 0;
+      }
+      #passwordSecond {
+         font-size: 1.1rem;
+      }
+      .select-box .options {
+         position: absolute;
+         top: 4rem;
+         width: 100%;
+         background-color: #fff;
+         border-radius: .5rem;
+         display: none;
+      }
+      .select-box input {
+         width: 100%;
+         padding: 1rem 0.2rem;
+         font-size: 1.1rem;
+         border: .1rem solid transparent;
+         outline: none;
+      }
+      .select-box input {
+         width: 100%;
+         padding: 1rem 0.2rem;
+         font-size: 1.1rem;
+         border: .1rem solid transparent;
+         outline: none;
+      }
+      .select-box ol {
+         list-style: none;
+         max-height: 23rem;
+         overflow: overlay;
+      }
+      .select-box ol li:not(:last-child) {
+         border-bottom: .1rem solid #eee;
+      }
+      .select-box ol li {
+         padding: 1rem;
+         display: flex;
+         justify-content: space-between;
+         cursor: pointer;
+      }
     </style>
 </head>
 <body>
