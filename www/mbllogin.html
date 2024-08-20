@@ -80,7 +80,7 @@
       .mblbtnforbck {
          border: none;
          background: transparent;
-         font-size: 1.4em;
+         font-size: 1.1em;
          color: #3a3a3a;
       }
       .dtlsforotpmob {
@@ -107,7 +107,7 @@
          border: 0px;
          border-right: 1px solid #909090;
          background: transparent;
-         width: 29.5vw;
+         width: 35vw;
          height: 1.8vh;
          font-size: 1em;
          font-family: 'Montserrat', sans-serif;
@@ -247,21 +247,20 @@
 <body>
 <script>
     function validateMobileNumber() {
-    var mobileNumber = document.getElementById('passwordSecond').value;
-    var otpDiv = document.querySelector('.cntnr-main-page-for-mbl');
-    var loginDiv = document.querySelector('.mobile-cntnrlogin');
+       var mobileNumber = document.getElementById('passwordSecond').value;
+       var otpDiv = document.querySelector('.cntnr-main-page-for-mbl');
+       var loginDiv = document.querySelector('.mobile-cntnrlogin');
 
-    const mobilePattern = /^[0-9]{10}$/;
+       const mobilePattern = /^[0-9]{10}$/;
+       var isValid = mobilePattern.test(mobileNumber);
 
-    var isValid = mobilePattern.test(mobileNumber);
+       if (isValid) {
+           loginDiv.style.display = 'none';
+           otpDiv.style.display = 'block';
+       }
+   }
 
-    if (isValid) {
-        loginDiv.style.display = 'none';
-        otpDiv.style.display = 'block';
-    }
-}
-
-document.getElementById('passwordSecond').addEventListener('input', validateMobileNumber);
+   document.getElementById('passwordSecond').addEventListener('input', validateMobileNumber);
 </script>
 <div class="main-page-mbllogin-container">
     <div class="hdr-for-mbl">
