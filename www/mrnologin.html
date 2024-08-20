@@ -91,7 +91,7 @@
         }
         .btn-verify-mrno {
            display: flex;
-           margin-left: -2vh;
+           margin-left: -1.5vh;
         }
         .mrnobtnforbck {
            border: none;
@@ -103,8 +103,8 @@
            border: 0px;
            border-right: 1px solid #909090;
            background: transparent;
-           width: 39vw;
-           height: 2.3vh;
+           width: 22vw;
+           height: 2vh;
            font-size: 0.9em;
            font-family: 'Montserrat', sans-serif;
            font-weight: 700;
@@ -116,7 +116,7 @@
            font-family: 'Montserrat', sans-serif;
            font-size: 0.9em;
            font-style: normal;
-           font-weight: 400;
+           font-weight: 500;
            line-height: normal;
            letter-spacing: 0.222px;
            border: 0;
@@ -153,12 +153,13 @@
         }
         .confirmation-for-mrno-otp {
           padding-top: 1.2vh;
+          margin-left: 0.5vh;
         }
         .mrno-otp-cntnr {
           padding-top: 1.5vh;
         }
         .dtlsforotpmrno {
-          margin-top: -1.5vh;
+          margin-top: -1vh;
           margin-left: 0.5vh;
         }
         .mrnoidcntnr::placeholder{
@@ -176,7 +177,25 @@
         }
         .otppageformrno {
            margin-top: -1vh;
+           margin-left: -4.5vh;
         }
+        .mail-hdng-parent-mrno {
+           margin-top: 1vh;
+        }
+        .mailhdngcntnr-mrno {
+          margin-left: .1vh;
+        }
+        inptformrnoonly {
+    border: 0px;
+    background: transparent;
+    width: 12vw;
+    height: 2vh;
+    font-size: 0.9em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #263238;
+    cursor: auto;
+}
     </style>
 </head>
 <body>
@@ -238,7 +257,8 @@
             </div>
             <div class="mail-hdng-parent-mrno">
                 <div class="mailhdngcntnr-mrno">
-                    <input value="MR No M1254136" class="inptformrno" readonly="">
+                    <input value="MR No" class="inptformrnoonly" readonly="">
+                    <input value="M1254136" class="inptformrno" readonly="">
                     <button class="numbereditformrno" type="button" onclick="">Edit</button>
                 </div>
                 <div class="mrno-otp-cntnr">
