@@ -239,26 +239,29 @@
       .mbllogin-hdng-parent {
          margin-top: 1vh;
       }
+      .cntnr-main-page-for-mbl {
+         display: none;
+      }
     </style>
 </head>
 <body>
 <script>
-    $(document).ready(function() {
-     var $mobileInput = $('#passwordSecond');
-     var $otpContainer = $('.otppageformbl');
+    function validateMobileNumber() {
+    var mobileNumber = document.getElementById('passwordSecond').value;
+    var otpDiv = document.querySelector('.cntnr-main-page-for-mbl');
+    var loginDiv = document.querySelector('.mobile-cntnrlogin');
 
-     $otpContainer.hide();
+    const mobilePattern = /^[0-9]{10}$/;
 
-     $mobileInput.on('input', function() {
-         var mobileNumber = $.trim($mobileInput.val());
+    var isValid = mobilePattern.test(mobileNumber);
 
-         if (mobileNumber.length === 10 && !isNaN(mobileNumber)) {
-             $otpContainer.show();
-         } else {
-             $otpContainer.hide();
-         }
-     });
- });
+    if (isValid) {
+        loginDiv.style.display = 'none';
+        otpDiv.style.display = 'block';
+    }
+}
+
+document.getElementById('passwordSecond').addEventListener('input', validateMobileNumber);
 </script>
 <div class="main-page-mbllogin-container">
     <div class="hdr-for-mbl">
