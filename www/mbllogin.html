@@ -247,20 +247,20 @@
 <body>
 <script>
     function validateMobileNumber() {
-       var mobileNumber = document.getElementById('passwordSecond').value;
-       var otpDiv = document.querySelector('.cntnr-main-page-for-mbl');
-       var loginDiv = document.querySelector('.mobile-cntnrlogin');
+        var mobileNumber = document.getElementById('passwordSecond').value;
+        var otpDiv = document.querySelector('.cntnr-main-page-for-mbl');
+        var loginDiv = document.querySelector('.mobile-cntnrlogin');
 
-       const mobilePattern = /^[0-9]{10}$/;
-       var isValid = mobilePattern.test(mobileNumber);
+        const mobilePattern = /^[0-9]{10}$/;
+        var isValid = mobilePattern.test(mobileNumber);
 
-       if (isValid) {
-           loginDiv.style.display = 'none';
-           otpDiv.style.display = 'block';
-       }
-   }
+        if (isValid) {
+            loginDiv.style.display = 'none';
+            otpDiv.style.display = 'block';
+        }
+    }
 
-   document.getElementById('passwordSecond').addEventListener('input', validateMobileNumber);
+    document.getElementById('passwordSecond').addEventListener('input', validateMobileNumber);
 </script>
 <div class="main-page-mbllogin-container">
     <div class="hdr-for-mbl">
