@@ -329,10 +329,10 @@
                     <button class="numbereditformbl" type="button" onclick="">Edit</button>
                 </div>
                 <div class="mbl-otp-cntnr">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="validatenum(this)" >
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="validatenum(this)" >
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="validatenum(this)" >
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="validatenum(this)" >
+                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
                 </div>
             </div>
             <div class="confirmation-for-mbl-otp">
