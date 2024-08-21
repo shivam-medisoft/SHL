@@ -218,6 +218,18 @@
         window.history.back();
     }
 
+    function moveToNextInput(currentInput) {
+    // Ensure only digits are entered
+    currentInput.value = currentInput.value.replace(/[^0-9]/g, '');
+
+    // Move to the next input if the current one is filled
+    if (currentInput.value.length === 1) {
+        let nextInput = currentInput.nextElementSibling;
+        if (nextInput && nextInput.tagName === "INPUT") {
+            nextInput.focus();
+        }
+    }
+}
 </script>
     <div class="main-page-container">
          <div class="hdr-brnd">
