@@ -265,6 +265,18 @@
 
     document.getElementById('passwordSecond').addEventListener('input', validateMobileNumber);
 
+    function moveToNextInput(currentInput) {
+    // Ensure only digits are entered
+    currentInput.value = currentInput.value.replace(/[^0-9]/g, '');
+
+    // Move to the next input if the current one is filled
+    if (currentInput.value.length === 1) {
+        let nextInput = currentInput.nextElementSibling;
+        if (nextInput && nextInput.tagName === "INPUT") {
+            nextInput.focus();
+        }
+    }
+}
 </script>
 <div class="main-page-mbllogin-container">
     <div class="hdr-for-mbl">
@@ -317,10 +329,10 @@
                     <button class="numbereditformbl" type="button" onclick="">Edit</button>
                 </div>
                 <div class="mbl-otp-cntnr">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="validatenum(this)" >
+                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="validatenum(this)" >
+                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="validatenum(this)" >
+                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="validatenum(this)" >
                 </div>
             </div>
             <div class="confirmation-for-mbl-otp">
