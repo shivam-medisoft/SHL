@@ -6,9 +6,6 @@
     <link rel="stylesheet" type="text/css" href="css/Sahyadri_login_page.css?version=01"/>
     <script  type="text/javascript"  src="js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
-    <script>
-        loadcssfile("Sahyadri_login_page.css?version="+Math.floor(Math.random() * 10) + 1");
-    </script>
     <style>
            #app-content {
                width: 100%;
@@ -152,68 +149,6 @@
            margin-top: 6vh;
          }
         }
-         background-image: url(images/shl_login_bg.svg);
-          background-size: 100%;
-          background-repeat: no-repeat;
-          overflow: auto;
-          height: 100%;
-          background-color: #505050;
-          background-blend-mode: multiply;
-          display: flex;
-          justify-content: center;
-        }
-        .imgbtn {
-           list-style-type: none;
-           display: flex;
-           margin-top: 5vh;
-           padding-left: 3vw;
-        }
-        .login-contents-shl {
-           text-align: center;
-           height: 23vh;
-           width: 81vw;
-           background: #F3FCFF;
-           border-radius: 8px !important;
-           margin-top: 35vh;
-           padding: 10px 10px;
-        }
-        .lst-itm-grp {
-           background-color: #F3FCFF;
-           width: 30vw;
-           display: flex;
-           margin-left: -9px;
-           flex-direction: column;
-        }
-        .hd-section {
-           background: #F3FCFF;
-           color: #1A3981 !important;
-           font-size: 1.2em;
-           border-radius: 8px;
-           height: 2vh;
-           font-weight: 500;
-           font-family: poppins, Arial, sans-serif;
-        }
-        .typeofcls {
-           background: #ffffff;
-           box-shadow: 0px 0px 1px 0px rgb(121 121 121 / 55%);
-           padding: 11px;
-           border-radius: 7px;
-           height: 5vh;
-           width: 11.5vw;
-        }
-        .type-list {
-           text-decoration: none;
-           padding: 1vh;
-        }
-        .shl-type-mbl {
-           color: #167BAD;
-           font-family: poppins, Arial, sans-serif;
-           font-size: 0.9rem;
-           font-weight: 500;
-        }
-        .prntsecn{
-           margin-top: -0.8vh;
-        }
     </style>
     <script>
         loadcssfile("Sahyadri_login_page.css?version="+Math.floor(Math.random() * 10) + 1");
@@ -221,48 +156,8 @@
 </head>
 <body>
 <script>
-    function redirectToNewPage1(pageUrl) {
-       location.href = pageUrl;
-       }
     function redirectToNewPage() {
-       //location.href = 'Sahyadrilogin.html';
-       <div  id = "firstone" class="login-contents-shl">
-          <div class="prntsecn">
-         <h2 class="hd-section">Login Options</h2>
-                 <ul class="imgbtn">
-                     <li class="lst-itm-grp" onclick="redirectToNewPage1('maillogin.html')">
-                        <span class="clsimg">
-                          <img class="typeofcls" alt="" src="images/SHL_Email.svg">
-                        </span>
-                         <a href="#" class="type-list" >
-                        <span class="shl-type-mbl">
-                        Email ID
-                        </span>
-                         </a>
-                     </li>
-                     <li class="lst-itm-grp" onclick="redirectToNewPage1('mbllogin.html')">
-                         <span class="clsimg">
-                          <img class="typeofcls" alt="" src="images/SHL_Phone.svg">
-                         </span>
-                         <a href="#" class="type-list" >
-                         <span class="shl-type-mbl">
-                         Mobile No
-                         </span>
-                         </a>
-                     </li>
-                     <li class="lst-itm-grp" onclick="redirectToNewPage1('mrnologin.html')">
-                         <span class="clsimg">
-                          <img class="typeofcls" alt="" src="images/SHL_mr_no.svg">
-                         </span>
-                         <a href="#" class="type-list" onclick="redirectToNewPage1('mrnologin.html')">
-                         <span class="shl-type-mbl">
-                         MR No
-                         </span>
-                         </a>
-                     </li>
-                 </ul>
-          </div>
-             </div>
+       location.href = 'Sahyadrilogin.html';
        }
 
 </script>
@@ -278,71 +173,5 @@
              <button class="btn_rgstr">Register</button>
           </div>
 </div>
-<div class="main-page-mbllogin-container" >
-    <div class="hdr-for-mbl">
-        <header class="brandlogoshlformbl">
-            <img class="mblbrandlogocntnr" alt="" src="images/shl_brand_logo.svg">
-        </header>
-    </div>
-    <div class="mobile-cntnrlogin">
-        <div class="mbllogin-page-container">
-            <div class="mblprntinptcls">
-                <h5 class="mainhdndformblloginformbl">Login with Mobile number</h5>
-                <label class="lblprghmob">One time password will be sent to your mobile Number</label>
-                <div class="mblinputcontnr">
-                    <form class="mbl-no-login-cntnt">
-                        <label class="mbl-label">Enter Mobile Number</label>
-                        <div class="select-box">
-                            <div class="selected-option">
-                                <div class="countryCodeSel">
-                                    <span class="iconify" data-icon="flag:in-4x3"></span>
-                                    <strong style="font-weight: 400;padding-left: 5px;">+91</strong>
-                                </div>
-                                <input id="passwordSecond" type="number" name="tel" placeholder="00-0000-0000" maxlength="10" oninput="validateMobileNumber()">
-                            </div>
-                            <div class="options">
-                                <input type="text" class="search-box" placeholder="Search Country Name">
-                                <ol id="countryCodes">
-
-                                </ol>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="cntnr-main-page-for-mbl">
-        <div class="otppageformbl">
-            <div class="btn-verify-mbl">
-                <button class="mblbtnforbck" id="mblbtnforbck" onclick="goBack()">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <h5 class="hdngsdbtnmformbllogin">Verify</h5>
-            </div>
-            <div class="dtlsforotpmob">
-                <label class="sentotpdtlsformbl">Enter the OTP sent to</label>
-            </div>
-            <div class="mbllogin-hdng-parent">
-                <div class="mblhdngcntnr">
-                    <input value="+917287872704" class="inptformbl" readonly="">
-                    <button class="numbereditformbl" type="button" onclick="">Edit</button>
-                </div>
-                <div class="mbl-otp-cntnr">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                </div>
-            </div>
-            <div class="confirmation-for-mbl-otp">
-                <label class="lbl-hdng-mbl">Didn’t you receive the OTP?</label>
-                <button class="resend_container-mbl" type="button" onclick="">Resend OTP</button>
-            </div>
-        </div>
-    </div>
-    <div>
-        <button onclick="location.href='appintronew.html'">Verify OTP</button>
-    </div>
 </body>
 </html>
