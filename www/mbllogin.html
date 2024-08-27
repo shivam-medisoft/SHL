@@ -8,7 +8,6 @@
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
-
     <style>
       body {
          margin: 0;
@@ -329,14 +328,15 @@
             </div>
             <div class="mbllogin-hdng-parent">
                 <div class="mblhdngcntnr">
-                    <input value="+917287872704" class="inptformbl" readonly="">
+                    <input value="" class="inptformbl" readonly="">
                     <button class="numbereditformbl" type="button" onclick="">Edit</button>
                 </div>
                 <div class="mbl-otp-cntnr">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input  id ="input1" type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input  id ="input2" type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input  id ="input3" type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input  id ="input4" type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="hidden" id="otpsent"/>
                 </div>
             </div>
             <div class="confirmation-for-mbl-otp">
@@ -346,7 +346,7 @@
         </div>
     </div>
     <div>
-        <button onclick="location.href='appintronew.html'">Verify OTP</button>
+        <button onclick="otpvalidate()">Verify OTP</button>
     </div>
 </body>
 </html>
