@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>title</title>
-    <link rel="stylesheet" type="text/css" href="css/Sahyadri_login_page.css?version=01"/>
     <script  type="text/javascript"  src="js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <style>
@@ -150,9 +149,6 @@
          }
         }
     </style>
-    <script>
-        loadcssfile("Sahyadri_login_page.css?version="+Math.floor(Math.random() * 10) + 1");
-    </script>
 </head>
 <body>
 <script>
@@ -200,6 +196,7 @@ $.ajax({
     function redirectToNewPage() {
        location.href = 'Sahyadrilogin.html';
        }
+    loadcssfile("Sahyadri_login_page.css?version=" + (Math.floor(Math.random() * 10) + 1));
 </script>
 <div class="main_page_container">
           <div id="main_img" class="img_container">
