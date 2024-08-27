@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
     <style>
       body {
          margin: 0;
@@ -249,6 +250,9 @@
 </head>
 <body>
 <script>
+    loadjsfile("patient_new.js?version="+Math.floor(Math.random() * 10) + 1);
+</script>
+<script>
     function validateMobileNumber() {
         var mobileNumber = document.getElementById('passwordSecond').value;
         var otpDiv = document.querySelector('.cntnr-main-page-for-mbl');
@@ -296,7 +300,7 @@
                                 <span class="iconify" data-icon="flag:in-4x3"></span>
                                 <strong style="font-weight: 400;padding-left: 5px;">+91</strong>
                             </div>
-                            <input id="passwordSecond" type="number" name="tel" placeholder="00-0000-0000" maxlength="10" oninput="validateMobileNumber()">
+                            <input id="passwordSecond" type="number" name="tel" placeholder="00-0000-0000" maxlength="10" oninput="validateMobileNumber()" onchange="loginviamrno(this)">
                         </div>
                         <div class="options">
                             <input type="text" class="search-box" placeholder="Search Country Name">
