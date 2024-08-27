@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>title</title>
-    <script  type="text/javascript"  src="js/jquery-1.9.1.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <style>
            #app-content {
@@ -152,6 +153,7 @@
 </head>
 <body>
 <script>
+    document.addEventListener("deviceready",function onDeviceReady() {
     localStorage.newpatapp = "1";
      var path = "https://hdpuat.sahyadrihospitals.com/uat2/";
 debugger;
@@ -193,6 +195,7 @@ $.ajax({
 
     }
 });
+ });
     function redirectToNewPage() {
        location.href = 'Sahyadrilogin.html';
        }
