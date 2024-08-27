@@ -156,10 +156,50 @@
 </head>
 <body>
 <script>
+    localStorage.newpatapp = "1";
+     var path = "https://hdpuat.sahyadrihospitals.com/uat2/";
+debugger;
+var asynchronization;
+ try{
+ if(device.platform == "iOS"){
+  asynchronization = true;
+ }else{ asynchronization = false; }
+ }catch(error){
+  asynchronization = true;
+ }
+$.ajax({
+    url: path,
+    type: "GET",
+    async: asynchronization,
+    success: function (data, textstatus, xhrreq) {
+        debugger;
+        data = data.trim();
+        var url = data;
+
+        if (data.indexOf("frame src") > 0) {
+            debugger;
+            data = data.substring(data.indexOf("frame src")).replace('frame src="', "");
+            var dqts = data.indexOf('"');
+            url = data.substring(0, dqts).trim();
+        }
+
+        localStorage.ipadrs = path;
+        localStorage.newuserip = path;
+    },
+    error: function (jqXHR, exception) {
+        // Log the error or handle it as needed
+        console.error("Error occurred during AJAX request:", exception);
+       localStorage.ipadrs = path;
+       localStorage.newuserip =path;
+    },
+    complete: function(data) {
+        //loadjsfile("patient_login.js?version=" + (Math.floor(Math.random() * 10) + 1));
+
+    }
+});
     function redirectToNewPage() {
        location.href = 'Sahyadrilogin.html';
        }
-
 </script>
 <div class="main_page_container">
           <div id="main_img" class="img_container">
