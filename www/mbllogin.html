@@ -8,6 +8,7 @@
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/localdbCare.js"></script>
     <style>
       body {
          margin: 0;
@@ -335,7 +336,7 @@
                     <input  id ="input1" type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
                     <input  id ="input2" type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
                     <input  id ="input3" type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input  id ="input4" type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input  id ="input4" type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onchange="otpvalidate();" onkeyup="moveToNextInput(this, event)">
                     <input type="hidden" id="otpsent"/>
                 </div>
             </div>
@@ -346,7 +347,7 @@
         </div>
     </div>
     <div>
-        <button onclick="otpvalidate()">Verify OTP</button>
+        <button  id = "butt" onclick="otpvalidate()">Verify OTP</button>
     </div>
 </body>
 </html>
