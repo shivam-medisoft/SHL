@@ -185,17 +185,25 @@ $.ajax({
         localStorage.newuserip = path;
         localStorage.mahappurl = path;
          localStorage.mah = '1';
+         var apppage = "sahyadri_index.html";
+         localStorage.newapppage =apppage;
+         localStorage.appname = "shl";
+         localStorage.apporginalname = "Sahyadri Hospitals";
     },
     error: function (jqXHR, exception) {
         // Log the error or handle it as needed
         console.error("Error occurred during AJAX request:", exception);
        localStorage.ipadrs = path;
-       localStorage.newuserip =path;
+        localStorage.newuserip = path;
         localStorage.mahappurl = path;
-        localStorage.mah = '1';
+         localStorage.mah = '1';
+         var apppage = "sahyadri_index.html";
+         localStorage.newapppage =apppage;
+         localStorage.appname = "shl";
+         localStorage.apporginalname = "Sahyadri Hospitals";
     },
     complete: function(data) {
-        //loadjsfile("patient_login.js?version=" + (Math.floor(Math.random() * 10) + 1));
+       // loadjsfile("patient_new.js?version=" + (Math.floor(Math.random() * 10) + 1));
 
     }
 });
