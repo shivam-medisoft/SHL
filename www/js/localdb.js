@@ -6,7 +6,7 @@ const DBIONICNEW = "dbionicnew";
 const PATMRNO = "PATMRNO";
 const PATNAME="PATNAME";
 const EMAIL="EMAIL"
-function insertUserDetails(hospname, ipadrs, cloudGroupHospId,cloudHospDetails,PATMRNO,PATNAME,mobile,careimg,printpath,groupmrno,outside) {
+function insertUserDetails(mobile, ipadrs, ,PATMRNO,PATNAME,email) {
     if (userExists(mobile, ipadrs, hospname,PATMRNO,careimg)) {
         return;
     }
@@ -20,17 +20,11 @@ function insertUserDetails(hospname, ipadrs, cloudGroupHospId,cloudHospDetails,P
     }
     DBIonicnew.push({
         ID: DBIonicnew.length,
-        HOSPNAME: hospname === undefined ? "" : hospname,
         MOBILE: mobile === undefined ? "" : mobile,
         IPADRS: ipadrs === undefined ? "" : ipadrs,
-        CLOUDGROUPHOSPID: cloudGroupHospId == undefined ? "" : cloudGroupHospId,
-        CLOUDHOSPDETAILS: cloudHospDetails == undefined ? "" : cloudHospDetails,
         PATMRNO: PATMRNO == undefined ? "" : PATMRNO,
         PATNAME: PATNAME == undefined ? "" : PATNAME,
-        CAREIMG: careimg == undefined ? "" : careimg,
-        PRINTPATH: printpath == undefined ? "" : printpath,
-        GROUPMRNO: groupmrno == undefined ? "" : groupmrno,
-        OUTSIDE: outside == undefined ? "" : outside
+       EMAIL : EMAIL == undefined ? "" :email
     });
     setUserDetails(DBIonicnew);
 }
@@ -80,8 +74,7 @@ function userExists(mobile, ipadress, hospname,mrno) {
         if (localStorage.getItem(DBIONICNEW) !== null) {
             var arr = JSON.parse(localStorage.getItem(DBIONICNEW));
             for (var u = 0; u < arr.length; u++) {
-                if (arr[u][HOSPNAME].toUpperCase() === hospname.toUpperCase() &&
-                        arr[u][IPADDRESS].toUpperCase() === ipadress.toUpparCase &&
+                if (arr[u][PATNAME].toUpperCase() === PATNAME.toUpperCase() &&
                         arr[u][MOBILE] === mobile && arr[u][PATMRNO] === mrno) {
                     isExist = true;
                     break;
