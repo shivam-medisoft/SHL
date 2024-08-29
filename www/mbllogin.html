@@ -249,12 +249,12 @@
          display: none;
       }
     </style>
+    <script>
+        loadjsfile("patient_new.js?version="+Math.floor(Math.random() * 10) + 1);
+        loadjsfile("localdbCare.js?version="+Math.floor(Math.random() * 10) + 1);
+    </script>
 </head>
 <body>
-<script>
-    loadjsfile("patient_new.js?version="+Math.floor(Math.random() * 10) + 1);
-    loadjsfile("localdbCare.js?version="+Math.floor(Math.random() * 10) + 1);
-</script>
 <script>
     function validateMobileNumber() {
         var mobileNumber = document.getElementById('passwordSecond').value;
@@ -270,7 +270,6 @@
         }
     }
 
-    document.getElementById('passwordSecond').addEventListener('input', validateMobileNumber);
 
     function moveToNextInput(currentInput) {
     currentInput.value = currentInput.value.replace(/[^0-9]/g, '');
