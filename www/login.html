@@ -180,7 +180,7 @@ $.ajax({
             var dqts = data.indexOf('"');
             url = data.substring(0, dqts).trim();
         }
-
+        localStorage.newappath = path;
         localStorage.ipadrs = path;
         localStorage.newuserip = path;
         localStorage.mahappurl = path;
@@ -193,7 +193,8 @@ $.ajax({
     error: function (jqXHR, exception) {
         // Log the error or handle it as needed
         console.error("Error occurred during AJAX request:", exception);
-       localStorage.ipadrs = path;
+        localStorage.newappath = path;
+        localStorage.ipadrs = path;
         localStorage.newuserip = path;
         localStorage.mahappurl = path;
          localStorage.mah = '1';

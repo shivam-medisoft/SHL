@@ -21,71 +21,12 @@ and open the template in the editor.
                 if(sessionStorage.home!=undefined && sessionStorage.home=="1"){
                    $('body').html(sessionStorage.homedata);
                 }else{
-                convert(localStorage.newappath, localStorage.apporginalname, localStorage.newapppage);
+                convert();
                 }
             }
-            function convert(path, appname, apppath) {
+            function convert() {
                 debugger;
-                $.ajax({
-                    url: path,
-                    type: "GET",
-                    success: function (data, textstatus, xhrreq) {
-                        debugger;
-                        data = data.trim();
-                        var url = data;
-                        if (data.indexOf("frame src") > 0) {
-                            debugger;
-                            data = data.substring(data.indexOf("frame src")).replace('frame src="', "");
-                            var dqts = data.indexOf('"');
-                            url = data.substring(0, dqts).trim()+"/";
-                            localStorage.mahappurl = url;
-                            localStorage.mah = '1';
-                            localStorage.appurl = url;
-                            localStorage.newurl = url;
-                            localStorage.ipadrs = url;
-                        } else {
-                            localStorage.mahappurl = path;
-                            localStorage.mah = '1';
-                            localStorage.appurl = path;
-                            localStorage.newurl = path;
-                            localStorage.ipadrs = path;
-                        }
-                        getIntro(localStorage.appurl);
-                    },
-                    error: function (jqXHR, exception) {
-                        debugger;
-                        $('#mydiv').hide();
-                        var msg = '';
-                        if (jqXHR.status === 0) {
-                            msg = 'Not connect.\n Verify Network';
-                        } else if (jqXHR.status == 404) {
-                            msg = 'Requested page not found. [404]';
-                        } else if (jqXHR.status == 500) {
-                            msg = 'Internal Server Error [500].';
-                        } else if (exception === 'parsererror') {
-                            msg = 'Requested JSON parse failed.';
-                        } else if (exception === 'timeout') {
-                            msg = 'Time out error.';
-                        } else if (exception === 'abort') {
-                            msg = 'Ajax request aborted.';
-                        } else {
-                            msg = 'Uncaught Error.\n' + jqXHR.responseText;
-                        }
-                  if(errorcnt===5){
-                        alert(msg + " \n Path : "+path);
-                        location.href = "404.html";
-                    }else if (jqXHR.status === 0) {
-                   convert(localStorage.newappath, localStorage.apporginalname, localStorage.newapppage);
-                   errorcnt++;
-                   }else{
-                        alert(msg + " \n Path : "+path);
-                        location.href = "404.html";
-                   }
-                }
-
-                });
-
-
+                  getIntro(localStorage.ipadrs);
             }
             function getIntro(url) {
                 $.ajax({
@@ -105,6 +46,7 @@ and open the template in the editor.
                 });
             }
             function appintroloading(formid) {
+                debugger;
                 var appName = localStorage.appname;
                 var ll = "",dt="";
                 if(appName == "ujalacygnus"){
