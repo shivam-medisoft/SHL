@@ -5,9 +5,9 @@ const IPADRS = "IPADRS";
 const DBIONICNEW = "dbionicnew";
 const PATMRNO = "PATMRNO";
 const PATNAME="PATNAME";
-const EMAIL="EMAIL"
-function insertUserDetails(mobile, ipadrs, ,PATMRNO,PATNAME,email) {
-    if (userExists(mobile, ipadrs, hospname,PATMRNO,careimg)) {
+const EMAIL="EMAIL";
+function insertUserDetails(mobile, ipadrs,PATMRNO,PATNAME,email) {
+    if (userExists(mobile, PATNAME,PATMRNO,email)) {
         return;
     }
  if (localStorage.getItem(DBIONICNEW) !== null) {
@@ -66,7 +66,7 @@ function deleteUserDetails(id) {
     setUserDetails(DBIonicnew);
 }
 
-function userExists(mobile, ipadress, hospname,mrno) {
+function userExists(mobile, patname,patmrno,email) {
     debugger;
 
     var isExist = false;
@@ -74,8 +74,8 @@ function userExists(mobile, ipadress, hospname,mrno) {
         if (localStorage.getItem(DBIONICNEW) !== null) {
             var arr = JSON.parse(localStorage.getItem(DBIONICNEW));
             for (var u = 0; u < arr.length; u++) {
-                if (arr[u][PATNAME].toUpperCase() === PATNAME.toUpperCase() &&
-                        arr[u][MOBILE] === mobile && arr[u][PATMRNO] === mrno) {
+                if (arr[u][PATNAME].toUpperCase() === patname.toUpperCase() &&
+                        arr[u][MOBILE] === mobile && arr[u][PATMRNO] === patmrno && aar[u][EMAIL] === email) {
                     isExist = true;
                     break;
                 }
