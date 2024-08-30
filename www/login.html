@@ -211,17 +211,17 @@ $.ajax({
     }
 });
  });
-    document.getElementById('loading').addEventListener("click", function() {
-       alert("bala");
-        if (localStorage.userlogin == "1") {
-            location.href = 'appintronew.html';
-        }
-    });
-    $('#loading').on("click", function() {
-       alert("nn");
-        if (localStorage.userlogin == "1") {
-            location.href = 'appintronew.html';
-        }
+    $(document).ready(function () {
+        $('#loading').click(function() {
+            // Check if the user is logged in by checking localStorage
+            if (localStorage.userlogin == "1") {
+                // Redirect to the specified URL if the user is logged in
+                location.href = 'appintronew.html';
+            } else {
+                // Stop the click function
+                return false; // Prevents any further action from the click
+            }
+        });
     });
 
 
