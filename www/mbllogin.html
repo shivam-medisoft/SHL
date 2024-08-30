@@ -282,13 +282,13 @@
     }
 }
 
-    function editMobNum() {
-    $('.otppageformbl').hide();
 
-    $('.mbllogin-page-container').show();
-    document.querySelector('#passwordSecond').focus();
-}
-
+ document.getElementById('editButton').addEventListener('click', function() {
+            // Hide the second page div
+            document.getElementById('otppageformbl').style.display = 'none';
+            // Show the first page div
+            document.getElementById('mbllogin-page-container').style.display = 'block';
+        });
 
 
 </script>
@@ -299,7 +299,7 @@
         </header>
     </div>
     <div class="mobile-cntnrlogin">
-        <div class="mbllogin-page-container">
+        <div class="mbllogin-page-container" id="mbllogin-page-container">
             <div class="mblprntinptcls">
                 <h5 class="mainhdndformblloginformbl">Login with Mobile number</h5>
                 <label class="lblprghmob">One time password will be sent to your mobile Number</label>
@@ -327,7 +327,7 @@
         </div>
     </div>
     <div class="cntnr-main-page-for-mbl">
-        <div class="otppageformbl">
+        <div class="otppageformbl" id="otppageformbl">
             <div class="btn-verify-mbl">
                 <button class="mblbtnforbck" id="mblbtnforbck" onclick="goBack()">
                     <i class="fa-solid fa-chevron-left"></i>
@@ -340,7 +340,7 @@
             <div class="mbllogin-hdng-parent">
                 <div class="mblhdngcntnr">
                     <input value="" class="inptformbl" readonly="">
-                    <button class="numbereditformbl" type="button" onclick="editMobNum()">Edit</button>
+                    <button class="numbereditformbl" type="button" onclick="editMobNum()" id="editButton">Edit</button>
                 </div>
                 <div class="mbl-otp-cntnr">
                     <input  id ="input1" type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
