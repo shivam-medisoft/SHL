@@ -281,6 +281,16 @@
         }
     }
 }
+
+    function editMobNum() {
+    $('.otppageformbl').hide();
+
+    $('.mbllogin-page-container').show();
+    document.querySelector('#passwordSecond').focus();
+}
+
+
+
 </script>
 <div class="main-page-mbllogin-container">
     <div class="hdr-for-mbl">
@@ -330,7 +340,7 @@
             <div class="mbllogin-hdng-parent">
                 <div class="mblhdngcntnr">
                     <input value="" class="inptformbl" readonly="">
-                    <button class="numbereditformbl" type="button" onclick="">Edit</button>
+                    <button class="numbereditformbl" type="button" onclick="editMobNum()">Edit</button>
                 </div>
                 <div class="mbl-otp-cntnr">
                     <input  id ="input1" type="text" maxlength="1" class="block-mbl-box-fourth mbl_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
@@ -342,12 +352,9 @@
             </div>
             <div class="confirmation-for-mbl-otp">
                 <label class="lbl-hdng-mbl">Didn’t you receive the OTP?</label>
-                <button class="resend_container-mbl" type="button" onclick="">Resend OTP</button>
+                <button class="resend_container-mbl" type="button" onclick="resendOTP()">Resend OTP</button>
             </div>
         </div>
-    </div>
-    <div>
-        <button  id = "butt" onclick="otpvalidate()">Verify OTP</button>
     </div>
 </body>
 </html>
