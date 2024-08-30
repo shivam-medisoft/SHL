@@ -283,12 +283,21 @@
 }
 
 
- document.getElementById('editButton').addEventListener('click', function() {
-            // Hide the second page div
-            document.getElementById('otppageformbl').style.display = 'none';
-            // Show the first page div
-            document.getElementById('mbllogin-page-container').style.display = 'block';
-        });
+//function editMobNum() {
+  //  $('.otppageformbl').hide();
+
+    //$('.mbllogin-page-container').show();
+    //document.querySelector('#passwordSecond').focus();
+    //}
+$(document).ready(function(){
+
+    // When the "Edit" button is clicked
+    $('#editButton').click(function(){
+        $('.otppageformbl').hide(); // Hide the OTP container
+        $('.mbllogin-page-container').show(); // Show the mobile input container
+        $('#mobileNumber').focus(); // Focus back on the mobile number input
+    });
+});
 
 
 </script>
