@@ -212,7 +212,11 @@ $.ajax({
 });
  });
     function redirectToNewPage() {
+       if(localStorage.userlogin == "1"){
+       location.href = 'appintronew.html';
+       }else{
        location.href = 'Sahyadrilogin.html';
+       }
        }
     loadcssfile("Sahyadri_login_page.css?version=" + (Math.floor(Math.random() * 10) + 1));
 </script>
