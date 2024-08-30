@@ -217,17 +217,16 @@ $.ajax({
             location.href = 'appintronew.html';
         }
     });
+    $('#loading').on("click", function() {
+       alert("nn");
+        if (localStorage.userlogin == "1") {
+            location.href = 'appintronew.html';
+        }
+    });
 
-    // Automatically trigger the click event when the page loads
-    window.onload = function() {
-       alert("sai");
-        // Simulate a click on the #loading div
-
-        document.getElementById('loading').click();
-    };
 
     function redirectToNewPage() {
-       if(localStorage.userlogin == "1" && (localStorage.getItem('dbionicnew') != '' || localStorage.getItem('dbionicnew') != null)){
+       if(localStorage.userlogin == "1" && (localStorage.getItem('dbionicnew') != '' && localStorage.getItem('dbionicnew') != null)){
        location.href = 'appintronew.html';
        }else{
        location.href = 'Sahyadrilogin.html';
@@ -242,8 +241,8 @@ $.ajax({
           <div class="hding_container">
              <h3 class="hdng">Welcome to Sahyadri Hospitals. let’s get started !</h3>
           </div>
-          <div id="loading" class="btn_lgn_rgstr">
-             <button class="btn_login" onclick="redirectToNewPage()">Login</button>
+          <div id="newlogin" class="btn_lgn_rgstr">
+             <button id="loading" class="btn_login" onclick="redirectToNewPage()">Login</button>
              <button class="btn_rgstr">Register</button>
           </div>
 </div>
