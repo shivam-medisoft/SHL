@@ -214,7 +214,7 @@ $.ajax({
     $(document).ready(function () {
         $('#loading').click(function() {
             // Check if the user is logged in by checking localStorage
-            if (localStorage.userlogin == "1") {
+            if (localStorage.userlogin == "1" && (localStorage.getItem('dbionicnew') != '' && localStorage.getItem('dbionicnew') != null)) {
                 // Redirect to the specified URL if the user is logged in
                 location.href = 'appintronew.html';
             } else {
@@ -226,6 +226,7 @@ $.ajax({
 
 
     function redirectToNewPage() {
+       debugger;
        if(localStorage.userlogin == "1" && (localStorage.getItem('dbionicnew') != '' && localStorage.getItem('dbionicnew') != null)){
        location.href = 'appintronew.html';
        }else{
