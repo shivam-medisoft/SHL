@@ -227,7 +227,7 @@ $.ajax({
 
     function redirectToNewPage() {
        debugger;
-       if(localStorage.userlogin == "1" && (localStorage.getItem('dbionicnew') != '' && localStorage.getItem('dbionicnew') != null)){
+       if(localStorage.userlogin == "1" && (localStorage.getItem('dbionicnew') != '' && localStorage.getItem('dbionicnew') != null) && localStorage.adduser != "1"){
        location.href = 'appintronew.html';
        }else{
        location.href = 'Sahyadrilogin.html';
