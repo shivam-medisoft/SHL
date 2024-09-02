@@ -206,11 +206,16 @@ $.ajax({
          localStorage.apporginalname = "Sahyadri Hospitals";
     },
     complete: function(data) {
-       // loadjsfile("patient_new.js?version=" + (Math.floor(Math.random() * 10) + 1));
-
+      if (localStorage.userlogin == "1" && (localStorage.getItem('dbionicnew') != '' && localStorage.getItem('dbionicnew') != null) && localStorage.adduser != "1"){
+       redirectToNewPage();
+      }else{
+      return false;
+      }
     }
 });
  });
+
+
     $(document).ready(function () {
         $('#loading').click(function() {
             // Check if the user is logged in by checking localStorage
@@ -223,6 +228,7 @@ $.ajax({
             }
         });
     });
+
 
 
     function redirectToNewPage() {
