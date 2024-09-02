@@ -267,13 +267,13 @@
                 <div class="mrnoinputcontnr">
                     <form class="mr-no-login-cntnt">
                         <label class="mrno-label">Enter MR No</label>
-                        <input class="mrnoidcntnr" id="mrnovalue" onkeyup="validateMRNumber(); viamrnowise();"  onchange="viamrnowise();"  placeholder="Enter MR no">
+                        <input class="mrnoidcntnr" id="mrnovalue" onkeyup="validateMRNumber();"  onchange="viamrnowise();"  placeholder="Enter MR no">
                     </form>
                 </div>
             </div>
         </div>
         <div class="prnt-btn-mrno">
-            <button class="btn-for-otp-for-mrno" id="btn-for-otp-for-mrno" onclick="hideMRNoInput();MRNoInput();" style="display: none;">Get OTP</button>
+            <button class="btn-for-otp-for-mrno" id="btn-for-otp-for-mrno" onclick="hideMRNoInput();MRNoInput();viamrnowise();" style="display: none;">Get OTP</button>
         </div>
     </div>
     <div class="cntnr-main-page-for-mrno">
@@ -294,11 +294,11 @@
                     <button class="numbereditformrno" type="button" onclick="">Edit</button>
                 </div>
                 <div class="mrno-otp-cntnr">
-                    <input type="text" maxlength="1"  id ="inputnew1" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1"  id ="inputnew2" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1" id ="inputnew3" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1" id ="inputnew4" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event);validationmrno();">
-                    <input type="hidden" id="otpsentnew"/>
+                    <input type="number" maxlength="1"  id ="inputnew1" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="number" maxlength="1"  id ="inputnew2" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="number" maxlength="1" id ="inputnew3" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="number" maxlength="1" id ="inputnew4" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event);validationmrno();" onchange="validationmrno();">
+                    <input type="hidden" id="mrnootp"/>
                 </div>
             </div>
             <div class="confirmation-for-mrno-otp">

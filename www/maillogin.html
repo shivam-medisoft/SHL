@@ -245,13 +245,13 @@
           <div class="emailinputcontnr">
               <form class="mbl-no-login-cntnt">
             <label class="mail-label">Enter Email ID</label>
-              <input class="mailidcntnr" id="emailvalue" onkeyup="validateEmail();" placeholder="Example@gmail.com">
+              <input class="mailidcntnr" id="emailvalue" onkeyup="validateEmail();"  placeholder="Example@gmail.com">
               </form>
           </div>
         </div>
          </div>
       <div class="prnt-btn">
-          <button class="btn-for-otp" id="btn-for-otp" onclick="hideEmailInput();" style="display: none;">Get OTP</button>
+          <button class="btn-for-otp" id="btn-for-otp" onclick="hideEmailInput(); loginviaemail();"  style="display: none;">Get OTP</button>
       </div>
      </div>
     </div>
@@ -272,10 +272,11 @@
                 <button class="numbereditforemail" type="button" onclick="">Edit</button>
             </div>
             <div class="email-otp-cntnr">
-                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                <input type="text" maxlength="1" class="block-email-box-fourth email_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                <input type="number"  id ="inputbox1" maxlength="1" class="block-email-box-fourth email_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                <input type="number"  id ="inputbox2" maxlength="1" class="block-email-box-fourth email_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                <input type="number" id ="inputbox3"  maxlength="1" class="block-email-box-fourth email_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                <input type="number" id ="inputbox4"  maxlength="1" class="block-email-box-fourth email_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event);validationemail();" onchange="validationemail();">
+                <input type="hidden" id="emailotp">
             </div>
           </div>
             <div class="confirmation-for-mail-otp">
