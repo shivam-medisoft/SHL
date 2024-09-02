@@ -5,6 +5,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
     <style>
         body {
           margin: 0;
@@ -211,6 +214,8 @@
 }
     </style>
     <script>
+        loadjsfile("patient_new.js?version="+Math.floor(Math.random() * 10) + 1);
+        loadjsfile("localdbCare.js?version="+Math.floor(Math.random() * 10) + 1);
         function moveToNextInput(currentInput) {
     currentInput.value = currentInput.value.replace(/[^0-9]/g, '');
 
@@ -261,7 +266,7 @@
                 <div class="mrnoinputcontnr">
                     <form class="mr-no-login-cntnt">
                         <label class="mrno-label">Enter MR No</label>
-                        <input class="mrnoidcntnr" id="mrnovalue" onkeyup="validateMRNumber()" placeholder="Enter MR no">
+                        <input class="mrnoidcntnr" id="mrnovalue" onkeyup="validateMRNumber()"  onchange="viamrnowise();"  placeholder="Enter MR no">
                     </form>
                 </div>
             </div>
@@ -284,19 +289,19 @@
             <div class="mail-hdng-parent-mrno">
                 <div class="mailhdngcntnr-mrno">
                     <input value="MR No" class="inptformrnoonly" readonly="">
-                    <input value="M1254136" class="inptformrno" readonly="">
+                    <input value="" class="inptformrno" readonly="">
                     <button class="numbereditformrno" type="button" onclick="">Edit</button>
                 </div>
                 <div class="mrno-otp-cntnr">
                     <input type="text" maxlength="1" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
                     <input type="text" maxlength="1" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
                     <input type="text" maxlength="1" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
-                    <input type="text" maxlength="1" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event)">
+                    <input type="text" maxlength="1" class="block-mrno-box-fourth mrno_container_box" oninput="this.value = this.value.replace(/[^0-9]/g, '');" onkeyup="moveToNextInput(this, event);validationmrno();">
                 </div>
             </div>
             <div class="confirmation-for-mrno-otp">
                 <label class="lbl-hdng-mrno">Didn’t you receive the OTP?</label>
-                <button class="resend_container-mrno" type="button" onclick="">Resend OTP</button>
+                <button  id="resend" class="resend_container-mrno" type="button" onclick="">Resend OTP</button>
             </div>
         </div>
     </div>
