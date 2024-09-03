@@ -18,7 +18,8 @@ and open the template in the editor.
     <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
     <link href="css/FontFamillyloading.css" rel="stylesheet" type="text/css"/>
     <script>
-        loadjsfile("changeusercare.js");
+        loadjsfile("changeusercare.js?version="+Math.floor(Math.random() * 10) + 1);
+        loadjsfile("localdbCare.js?version="+Math.floor(Math.random() * 10) + 1);
         loadcssfile_new("changeusercare.css")
         localStorage.changeuser = "1";
          function getParameterByName(name) {
