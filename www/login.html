@@ -153,6 +153,20 @@
 </head>
 <body>
 <script>
+    window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            const appContent = document.getElementById('app-content');
+
+            // Hide the loading screen and show the main content
+            loadingScreen.style.display = 'none';
+            appContent.style.display = 'block';
+
+             setTimeout(function() {
+                loadingScreen.style.display = 'none';
+                appContent.style.display = 'block';
+               }, 4000);
+             });
+
     document.addEventListener("deviceready",function onDeviceReady() {
     localStorage.newpatapp = "1";
      var path = "https://hdpuat.sahyadrihospitals.com/uat2/";
@@ -241,7 +255,13 @@ $.ajax({
        }
     loadcssfile("Sahyadri_login_page.css?version=" + (Math.floor(Math.random() * 10) + 1));
 </script>
-<div  class="main_page_container">
+            <div id="loading-screen">
+             <img src="images/shl.gif" alt="">
+            </div>
+            <div id="app-content" style="display: none;">
+             <h1>Welcome to My App</h1>
+            </div>
+        <div  class="main_page_container">
           <div id="main_img" class="img_container">
              <img src="images/shl_img_main_contnr.svg" alt="" class="header-image">
           </div>
