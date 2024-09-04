@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script src="scripts.js"></script>
     <style>
            #app-content {
                width: 100%;
@@ -162,8 +163,10 @@
             appContent.style.display = 'block';
 
              setTimeout(function() {
+             const loadingScreen = document.getElementById('loading-screen');
+             const appContent = document.getElementById('app-content');
                 loadingScreen.style.display = 'none';
-                appContent.style.display = 'block';
+                appContent.style.display = 'none';
                }, 4000);
              });
 
