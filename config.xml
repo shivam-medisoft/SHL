@@ -28,9 +28,9 @@
     <preference name="AutoHideSplashScr een" value="true" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="disable-cursor" value="false" />
-    <preference name="android-targetSdkVersion" value="33"/>
+    <preference name="android-targetSdkVersion" value="34"/>
     <preference name="android-minSdkVersion" value="19" />
-    <preference name="android-compileSdkVersion" value="33" />
+    <preference name="android-compileSdkVersion" value="34" />
     <preference name="android-installLocation" value="auto" />
     <preference name="LoadingDialog" value="Please wait, the app is loading"/>
     <preference name="AllowInlineMediaPlayback" value="true"/>
@@ -42,8 +42,8 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="StatusBarBackgroundColor" value="#ffffff" />
     <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,assets,root" />
-    <plugin name="cordova.plugins.diagnostic" />
-    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />
+<!--    <plugin name="cordova.plugins.diagnostic" />-->
+<!--    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />-->
     <plugin name="cordova-plugin-file" source="npm" />
     <plugin name="cordova-plugin-geolocation" source="npm"/>
     <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
