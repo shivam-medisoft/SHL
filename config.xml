@@ -88,7 +88,7 @@
 <!--    <plugin name="cordova-plugin-openfilenative" spec="https://github.com/andischerer/cordova-plugin-openfilenative.git" source="git" />-->
 <!--    <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" source="git" />-->
 <!--    <plugin name="cordova-plugin-market" spec="https://github.com/xmartlabs/cordova-plugin-market" source="git" />-->
-    <plugin name="cordova-plugin-qr-barcode-scanner" source="npm" />
+<!--    <plugin name="cordova-plugin-qr-barcode-scanner" source="npm" />-->
     <plugin name="cordova-plugin-camera" source="npm"  />
     <plugin name="cordova-plugin-file-opener2" source="npm" />
     <plugin name="cordova-plugin-android-permissions" source="npm">
