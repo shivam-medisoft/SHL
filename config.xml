@@ -75,14 +75,14 @@
 <!--&lt;!&ndash;    <plugin name="cordova-plugin-file-transfer" spec="https://github.com/Priyansu431/cordova-plugin-file-transfer.git" />&ndash;&gt;-->
 <!--    <plugin name="cordova-plugin-androidx" source="npm"/>-->
 <!--    <plugin name="cordova-plugin-camera" source="git" spec="https://github.com/DaedalusDev/cordova-plugin-camera.git"/>-->
-<!--    <plugin name="cordova-plugin-androidx-adapter" source="npm"/>-->
-<!--    <plugin name="cordova-plugin-advanced-http" source="npm"/>-->
-<!--    <preference name="Scheme" value="https" />-->
-<!--    <preference name="InAppBrowserStatusBarStyle" value="lightcontent" />-->
-<!--    <plugin name="cordova-plugin-app-version" source="npm" />-->
-<!--    <plugin name="cordova-plugin-datepicker" spec="https://github.com/VitaliiBlagodir/cordova-plugin-datepicker" source="git" />-->
-<!--    <plugin name="SpinnerDialog" spec="https://github.com/Paldom/SpinnerDialog.git" source="git" />-->
-<!--    <plugin name="cordova-plugin-inappbrowser" spec="https://github.com/apache/cordova-plugin-inappbrowser.git" source="git" />-->
+    <plugin name="cordova-plugin-androidx-adapter" source="npm"/>
+    <plugin name="cordova-plugin-advanced-http" source="npm"/>
+    <preference name="Scheme" value="https" />
+    <preference name="InAppBrowserStatusBarStyle" value="lightcontent" />
+    <plugin name="cordova-plugin-app-version" source="npm" />
+    <plugin name="cordova-plugin-datepicker" spec="https://github.com/VitaliiBlagodir/cordova-plugin-datepicker" source="git" />
+    <plugin name="SpinnerDialog" spec="https://github.com/Paldom/SpinnerDialog.git" source="git" />
+    <plugin name="cordova-plugin-inappbrowser" spec="https://github.com/apache/cordova-plugin-inappbrowser.git" source="git" />
     <plugin name="cordova-plugin-inappbrowser" spec="5.0.0" source="npm" />
     <plugin name="cordova-plugin-keyboard" spec="https://github.com/cjpearson/cordova-plugin-keyboard" source="git" />
 <!--    <plugin name="cordova-plugin-openfilenative" spec="https://github.com/andischerer/cordova-plugin-openfilenative.git" source="git" />-->
