@@ -158,31 +158,31 @@
 
 
 
-        <icon src="resources/baghicons/ios/shl 180.png" width="180" height="180" />
-        <!-- iPhone / iPod Touch  -->
-        <!--        <icon src="resources/baghicons/ios/Icon-App-60x60@3x.png" width="180" height="180" />-->
-        <!-- iPhone / iPod Touch  -->
-        <icon src="resources/baghicons/ios/shl 60.png" width="60" height="60" />
-        <icon src="resources/baghicons/ios/shl 120.png" width="120" height="120" />
-        <!-- iPad -->
-        <icon src="resources/baghicons/ios/shl 76.png"  width="76" height="76" />
-        <icon src="resources/baghicons/ios/shl 152.png" width="152" height="152" />
-        <!-- Settings Icon -->
-        <icon src="resources/baghicons/ios/shl 29.png" width="29" height="29" />
-        <icon src="resources/baghicons/ios/shl 58.png" width="58" height="58" />
-        <!-- Spotlight Icon -->
-        <icon src="resources/baghicons/ios/shl 40.png" width="40" height="40" />
-        <icon src="resources/baghicons/ios/shl 80.png" width="80" height="80" />
-        <icon src="resources/baghicons/ios/shl 120.png" width="120" height="120" />
+<!--        <icon src="resources/baghicons/ios/shl 180.png" width="180" height="180" />-->
+<!--        &lt;!&ndash; iPhone / iPod Touch  &ndash;&gt;-->
+<!--        &lt;!&ndash;        <icon src="resources/baghicons/ios/Icon-App-60x60@3x.png" width="180" height="180" />&ndash;&gt;-->
+<!--        &lt;!&ndash; iPhone / iPod Touch  &ndash;&gt;-->
+<!--        <icon src="resources/baghicons/ios/shl 60.png" width="60" height="60" />-->
+<!--        <icon src="resources/baghicons/ios/shl 120.png" width="120" height="120" />-->
+<!--        &lt;!&ndash; iPad &ndash;&gt;-->
+<!--        <icon src="resources/baghicons/ios/shl 76.png"  width="76" height="76" />-->
+<!--        <icon src="resources/baghicons/ios/shl 152.png" width="152" height="152" />-->
+<!--        &lt;!&ndash; Settings Icon &ndash;&gt;-->
+<!--        <icon src="resources/baghicons/ios/shl 29.png" width="29" height="29" />-->
+<!--        <icon src="resources/baghicons/ios/shl 58.png" width="58" height="58" />-->
+<!--        &lt;!&ndash; Spotlight Icon &ndash;&gt;-->
+<!--        <icon src="resources/baghicons/ios/shl 40.png" width="40" height="40" />-->
+<!--        <icon src="resources/baghicons/ios/shl 80.png" width="80" height="80" />-->
+<!--        <icon src="resources/baghicons/ios/shl 120.png" width="120" height="120" />-->
 
-        <!--        <icon src="resources/baghicons/ios/Icon-App-83.5x83.5@2x.png"  width="167" height="167" />-->
-        <!--<icon src="resources/baghicons/ios/57by57.png" width="57" height="57" />-->
-        <icon src="resources/baghicons/ios/shl 114.png"  width="114" height="114" />
-        <!-- iPad -->
-        <icon src="resources/baghicons/ios/shl 72.png" width="72" height="72" />
-        <icon src="resources/baghicons/ios/shl 87.png" width="87" height="87" />
-        <!-- iPad Spotlight and Settings Icon -->
-        <icon src="resources/baghicons/ios/shl 50.png" width="50" height="50" />
+<!--        &lt;!&ndash;        <icon src="resources/baghicons/ios/Icon-App-83.5x83.5@2x.png"  width="167" height="167" />&ndash;&gt;-->
+<!--        &lt;!&ndash;<icon src="resources/baghicons/ios/57by57.png" width="57" height="57" />&ndash;&gt;-->
+<!--        <icon src="resources/baghicons/ios/shl 114.png"  width="114" height="114" />-->
+<!--        &lt;!&ndash; iPad &ndash;&gt;-->
+<!--        <icon src="resources/baghicons/ios/shl72.png" width="72" height="72" />-->
+<!--        <icon src="resources/baghicons/ios/shl 87.png" width="87" height="87" />-->
+<!--        &lt;!&ndash; iPad Spotlight and Settings Icon &ndash;&gt;-->
+<!--        <icon src="resources/baghicons/ios/shl 50.png" width="50" height="50" />-->
         <!--        <icon src="resources/baghicons/ios/100by100.png" width="50" height="50" />-->
         <!--        <icon src="resources/baghicons/ios/1024by1024.png" width="1024" height="1024" />-->
 
