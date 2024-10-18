@@ -17,7 +17,7 @@
     <preference name="permissions" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="prerendered-icon" value="true" />
-
+    <preference name="Orientation" value="portrait" />
     <preference name="fullscreen" value="false" />
     <preference name="stay-in-webview" value="false" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
@@ -67,7 +67,7 @@
     <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-device.git" source="git" />
     <plugin name="cordova-plugin-device-motion" spec="https://github.com/apache/cordova-plugin-device-motion.git" source="git" />
 <!--    &lt;!&ndash; <plugin name="cordova-plugin-device-orientation" spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" /> &ndash;&gt;-->
-     <plugin name="cordova-plugin-device-orientation" spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" />
+<!--     <plugin name="cordova-plugin-device-orientation" spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" />-->
     <plugin name="cordova-plugin-dialogs" spec="https://github.com/apache/cordova-plugin-dialogs.git" source="git" />
     <plugin name="cordova-plugin-splashscreen" spec="https://github.com/apache/cordova-plugin-splashscreen.git" source="git" />
     <plugin name="cordova-plugin-network-information" spec="https://github.com/apache/cordova-plugin-network-information.git" source="git" />
