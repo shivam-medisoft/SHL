@@ -95,6 +95,7 @@
     <plugin name="cordova-plugin-android-permissions" source="npm">
         <variable name="storage" value="would like to access storage." />
     </plugin>
+    <icon src="resources/baghicons/android/icon.png" />
     <plugin name="cordova-plugin-sms-retriever-manager" source="npm" />
     <platform name="android">
         <resource-file src="google-services.json" target="app/google-services.json" />
