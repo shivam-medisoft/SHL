@@ -2,19 +2,15 @@
 <html>
 <head>
   <title>Load JSP with jQuery</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script  type="text/javascript"  src="js/jquery-1.9.1.js"></script>
   <script type="text/javascript" src="cordova.js"></script>
-
 </head>
 <body>
 <div> <h3> Payment Page</h3></div>
 <div id="paymentpage"></div>
 
 <script>
-  $(document).ready(function() {
-      $("#paymentpage").load(sessionStorage.paymentData);
-      //sessionStorage.paymentData="";
-   });
+loadappjsfile("mobilepayments.js");
 </script>
 </body>
 </html>
