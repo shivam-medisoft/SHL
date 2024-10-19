@@ -110,13 +110,6 @@
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
 
             <activity android:hardwareAccelerated="true" />
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="upi"/>
-                <data android:host="pay"/>
-            </intent-filter>
             <service android:exported="true"/>
             <receiver android:exported="true"/>
             <application android:usesCleartextTraffic="true" />
