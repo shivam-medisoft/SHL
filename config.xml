@@ -46,6 +46,7 @@
     <!--    <plugin name="cordova.plugins.diagnostic" />-->
 <!--    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />-->
     <plugin name="cordova-plugin-file" source="npm" />
+    <plugin name="upi-intent" source="npm" />
 <!--    <plugin name="cordova-plugin-customurlscheme" source="npm" />-->
     <plugin name="cordova-plugin-geolocation" source="npm"/>
     <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
