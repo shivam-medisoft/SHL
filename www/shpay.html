@@ -8,6 +8,13 @@
 <body>
 <div> <h3> Payment Page</h3></div>
 <div id="paymentpage"></div>
+<div id="mobileform"> </div>
+<form  id="paymentForm" >
+  <input type="hidden" id="app_token" name="token" />
+  <input type="hidden" id="app_check_sum_hash" name="check_sum_hash" />
+  <input type="hidden" id="app_mid" name="mid" />
+  <button type="submit">Submit</button>
+</form>
 
 <script>
 loadappjsfile("mobilepayments.js");
