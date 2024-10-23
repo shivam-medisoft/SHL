@@ -40,16 +40,6 @@ and open the template in the editor.
                 } catch (err) {
                     //        alert(err);
                 }
-                document.addEventListener('deviceready', function () {
-             universalLinks.subscribe('openPhonePe', function (eventData) {
-        var upiIntent = 'upi://pay?pa=pl.sahyadrihospitals@kaypay&pn=Sahyadri%20Hospitals%20Private%20Limited&am=1.00&tr=1729581444762375387&tn=Payment%20for%20429673323&cu=INR&mc=8062&mode=04';
-        cordova.plugins.upi.startActivityForResult(upiIntent, function(success) {
-            console.log('Success: ' + success);
-        }, function(error) {
-            console.error('Error: ' + error);
-        });
-    });
-}, false);
             });
             function loading(){
                 localStorage.newappath = "https://shpl.sahyadrihospitals.com/APP/";

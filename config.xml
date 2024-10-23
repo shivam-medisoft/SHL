@@ -66,9 +66,9 @@
     <plugin name="cordova-plugin-phonedialer" source="npm" />
     <plugin name="cordova-plugin-x-socialsharing" source="npm" />
     <plugin name="cordova-plugin-upi" source="npm" />
-    <plugin name="cordova-plugin-customurlscheme" spec="^4.4.0">
-        <variable name="URL_SCHEME" value="upi" />
-    </plugin>
+<!--    <plugin name="cordova-plugin-customurlscheme" spec="^4.4.0">-->
+<!--        <variable name="URL_SCHEME" value="upi" />-->
+<!--    </plugin>-->
 
     <!--    <plugin name= "cordova-plugin-print-pdf" source="npm"/>-->
 <!--    <plugin name="cordova-filechooser" spec="https://github.com/ihadeed/cordova-filechooser.git" source="git" />-->
