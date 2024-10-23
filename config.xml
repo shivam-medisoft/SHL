@@ -203,6 +203,7 @@
     <access uri="*" subdomains="true" />
     <access launch-external="yes" origin="whatsapp://*" />
     <access origin="tel:*" launch-external="yes" />
+    <access origin="file://*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-navigation href="http://*/*" />
