@@ -106,12 +106,11 @@
     </plugin>
 <!--    <icon src="resources/baghicons/android/icon.png" />-->
 <!--        <splash src="resources/baghicons/android/icon.png" />-->
-        <splash src="resources/baghicons/android/icon.png" density="land-mdpi"/>
-        <splash src="resources/baghicons/android/icon.png" density="land-hdpi"/>
-        <splash src="resources/baghicons/android/icon.png" density="land-xhdpi"/>
-        <splash src="resources/baghicons/android/icon.png" density="port-hdpi"/>
-        <splash src="resources/baghicons/android/icon.png" density="port-mdpi"/>
-        <splash src="resources/baghicons/android/icon.png" density="port-xhdpi"/>
+        <splash src="resources/baghicons/android/shl 48.png" density="mdpi"/>
+        <splash src="resources/baghicons/android/shl72.png" density="hdpi"/>
+        <splash src="resources/baghicons/android/shl 96.png" density="xhdpi"/>
+        <splash src="resources/baghicons/android/shl152.png" density="xxhdpi"/>
+        <splash src="resources/baghicons/android/shl167.png" density="xxxhdpi"/>
 <!--    <plugin name="cordova-plugin-sms-retriever-manager" source="npm" />-->
     <platform name="android">
         <resource-file src="google-services.json" target="app/google-services.json" />
