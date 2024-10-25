@@ -36,11 +36,6 @@
     <preference name="AllowInlineMediaPlayback" value="true"/>
     <preference name="SplashScreenDelay" value="3000"/>
     <preference name="FadeSplashScreenDuration" value="300"/>
-    <splash src="resources/baghicons/android/shl 48.png" density="mdpi"/>
-    <splash src="resources/baghicons/android/shl72.png" density="hdpi"/>
-    <splash src="resources/baghicons/android/shl 96.png" density="xhdpi"/>
-    <splash src="resources/baghicons/android/shl152.png" density="xxhdpi"/>
-    <splash src="resources/baghicons/android/shl167.png" density="xxxhdpi"/>
     <preference name="KeepRunning" value="true"/>
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="webviewbounce" value="false" />
@@ -111,6 +106,12 @@
         <variable name="storage" value="would like to access storage." />
     </plugin>
 <!--    <icon src="resources/baghicons/android/icon.png" />-->
+    <splash src="resources/baghicons/android/icon.png" />
+    <splash src="resources/baghicons/android/icon.png" density="mdpi"/>
+    <splash src="resources/baghicons/android/icon.png" density="hdpi"/>
+    <splash src="resources/baghicons/android/icon.png" density="xhdpi"/>
+    <splash src="resources/baghicons/android/icon.png" density="xxhdpi"/>
+    <splash src="resources/baghicons/android/icon.png" density="xxxhdpi"/>
 <!--        <splash src="resources/baghicons/android/icon.png" />-->
 <!--        <splash src="resources/baghicons/android/shl 48.png" density="mdpi"/>-->
 <!--        <splash src="resources/baghicons/android/shl72.png" density="hdpi"/>-->
