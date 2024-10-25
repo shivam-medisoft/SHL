@@ -10,7 +10,7 @@
     <description>
         SHL offers comprehensive clinical services under one roof with an active Transplant Program. The hospital provides round the clock network of Emergency services , Diagnostic services, a Blood Bank facility and a Pharmacy supported by a team of expert senior clinical consultants working in a full-time capacity. The active association with over 150 clinical consultants adds a unique strength to BAGH and enables us to achieve the highest outcomes for our patients capacity.
     </description>
-    <author email="sharad@shivammedisoft.com" href="https://www.baghospital.com/">
+    <author email="sharad@shivammedisoft.com" href="https://sahyadrihospital.com/">
         Shivam Medisoft Services Pvt. Ltd.
     </author>
     <content src="app.html"/>
@@ -36,6 +36,11 @@
     <preference name="AllowInlineMediaPlayback" value="true"/>
     <preference name="SplashScreenDelay" value="3000"/>
     <preference name="FadeSplashScreenDuration" value="300"/>
+    <splash src="resources/baghicons/android/shl 48.png" density="mdpi"/>
+    <splash src="resources/baghicons/android/shl72.png" density="hdpi"/>
+    <splash src="resources/baghicons/android/shl 96.png" density="xhdpi"/>
+    <splash src="resources/baghicons/android/shl152.png" density="xxhdpi"/>
+    <splash src="resources/baghicons/android/shl167.png" density="xxxhdpi"/>
     <preference name="KeepRunning" value="true"/>
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="webviewbounce" value="false" />
@@ -107,13 +112,11 @@
     </plugin>
 <!--    <icon src="resources/baghicons/android/icon.png" />-->
 <!--        <splash src="resources/baghicons/android/icon.png" />-->
-    <platform name="android">
-        <splash src="resources/baghicons/android/shl 48.png" density="mdpi"/>
-        <splash src="resources/baghicons/android/shl72.png" density="hdpi"/>
-        <splash src="resources/baghicons/android/shl 96.png" density="xhdpi"/>
-        <splash src="resources/baghicons/android/shl152.png" density="xxhdpi"/>
-        <splash src="resources/baghicons/android/shl167.png" density="xxxhdpi"/>
-    </platform>
+<!--        <splash src="resources/baghicons/android/shl 48.png" density="mdpi"/>-->
+<!--        <splash src="resources/baghicons/android/shl72.png" density="hdpi"/>-->
+<!--        <splash src="resources/baghicons/android/shl 96.png" density="xhdpi"/>-->
+<!--        <splash src="resources/baghicons/android/shl152.png" density="xxhdpi"/>-->
+<!--        <splash src="resources/baghicons/android/shl167.png" density="xxxhdpi"/>-->
 <!--    <plugin name="cordova-plugin-sms-retriever-manager" source="npm" />-->
     <platform name="android">
         <resource-file src="google-services.json" target="app/google-services.json" />
