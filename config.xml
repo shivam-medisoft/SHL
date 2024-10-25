@@ -35,8 +35,8 @@
     <preference name="LoadingDialog" value="Please wait, the app is loading"/>
     <preference name="AllowInlineMediaPlayback" value="true"/>
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="0"/>
-    <preference name="FadeSplashScreenDuration" value="0"/>
+    <preference name="SplashScreenDelay" value="3000"/>
+    <preference name="FadeSplashScreenDuration" value="300"/>
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="KeepRunning" value="true"/>
