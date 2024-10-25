@@ -108,18 +108,18 @@
         <variable name="storage" value="would like to access storage." />
     </plugin>
 <!--    <icon src="resources/baghicons/android/icon.png" />-->
-    <splash src="resources/baghicons/android/icon.png" />
-    <splash src="resources/baghicons/android/icon.png" density="mdpi"/>
-    <splash src="resources/baghicons/android/icon.png" density="hdpi"/>
-    <splash src="resources/baghicons/android/icon.png" density="xhdpi"/>
-    <splash src="resources/baghicons/android/icon.png" density="xxhdpi"/>
-    <splash src="resources/baghicons/android/icon.png" density="xxxhdpi"/>
+<!--    <splash src="resources/baghicons/android/icon.png" />-->
+<!--    <splash src="resources/baghicons/android/icon.png" density="mdpi"/>-->
+<!--    <splash src="resources/baghicons/android/icon.png" density="hdpi"/>-->
+<!--    <splash src="resources/baghicons/android/icon.png" density="xhdpi"/>-->
+<!--    <splash src="resources/baghicons/android/icon.png" density="xxhdpi"/>-->
+<!--    <splash src="resources/baghicons/android/icon.png" density="xxxhdpi"/>-->
 <!--        <splash src="resources/baghicons/android/icon.png" />-->
-<!--        <splash src="resources/baghicons/android/shl 48.png" density="mdpi"/>-->
-<!--        <splash src="resources/baghicons/android/shl72.png" density="hdpi"/>-->
-<!--        <splash src="resources/baghicons/android/shl 96.png" density="xhdpi"/>-->
-<!--        <splash src="resources/baghicons/android/shl152.png" density="xxhdpi"/>-->
-<!--        <splash src="resources/baghicons/android/shl167.png" density="xxxhdpi"/>-->
+        <splash src="resources/baghicons/android/shl_48.png" density="mdpi"/>
+        <splash src="resources/baghicons/android/shl72.png" density="hdpi"/>
+        <splash src="resources/baghicons/android/shl_96.png" density="xhdpi"/>
+        <splash src="resources/baghicons/android/shl152.png" density="xxhdpi"/>
+        <splash src="resources/baghicons/android/shl167.png" density="xxxhdpi"/>
 <!--    <plugin name="cordova-plugin-sms-retriever-manager" source="npm" />-->
     <platform name="android">
         <resource-file src="google-services.json" target="app/google-services.json" />
