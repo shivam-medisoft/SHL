@@ -108,12 +108,18 @@
         <variable name="storage" value="would like to access storage." />
     </plugin>
 <!--    <icon src="resources/baghicons/android/icon.png" />-->
-    <splash src="res/drawable/android/icon.png" />
-    <splash src="res/drawable/android/icon.png" density="mdpi"/>
-    <splash src="res/drawable/android/icon.png" density="hdpi"/>
-    <splash src="res/drawable/android/icon.png" density="xhdpi"/>
-    <splash src="res/drawable/android/icon.png" density="xxhdpi"/>
-    <splash src="res/drawable/android/icon.png" density="xxxhdpi"/>
+<!--    <splash src="res/drawable/android/icon.png" />-->
+<!--    <splash src="res/drawable/android/icon.png" density="mdpi"/>-->
+<!--    <splash src="res/drawable/android/icon.png" density="hdpi"/>-->
+<!--    <splash src="res/drawable/android/icon.png" density="xhdpi"/>-->
+<!--    <splash src="res/drawable/android/icon.png" density="xxhdpi"/>-->
+<!--    <splash src="res/drawable/android/icon.png" density="xxxhdpi"/> -->
+
+    <splash src="res/drawable/android/shl48.png" density="mdpi"/>
+    <splash src="res/drawable/android/shl72.png" density="hdpi"/>
+    <splash src="res/drawable/android/shl96.png" density="xhdpi"/>
+    <splash src="res/drawable/android/shl152.png" density="xxhdpi"/>
+    <splash src="res/drawable/android/shl167.png" density="xxxhdpi"/>
 <!--        <splash src="resources/baghicons/android/icon.png" />-->
 <!--        <splash src="resources/baghicons/android/shl 48.png" density="mdpi"/>-->
 <!--        <splash src="resources/baghicons/android/shl72.png" density="hdpi"/>-->
