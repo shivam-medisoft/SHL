@@ -25,7 +25,7 @@
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="true" />
 <!--    <preference name="ShowSplashScreenSpinner" value="false" />-->
-<!--    <preference name="AutoHideSplashScreen" value="true" />-->
+    <preference name="AutoHideSplashScreen" value="true" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-targetSdkVersion" value="34"/>
@@ -35,7 +35,7 @@
     <preference name="LoadingDialog" value="Please wait, the app is loading"/>
     <preference name="AllowInlineMediaPlayback" value="true"/>
     <preference name="SplashScreen" value="false" />
-    <preference name="SplashScreenDelay" value="3000"/>
+    <preference name="SplashScreenDelay" value="0"/>
     <preference name="FadeSplashScreenDuration" value="300"/>
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashMaintainAspectRatio" value="true" />

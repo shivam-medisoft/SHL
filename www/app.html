@@ -12,6 +12,9 @@ and open the template in the editor.
         <script src="js/jquery-1.9.1.js" type="text/javascript"></script>
          <script src="cordova.js" type="text/javascript"></script>
         <script>
+            document.addEventListener('deviceready', function() {
+                navigator.splashscreen.hide();
+            }, false);
             document.addEventListener("deviceready",function onDeviceReady() {
                 try {
                     var backgroundcolor = "", apppath = "",apppage="";
