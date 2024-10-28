@@ -108,12 +108,12 @@
         <variable name="storage" value="would like to access storage." />
     </plugin>
 <!--    <icon src="resources/baghicons/android/icon.png" />-->
-    <splash src="resources/baghicons/android/icon.png" />
-    <splash src="resources/baghicons/android/icon.png" density="mdpi"/>
-    <splash src="resources/baghicons/android/icon.png" density="hdpi"/>
-    <splash src="resources/baghicons/android/icon.png" density="xhdpi"/>
-    <splash src="resources/baghicons/android/icon.png" density="xxhdpi"/>
-    <splash src="resources/baghicons/android/icon.png" density="xxxhdpi"/>
+    <splash src="res/drawable/android/icon.png" />
+    <splash src="res/drawable/android/icon.png" density="mdpi"/>
+    <splash src="res/drawable/android/icon.png" density="hdpi"/>
+    <splash src="res/drawable/android/icon.png" density="xhdpi"/>
+    <splash src="res/drawable/android/icon.png" density="xxhdpi"/>
+    <splash src="res/drawable/android/icon.png" density="xxxhdpi"/>
 <!--        <splash src="resources/baghicons/android/icon.png" />-->
 <!--        <splash src="resources/baghicons/android/shl 48.png" density="mdpi"/>-->
 <!--        <splash src="resources/baghicons/android/shl72.png" density="hdpi"/>-->
