@@ -14,11 +14,11 @@
         Shivam Medisoft Services Pvt. Ltd.
     </author>
     <content src="app.html"/>
-    <preference name="permissions" value="none" />
-    <preference name="orientation" value="default" />
+    <preference name="permissions" value="default" />
+    <preference name="orientation" value="portrait" />
     <preference name="target-device" value="universal" />
     <preference name="prerendered-icon" value="true" />
-    <preference name="fullscreen" value="true" />
+    <preference name="fullscreen" value="false" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="StatusBarBackgroundColor" value="#31708F" />
     <preference name="detect-data-types" value="true" />
