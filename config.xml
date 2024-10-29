@@ -61,6 +61,9 @@
     </plugin>
     <plugin name="cordova-plugin-file" source="npm" spec="6.0.2" />
     <plugin name="cordova-plugin-geolocation" source="npm" spec="4.0.2"/>
+    <plugin name="cordova-plugin-customurlscheme" spec="^5.0.0">
+        <variable name="URL_SCHEME" value="phonepay" />
+    </plugin>
     <platform name="ios">
         <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
             <string>to take pictures/scan barcodes</string>
