@@ -61,19 +61,10 @@
     </plugin>
     <plugin name="cordova-plugin-file" source="npm" spec="6.0.2" />
     <plugin name="cordova-plugin-geolocation" source="npm" spec="4.0.2"/>
-    <plugin name="cordova-plugin-customurlscheme" spec="^5.0.0">
-        <variable name="URL_SCHEME" value="phonepay" />
-    </plugin>
     <platform name="ios">
-<!--        <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">-->
-<!--            <string>to take pictures/scan barcodes</string>-->
-<!--        </edit-config>-->
-
-        <config-file platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity">
-            <dict>
-                <key>NSAllowsArbitraryLoads</key> <true/>
-            </dict>
-        </config-file>
+        <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+            <string>to take pictures/scan barcodes</string>
+        </edit-config>
         <edit-config target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge">
             <array>
                 <string>upi</string>
@@ -82,22 +73,27 @@
                 <string>paytm</string>
             </array>
         </edit-config>
-<!--        <config-file platform="ios" target="*-Info.plist" parent="UIBackgroundModes">-->
-<!--            <array>-->
-<!--                <string>audio</string>-->
-<!--                <string>location</string>-->
-<!--                <string>fetch</string>-->
-<!--            </array>-->
-<!--        </config-file>-->
-<!--        <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">-->
-<!--            <string>to get pictures</string>-->
-<!--        </edit-config>-->
-<!--        <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">-->
-<!--            <string>need location access to find things nearby</string>-->
-<!--        </edit-config>-->
-<!--        <edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">-->
-<!--            <string>need photo library access to save pictures there</string>-->
-<!--        </edit-config>-->
+        <config-file platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity">
+            <dict>
+                <key>NSAllowsArbitraryLoads</key> <true/>
+            </dict>
+        </config-file>
+        <config-file platform="ios" target="*-Info.plist" parent="UIBackgroundModes">
+            <array>
+                <string>audio</string>
+                <string>location</string>
+                <string>fetch</string>
+            </array>
+        </config-file>
+        <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+            <string>to get pictures</string>
+        </edit-config>
+        <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+            <string>need location access to find things nearby</string>
+        </edit-config>
+        <edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
+            <string>need photo library access to save pictures there</string>
+        </edit-config>
     </platform>
     <!--    for android-->
     <plugin name="cordova-plugin-badge" source="npm"  spec="0.8.8"/>
@@ -184,12 +180,10 @@
         <!--        <icon src="resources/baghicons/ios/100by100.png" width="50" height="50" />-->
         <!--        <icon src="resources/baghicons/ios/1024by1024.png" width="1024" height="1024" />-->
     </platform>
-    <access origin="content:///*" />
-    <access uri="*" subdomains="true" />
+
     <access origin="content:///*" />
     <access origin="*" subdomains="true"/>
     <access launch-external="yes" origin="whatsapp://*" />
-    <access launch-external="yes" origin="phonepe://*" />
     <access origin="tel:*" launch-external="yes" />
 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
@@ -210,12 +204,6 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-        <allow-intent href="upi:*" />
-        <allow-navigation href="upi:*" />
-        <allow-intent href="phonepe:*" />
-        <allow-navigation href="phonepe:*" />
-        <allow-intent href="*" />
-        <allow-navigation href="*" />
     </platform>
     <preference name="android-build-tool" value="gradle" />
     <engine name="ios"/>
