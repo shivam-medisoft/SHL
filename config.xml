@@ -46,6 +46,7 @@
     <preference name="hostname" value="localhost" />
     <!-- Plugins -->
     <!-- Core plugins -->
+    <plugin name="cordova-plugin-upi" source="npm" />
     <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1"/>
     <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1">
         <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />
