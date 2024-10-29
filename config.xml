@@ -46,7 +46,7 @@
     <preference name="hostname" value="localhost" />
     <!-- Plugins -->
     <!-- Core plugins -->
-    <plugin name="cordova-plugin-upi" source="npm" />
+<!--    <plugin name="cordova-plugin-upi" source="npm" />-->
     <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1"/>
     <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1">
         <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />
@@ -111,43 +111,6 @@
 
     <!-- default-->
     <icon src="resources/baghicons/android/icon.png" />
-    <platform name="android">
-        <resource-file src="google-services.json" target="app/google-services.json" />
-        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
-            <application android:usesCleartextTraffic="true" />
-            <application android:requestLegacyExternalStorage="true" />
-            <application android:requestLegacyExternalStorage="@xml/storage" />
-            <!--            <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />-->
-            <!--            <application android:permission.WRITE_EXTERNAL_STORAGE="true" />-->
-            <!--            <application android:permission.READ_EXTERNAL_STORAGE="true" />-->
-            <application android:networkSecurityConfig="@xml/network_security_config" />
-            <!--            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
-            <!--            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
-        </edit-config>
-        <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
-            <string>need to photo library access to get pictures from there</string>
-        </edit-config>
-        <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
-        <resource-file src="resources/android/xml/storage.xml" target="app/src/main/res/xml/storage.xml" />
-        <icon src="resources/baghicons/android/icon.png" width="180" height="180" />
-
-        <icon src="resources/baghicons/android/icon.png" density="ldpi"/>
-        <icon src="resources/baghicons/android/icon.png" density="mdpi"/>
-        <icon src="resources/baghicons/android/icon.png" density="hdpi"/>
-        <icon src="resources/baghicons/android/icon.png" density="xhdpi"/>
-        <!-- <resource-file src="resources/android/xml/network_security_config.xml" target="res/xml/network_security_config.xml" />-->
-        <!--        <icon src="resources/baghicons/android/icon.png" />-->
-        <!--
-    android spalsh -->
-        <!--        <splash src="resources/baghsplash/android/272by482.png" density="ldpi" />-->
-        <!--        <splash src="resources/baghsplash/android/362by642.png" density="mdpi" />-->
-        <!--        <splash src="resources/baghsplash/android/542by962.png" density="hdpi" />-->
-        <!--        <splash src="resources/baghsplash/android/722by1282.png" density="xhdpi" />-->
-
-        <feature name="InAppBrowser">
-            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
-        </feature>
-    </platform>
 
     <platform name="ios">
         <preference name="WKWebViewOnly" value="true" />
