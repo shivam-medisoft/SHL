@@ -65,14 +65,14 @@
         <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
             <string>to take pictures/scan barcodes</string>
         </edit-config>
-        <config-file parent="LSApplicationQueriesSchemes" target="*-Info.plist">
+        <edit-config target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge">
             <array>
                 <string>upi</string>
                 <string>phonepe</string>
                 <string>googlepay</string>
                 <string>paytm</string>
             </array>
-        </config-file>
+        </edit-config>
         <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
             <string>to get pictures</string>
         </edit-config>
