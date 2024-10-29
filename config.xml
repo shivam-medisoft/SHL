@@ -104,7 +104,6 @@
     <plugin name="cordova-plugin-fileopener" source="npm" spec="1.0.5"/>
 <!--    <plugin name="cordova-plugin-upi" spec="^1.0.4" source="npm" />-->
     <plugin name="cordova-plugin-new-upi-payment" spec="^1.0.0" />
-    <plugin name="cordova-plugin-customurlscheme" spec="^5.0.0"> <variable name="URL_SCHEME" value="phonepe" /> </plugin>
 
     <plugin name="cordova-plugin-app-version" source="npm" spec="0.1.11"/>
     <plugin name="cordova-plugin-inappbrowser"   spec="https://github.com/apache/cordova-plugin-inappbrowser.git" source="git" />
