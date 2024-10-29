@@ -124,7 +124,7 @@
     <plugin name= "cordova-plugin-splashscreen" source="npm" spec="6.0.0"/>
     <plugin name= "cordova-plugin-splashscreen" source="npm" spec="6.0.0"/>
     <plugin name="cordova-plugin-file-transfer-latest"  source="npm" spec="2.0.2-dev" />
-    <plugin name="cordova-plugin-qr-barcode-scanner" source="npm"  spec="8.0.3"/>
+<!--    <plugin name="cordova-plugin-qr-barcode-scanner" source="npm"  spec="8.0.3"/>-->
     <plugin name= "cordova-plugin-filepicker" source="npm" spec="1.1.6"/>
 
 
