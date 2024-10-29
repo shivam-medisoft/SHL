@@ -196,6 +196,8 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-intent href="whatsapp:*" />
+    <allow-intent href="upi:*" />
+    <allow-intent href="phonepe:*" />
     <allow-intent href="*" />
     <allow-navigation href="*" />
     <allow-navigation href="http://*/*" />
