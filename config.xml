@@ -73,6 +73,18 @@
                 <string>paytm</string>
             </array>
         </edit-config>
+        <config-file platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity">
+            <dict>
+                <key>NSAllowsArbitraryLoads</key> <true/>
+            </dict>
+        </config-file>
+        <config-file platform="ios" target="*-Info.plist" parent="UIBackgroundModes">
+            <array>
+                <string>audio</string>
+                <string>location</string>
+                <string>fetch</string>
+            </array>
+        </config-file>
         <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
             <string>to get pictures</string>
         </edit-config>
