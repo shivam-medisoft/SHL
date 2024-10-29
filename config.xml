@@ -66,12 +66,12 @@
             <string>to take pictures/scan barcodes</string>
         </edit-config>
         <edit-config target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge">
-            <array>
-                <string>upi</string>
+<!--            <array>-->
+<!--                <string>upi</string>-->
                 <string>phonepe</string>
-                <string>googlepay</string>
-                <string>paytm</string>
-            </array>
+<!--                <string>googlepay</string>-->
+<!--                <string>paytm</string>-->
+<!--            </array>-->
         </edit-config>
         <config-file platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity">
             <dict>
