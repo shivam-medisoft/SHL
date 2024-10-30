@@ -33,8 +33,8 @@
     <preference name="KeepRunning" value="true"/>
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
-    <plugin name="cordova.plugins.diagnostic" spec="6.0.2"/>
-    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />
+<!--    <plugin name="cordova.plugins.diagnostic" spec="6.0.2"/>-->
+<!--    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />-->
     <preference name="stay-in-webview" value="false" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
@@ -57,7 +57,7 @@
 <!--        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />-->
 <!--    </plugin>-->
 <!--    <plugin name="cordova-plugin-file" source="npm" spec="6.0.2" />-->
-    <plugin name="cordova-plugin-geolocation" source="npm" spec="4.0.2"/>
+<!--    <plugin name="cordova-plugin-geolocation" source="npm" spec="4.0.2"/>-->
     <platform name="ios">
         <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
             <string>to take pictures/scan barcodes</string>
@@ -96,35 +96,35 @@
     <plugin name="cordova-plugin-badge" source="npm"  spec="0.8.8"/>
     <plugin name="cordova-plugin-email-composer" source="npm"/>
     <plugin name="cordova-plugin-phonedialer" source="npm" spec="0.3.1"/>
-    <plugin name="cordova-plugin-x-socialsharing" source="npm" spec="6.0.3"/>
-    <plugin name= "cordova-plugin-print-pdf" source="npm" spec="4.0.2"/>
+<!--    <plugin name="cordova-plugin-x-socialsharing" source="npm" spec="6.0.3"/>-->
+<!--    <plugin name= "cordova-plugin-print-pdf" source="npm" spec="4.0.2"/>-->
     <plugin name="cordova-plugin-androidx" source="npm"/>
 <!--    <plugin name="cordova-plugin-advanced-http" source="npm" spec="3.1.0"/>-->
 <!--    <plugin name="cordova-plugin-httpd-cors" source="npm" spec="0.9.9"/>-->
-    <plugin name="cordova-plugin-fileopener" source="npm" spec="1.0.5"/>
+<!--    <plugin name="cordova-plugin-fileopener" source="npm" spec="1.0.5"/>-->
 <!--    <plugin name="cordova-plugin-upi" spec="^1.0.4" source="npm" />-->
     <plugin name="cordova-plugin-new-upi-payment" spec="^1.0.0" />
 
     <plugin name="cordova-plugin-app-version" source="npm" spec="0.1.11"/>
-    <plugin name="cordova-plugin-inappbrowser"   spec="https://github.com/apache/cordova-plugin-inappbrowser.git" source="git" />
+<!--    <plugin name="cordova-plugin-inappbrowser"   spec="https://github.com/apache/cordova-plugin-inappbrowser.git" source="git" />-->
     <plugin name= "cordova-filechooser" source="npm" spec="1.0.3"/>
     <plugin name= "cordova-plugin-device" source="npm" spec="2.0.3"/>
-    <plugin name= "cordova-plugin-dialogs" source="npm" spec="2.0.2"/>
+<!--    <plugin name= "cordova-plugin-dialogs" source="npm" spec="2.0.2"/>-->
     <plugin name= "cordova-plugin-network-information" source="npm" spec="2.0.2"/>
     <plugin name= "cordova-plugin-networkinterfaces" source="npm" spec="2.0.0"/>
-    <plugin name= "cordova-plugin-datepicker" source="npm" spec="0.9.3"/>
+<!--    <plugin name= "cordova-plugin-datepicker" source="npm" spec="0.9.3"/>-->
     <plugin name= "cordova-plugin-spinnerdialog" source="npm" spec="1.3.2"/>
     <plugin name= "cordova-plugin-keyboard" source="npm" spec="1.2.0"/>
     <plugin name= "cordova-plugin-openfilenative" source="npm" spec="1.1.0"/>
-    <plugin name= "cordova-plugin-statusbar" source="npm" spec="2.4.3"/>
-    <plugin name= "cordova-plugin-market" source="npm" spec="1.2.0"/>
+<!--    <plugin name= "cordova-plugin-statusbar" source="npm" spec="2.4.3"/>-->
+<!--    <plugin name= "cordova-plugin-market" source="npm" spec="1.2.0"/>-->
     <plugin name= "cordova-plugin-nativestorage" source="npm" spec="2.3.2"/>
     <plugin name="cordova-plugin-wkwebview-file-xhr" source="npm" version="3.0.0" />
     <plugin name= "cordova-plugin-splashscreen" source="npm" spec="6.0.0"/>
-    <plugin name= "cordova-plugin-splashscreen" source="npm" spec="6.0.0"/>
+<!--    <plugin name= "cordova-plugin-splashscreen" source="npm" spec="6.0.0"/>-->
 <!--    <plugin name="cordova-plugin-file-transfer-latest"  source="npm" spec="2.0.2-dev" />-->
 <!--    <plugin name="cordova-plugin-qr-barcode-scanner" source="npm"  spec="8.0.3"/>-->
-    <plugin name= "cordova-plugin-filepicker" source="npm" spec="1.1.6"/>
+<!--    <plugin name= "cordova-plugin-filepicker" source="npm" spec="1.1.6"/>-->
 
 
     <!-- default-->
