@@ -81,15 +81,15 @@
                 <string>fetch</string>
             </array>
         </config-file>
-        <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
-            <string>to get pictures</string>
-        </edit-config>
+<!--        <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">-->
+<!--            <string>to get pictures</string>-->
+<!--        </edit-config>-->
         <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
             <string>need location access to find things nearby</string>
         </edit-config>
-        <edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
-            <string>need photo library access to save pictures there</string>
-        </edit-config>
+<!--        <edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">-->
+<!--            <string>need photo library access to save pictures there</string>-->
+<!--        </edit-config>-->
     </platform>
     <!--    for android-->
     <plugin name="cordova-plugin-badge" source="npm"  spec="0.8.8"/>
