@@ -102,8 +102,8 @@
 <!--    <plugin name="cordova-plugin-advanced-http" source="npm" spec="3.1.0"/>-->
 <!--    <plugin name="cordova-plugin-httpd-cors" source="npm" spec="0.9.9"/>-->
 <!--    <plugin name="cordova-plugin-fileopener" source="npm" spec="1.0.5"/>-->
-<!--    <plugin name="cordova-plugin-upi" spec="^1.0.4" source="npm" />-->
-    <plugin name="cordova-plugin-new-upi-payment" spec="^1.0.0" />
+    <plugin name="cordova-plugin-upi" spec="^1.0.4" source="npm" />
+<!--    <plugin name="cordova-plugin-new-upi-payment" spec="^1.0.0" />-->
 
     <plugin name="cordova-plugin-app-version" source="npm" spec="0.1.11"/>
 <!--    <plugin name="cordova-plugin-inappbrowser"   spec="https://github.com/apache/cordova-plugin-inappbrowser.git" source="git" />-->
