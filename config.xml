@@ -59,9 +59,9 @@
 <!--    <plugin name="cordova-plugin-file" source="npm" spec="6.0.2" />-->
 <!--    <plugin name="cordova-plugin-geolocation" source="npm" spec="4.0.2"/>-->
     <platform name="ios">
-        <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
-            <string>to take pictures/scan barcodes</string>
-        </edit-config>
+<!--        <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">-->
+<!--            <string>to take pictures/scan barcodes</string>-->
+<!--        </edit-config>-->
         <edit-config target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge">
             <array>
                 <string>upi</string>
@@ -95,7 +95,7 @@
     <!--    for android-->
     <plugin name="cordova-plugin-badge" source="npm"  spec="0.8.8"/>
     <plugin name="cordova-plugin-email-composer" source="npm"/>
-    <plugin name="cordova-plugin-phonedialer" source="npm" spec="0.3.1"/>
+<!--    <plugin name="cordova-plugin-phonedialer" source="npm" spec="0.3.1"/>-->
 <!--    <plugin name="cordova-plugin-x-socialsharing" source="npm" spec="6.0.3"/>-->
 <!--    <plugin name= "cordova-plugin-print-pdf" source="npm" spec="4.0.2"/>-->
     <plugin name="cordova-plugin-androidx" source="npm"/>
@@ -118,7 +118,7 @@
     <plugin name= "cordova-plugin-openfilenative" source="npm" spec="1.1.0"/>
 <!--    <plugin name= "cordova-plugin-statusbar" source="npm" spec="2.4.3"/>-->
 <!--    <plugin name= "cordova-plugin-market" source="npm" spec="1.2.0"/>-->
-    <plugin name= "cordova-plugin-nativestorage" source="npm" spec="2.3.2"/>
+<!--    <plugin name= "cordova-plugin-nativestorage" source="npm" spec="2.3.2"/>-->
     <plugin name="cordova-plugin-wkwebview-file-xhr" source="npm" version="3.0.0" />
     <plugin name= "cordova-plugin-splashscreen" source="npm" spec="6.0.0"/>
 <!--    <plugin name= "cordova-plugin-splashscreen" source="npm" spec="6.0.0"/>-->
