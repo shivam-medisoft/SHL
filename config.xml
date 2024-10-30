@@ -44,19 +44,19 @@
     <!-- Plugins -->
     <!-- Core plugins -->
 <!--    <plugin name="cordova-plugin-upi" source="npm" />-->
-    <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1"/>
-    <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1">
-        <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />
-        <variable name="MICROPHONE_USAGE_DESCRIPTION" value="App would like to access the microphone." />
-        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />
-    </plugin>
-    <plugin name="cordova-plugin-media-capture" source="npm" spec="3.0.3"/>
-    <plugin name="cordova-plugin-media-capture" source="npm" spec="3.0.3">
-        <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />
-        <variable name="MICROPHONE_USAGE_DESCRIPTION" value="App would like to access the microphone." />
-        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />
-    </plugin>
-    <plugin name="cordova-plugin-file" source="npm" spec="6.0.2" />
+<!--    <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1"/>-->
+<!--    <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1">-->
+<!--        <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />-->
+<!--        <variable name="MICROPHONE_USAGE_DESCRIPTION" value="App would like to access the microphone." />-->
+<!--        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />-->
+<!--    </plugin>-->
+<!--    <plugin name="cordova-plugin-media-capture" source="npm" spec="3.0.3"/>-->
+<!--    <plugin name="cordova-plugin-media-capture" source="npm" spec="3.0.3">-->
+<!--        <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />-->
+<!--        <variable name="MICROPHONE_USAGE_DESCRIPTION" value="App would like to access the microphone." />-->
+<!--        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />-->
+<!--    </plugin>-->
+<!--    <plugin name="cordova-plugin-file" source="npm" spec="6.0.2" />-->
     <plugin name="cordova-plugin-geolocation" source="npm" spec="4.0.2"/>
     <platform name="ios">
         <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
@@ -99,8 +99,8 @@
     <plugin name="cordova-plugin-x-socialsharing" source="npm" spec="6.0.3"/>
     <plugin name= "cordova-plugin-print-pdf" source="npm" spec="4.0.2"/>
     <plugin name="cordova-plugin-androidx" source="npm"/>
-    <plugin name="cordova-plugin-advanced-http" source="npm" spec="3.1.0"/>
-    <plugin name="cordova-plugin-httpd-cors" source="npm" spec="0.9.9"/>
+<!--    <plugin name="cordova-plugin-advanced-http" source="npm" spec="3.1.0"/>-->
+<!--    <plugin name="cordova-plugin-httpd-cors" source="npm" spec="0.9.9"/>-->
     <plugin name="cordova-plugin-fileopener" source="npm" spec="1.0.5"/>
 <!--    <plugin name="cordova-plugin-upi" spec="^1.0.4" source="npm" />-->
     <plugin name="cordova-plugin-new-upi-payment" spec="^1.0.0" />
@@ -122,7 +122,7 @@
     <plugin name="cordova-plugin-wkwebview-file-xhr" source="npm" version="3.0.0" />
     <plugin name= "cordova-plugin-splashscreen" source="npm" spec="6.0.0"/>
     <plugin name= "cordova-plugin-splashscreen" source="npm" spec="6.0.0"/>
-    <plugin name="cordova-plugin-file-transfer-latest"  source="npm" spec="2.0.2-dev" />
+<!--    <plugin name="cordova-plugin-file-transfer-latest"  source="npm" spec="2.0.2-dev" />-->
 <!--    <plugin name="cordova-plugin-qr-barcode-scanner" source="npm"  spec="8.0.3"/>-->
     <plugin name= "cordova-plugin-filepicker" source="npm" spec="1.1.6"/>
 
