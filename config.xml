@@ -6,7 +6,7 @@
         id="com.shivam.sah"
         version="1.0.5"
         android-versionCode="100105" >
-    <config-file platform="ios" target="*-Info.plist" parent="LSApplicationQueriesSchemes"> <array> <string>phonepe</string> <string>gpay</string> <string>paytmmp</string> </array> </config-file>
+    <config-file platform="ios" target="Info.plist" parent="LSApplicationQueriesSchemes"> <array> <string>phonepe</string> <string>gpay</string> <string>paytmmp</string> </array> </config-file>
 
     <name>Sahyadri Hospitals</name>
     <description>
@@ -201,5 +201,5 @@
     <allow-navigation href="*" />
     <access origin="*" />
     <engine name="ios"/>
-    <config-file platform="ios" target="*-Info.plist" parent="LSApplicationQueriesSchemes"> <array> <string>phonepe</string> <string>gpay</string> <string>paytmmp</string> </array> </config-file>
+    <config-file platform="ios" target="Info.plist" parent="LSApplicationQueriesSchemes"> <array> <string>phonepe</string> <string>gpay</string> <string>paytmmp</string> </array> </config-file>
 </widget>
