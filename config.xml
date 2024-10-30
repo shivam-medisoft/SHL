@@ -57,19 +57,19 @@
 <!--    </plugin>-->
 <!--    <plugin name="cordova-plugin-file" source="npm" spec="6.0.2" />-->
 <!--    <plugin name="cordova-plugin-geolocation" source="npm" spec="4.0.2"/>-->
-    <config-file platform="ios" target="*-Info.plist" parent="LSApplicationQueriesSchemes"> <array> <string>upi</string> <string>phonepe</string> <string>gpay</string> <string>paytm</string> <!-- Add more as needed --> </array> </config-file>
+<!--    <config-file platform="ios" target="*-Info.plist" parent="LSApplicationQueriesSchemes"> <array> <string>upi</string> <string>phonepe</string> <string>gpay</string> <string>paytm</string> &lt;!&ndash; Add more as needed &ndash;&gt; </array> </config-file>-->
     <platform name="ios">
 <!--        <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">-->
 <!--            <string>to take pictures/scan barcodes</string>-->
 <!--        </edit-config>-->
-<!--        <edit-config target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge">-->
-<!--            <array>-->
-<!--                <string>upi</string>-->
-<!--                <string>phonepe</string>-->
-<!--                <string>googlepay</string>-->
-<!--                <string>paytm</string>-->
-<!--            </array>-->
-<!--        </edit-config>-->
+        <edit-config target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge">
+            <array>
+                <string>upi</string>
+                <string>phonepe</string>
+                <string>googlepay</string>
+                <string>paytm</string>
+            </array>
+        </edit-config>
         <config-file platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity">
             <dict>
                 <key>NSAllowsArbitraryLoads</key> <true/>
