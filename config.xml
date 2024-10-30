@@ -57,18 +57,19 @@
 <!--    </plugin>-->
 <!--    <plugin name="cordova-plugin-file" source="npm" spec="6.0.2" />-->
 <!--    <plugin name="cordova-plugin-geolocation" source="npm" spec="4.0.2"/>-->
+    <config-file platform="ios" target="*-Info.plist" parent="LSApplicationQueriesSchemes"> <array> <string>upi</string> <string>phonepe</string> <string>paytm</string> <!-- Add more as needed --> </array> </config-file>
     <platform name="ios">
 <!--        <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">-->
 <!--            <string>to take pictures/scan barcodes</string>-->
 <!--        </edit-config>-->
-        <edit-config target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge">
-            <array>
-                <string>upi</string>
-                <string>phonepe</string>
-                <string>googlepay</string>
-                <string>paytm</string>
-            </array>
-        </edit-config>
+<!--        <edit-config target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge">-->
+<!--            <array>-->
+<!--                <string>upi</string>-->
+<!--                <string>phonepe</string>-->
+<!--                <string>googlepay</string>-->
+<!--                <string>paytm</string>-->
+<!--            </array>-->
+<!--        </edit-config>-->
         <config-file platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity">
             <dict>
                 <key>NSAllowsArbitraryLoads</key> <true/>
@@ -172,7 +173,7 @@
         <icon src="resources/baghicons/ios/shl72.png" width="72" height="72" />
         <icon src="resources/baghicons/ios/shl87.png" width="87" height="87" />
         <!-- iPad Spotlight and Settings Icon -->
-        <icon src="resources/baghicons/ios/shl50sd.png" width="50" height="50" />
+        <icon src="resources/baghicons/ios/shl50.png" width="50" height="50" />
         <!--        <icon src="resources/baghicons/ios/100by100.png" width="50" height="50" />-->
         <!--        <icon src="resources/baghicons/ios/1024by1024.png" width="1024" height="1024" />-->
     </platform>
