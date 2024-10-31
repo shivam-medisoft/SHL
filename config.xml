@@ -40,7 +40,7 @@
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
 <!--    <preference name="scheme" value="app" />-->
-    <preference name="hostname" value="localhost" />
+<!--    <preference name="hostname" value="localhost" />-->
     <!-- Plugins -->
     <!-- Core plugins -->
 <!--    <plugin name="cordova-plugin-upi" source="npm" />-->
@@ -80,7 +80,15 @@
 <!--                    <string>paytm</string>-->
 <!--                </array>-->
 <!--            </edit-config>-->
-            <edit-config target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge"> <array> <string>upi</string> <string>phonepe</string> <string>googlepay</string> <string>paytm</string> </array> </edit-config>
+            <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+                <array>
+                    <string>upi</string>
+                    <string>phonepe</string>
+                    <string>googlepay</string>
+                    <string>paytm</string>
+                </array>
+            </config-file>
+<!--            <edit-config target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge"> <array> <string>upi</string> <string>phonepe</string> <string>googlepay</string> <string>paytm</string> </array> </edit-config>-->
         </platform>
         <!--        <config-file platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity">-->
 <!--            <dict>-->
