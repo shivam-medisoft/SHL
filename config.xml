@@ -75,6 +75,26 @@
                 <key>NSAllowsArbitraryLoads</key> <true/>
             </dict>
         </edit-config>
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
+            <application android:usesCleartextTraffic="true" />
+            <application android:requestLegacyExternalStorage="true" />
+            <application android:requestLegacyExternalStorage="@xml/storage" />
+            <!--            <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />-->
+            <!--            <application android:permission.WRITE_EXTERNAL_STORAGE="true" />-->
+            <!--            <application android:permission.READ_EXTERNAL_STORAGE="true" />-->
+            <application android:networkSecurityConfig="@xml/network_security_config" />
+            <!--            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+            <!--            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+        </edit-config>
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/activity">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-feature android:name="android.hardware.camera" android:required="true" />
+            <uses-feature android:name="android.hardware.camera.autofocus" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+        </edit-config>
     </platform>
     <!--    for android-->
     <plugin name="cordova-plugin-badge" source="npm"  spec="0.8.8"/>
