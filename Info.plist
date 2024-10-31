@@ -20,6 +20,12 @@
 		<string>Apple Development: Sarath Jupalli (Q3D837T8K2)</string>
 		<key>Team</key>
 		<string>NGB5H9AH9R</string>
+		 <key>LSApplicationQueriesSchemes</key>
+                <array>
+                    <string>phonepe</string>
+                    <string>gpay</string>
+                    <string>paytmmp</string>
+                </array>
 	</dict>
 	<key>ArchiveVersion</key>
 	<integer>2</integer>
