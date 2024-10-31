@@ -72,14 +72,15 @@
 <!--            </array>-->
 <!--        </edit-config>-->
         <platform name="ios">
-            <edit-config target="*-Info.plist" file="*-Info.plist" mode="merge">
-                <array>
-                    <string>upi</string>
-                    <string>phonepe</string>
-                    <string>googlepay</string>
-                    <string>paytm</string>
-                </array>
-            </edit-config>
+<!--            <edit-config target="*-Info.plist" file="*-Info.plist" mode="merge">-->
+<!--                <array>-->
+<!--                    <string>upi</string>-->
+<!--                    <string>phonepe</string>-->
+<!--                    <string>googlepay</string>-->
+<!--                    <string>paytm</string>-->
+<!--                </array>-->
+<!--            </edit-config>-->
+            <edit-config target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge"> <array> <string>upi</string> <string>phonepe</string> <string>googlepay</string> <string>paytm</string> </array> </edit-config>
         </platform>
         <!--        <config-file platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity">-->
 <!--            <dict>-->
