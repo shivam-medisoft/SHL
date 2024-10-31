@@ -63,15 +63,25 @@
 <!--        <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">-->
 <!--            <string>to take pictures/scan barcodes</string>-->
 <!--        </edit-config>-->
-        <edit-config platform="ios" target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge">
-            <array>
-                <string>upi</string>
-                <string>phonepe</string>
-                <string>googlepay</string>
-                <string>paytm</string>
-            </array>
-        </edit-config>
-<!--        <config-file platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity">-->
+<!--        <edit-config platform="ios" target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge">-->
+<!--            <array>-->
+<!--                <string>upi</string>-->
+<!--                <string>phonepe</string>-->
+<!--                <string>googlepay</string>-->
+<!--                <string>paytm</string>-->
+<!--            </array>-->
+<!--        </edit-config>-->
+        <platform name="ios">
+            <edit-config target="*-Info.plist" file="*-Info.plist" mode="merge">
+                <array>
+                    <string>upi</string>
+                    <string>phonepe</string>
+                    <string>googlepay</string>
+                    <string>paytm</string>
+                </array>
+            </edit-config>
+        </platform>
+        <!--        <config-file platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity">-->
 <!--            <dict>-->
 <!--                <key>NSAllowsArbitraryLoads</key> <true/>-->
 <!--            </dict>-->
