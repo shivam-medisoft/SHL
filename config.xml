@@ -167,10 +167,10 @@
     <allow-navigation href="http://*/*" />
     <allow-navigation href="https://*/*" />
     <allow-navigation href="*" />
-    <allow-intent href="upi://*"/>
-    <allow-intent href="phonepe://*"/>
-    <allow-intent href="googlepay://*"/>
-    <allow-intent href="paytm://*"/>
+    <allow-intent href="upi:*"/>
+    <allow-intent href="phonepe:*"/>
+    <allow-intent href="googlepay:*"/>
+    <allow-intent href="paytm:*"/>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
