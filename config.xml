@@ -39,6 +39,8 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="scheme" value="app" />
     <preference name="hostname" value="localhost" />
+    <access origin="phonepe:*" launch-external="yes" />
+    <allow-intent href="phonepe:*" />
     <access origin="*" />
     <allow-navigation href="*" />
     <allow-intent href="*" />
