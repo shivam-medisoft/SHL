@@ -72,6 +72,23 @@
                 <key>NSAllowsArbitraryLoads</key> <true/>
             </dict>
         </edit-config>
+        <platform name="android">
+            <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+                <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true" />
+            </edit-config>
+
+            <!-- Adding intent filters to handle UPI URL schemes on Android -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="upi" />
+                <data android:scheme="phonepe" />
+                <data android:scheme="googlepay" />
+                <data android:scheme="paytm" />
+            </intent-filter>
+        </platform>
+
 
     </platform>
     <!--    for android-->
@@ -167,10 +184,10 @@
     <allow-navigation href="http://*/*" />
     <allow-navigation href="https://*/*" />
     <allow-navigation href="*" />
-    <allow-intent href="upi:*"/>
-    <allow-intent href="phonepe:*"/>
-    <allow-intent href="googlepay:*"/>
-    <allow-intent href="paytm:*"/>
+    <allow-intent href="upi://*"/>
+    <allow-intent href="phonepe://*"/>
+    <allow-intent href="googlepay://*"/>
+    <allow-intent href="paytm://*"/>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
