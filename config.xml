@@ -43,7 +43,8 @@
     <allow-navigation href="*" />
     <allow-intent href="*" />
     <platform name="ios">
-        <edit-config target="*-Info.plist" file="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">
+        <edit-config target="*-Info.plist" file="*-Info.plist" mode="merge">
+            <key>LSApplicationQueriesSchemes</key>
             <array>
                 <string>upi</string>
                 <string>phonepe</string>
@@ -51,21 +52,12 @@
                 <string>paytm</string>
             </array>
         </edit-config>
-            <edit-config target="*-Info.plist" file="*-Info.plist" mode="merge">
-                <key>NSAppTransportSecurity</key>
-                <dict>
-                    <key>NSAllowsArbitraryLoads</key>
-                    <true/>
-                </dict>
-            </edit-config>
-            <edit-config target="*-Info.plist" file="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">
-                <array>
-                    <string>upi</string>
-                    <string>phonepe</string>
-                    <string>googlepay</string>
-                    <string>paytm</string>
-                </array>
-            </edit-config>
+        <edit-config target="*-Info.plist" file="*-Info.plist" mode="merge">
+            <key>NSAppTransportSecurity</key>
+            <dict>
+                <key>NSAllowsArbitraryLoads</key> <true/>
+            </dict>
+        </edit-config>
             <edit-config target="*-Info.plist" file="*-Info.plist" mode="merge">
                 <key>UIBackgroundModes</key>
                 <array>
