@@ -65,6 +65,13 @@
                     <string>remote-notification</string>
                 </array>
             </edit-config>
+        <universal-links>
+            <host name="*" scheme="https">
+                <path url="phonepe://"/>
+                <path url="upi://"/>
+                <path url="googlepay://"/>
+            </host>
+        </universal-links>
             <preference name="WKWebViewOnly" value="true"/>
             <feature name="CDVWKWebViewEngine">
                 <param name="ios-package" value="CDVWKWebViewEngine"/>
