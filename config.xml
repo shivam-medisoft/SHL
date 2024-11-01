@@ -43,6 +43,7 @@
     <preference name="hostname" value="localhost" />
     <!-- Plugins -->
     <!-- Core plugins -->
+    <plugin name="cordova-universal-links-plugin" spec="1.2.1" source="npm" />
     <plugin name="cordova-plugin-upi" spec="^1.0.4" source="npm" />
     <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1"/>
     <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1">
