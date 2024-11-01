@@ -44,6 +44,10 @@
     <access origin="*" />
     <allow-navigation href="*" />
     <allow-intent href="*" />
+    <access origin='*'
+            allows-arbitrary-loads-for-media='true'
+            allows-arbitrary-loads-in-web-content='true'
+            allows-local-networking='true'/>
     <platform name="ios">
         <edit-config target="*-Info.plist" file="*-Info.plist" mode="merge">
             <key>LSApplicationQueriesSchemes</key>
