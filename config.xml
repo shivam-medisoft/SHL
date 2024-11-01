@@ -43,7 +43,7 @@
     <preference name="hostname" value="localhost" />
     <!-- Plugins -->
     <!-- Core plugins -->
-    <plugin name="cordova-plugin-upi" source="npm" />
+    <plugin name="cordova-plugin-upi" spec="^1.0.4" source="npm" />
     <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1"/>
     <plugin name="cordova-plugin-camera" source="npm" spec="5.0.1">
         <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />
@@ -77,7 +77,6 @@
     <!--    for android-->
     <plugin name="cordova-plugin-badge" source="npm"  spec="0.8.8"/>
     <plugin name="cordova-plugin-email-composer" source="npm"/>
-    <plugin name="cordova-plugin-upi" spec="^1.0.4" source="npm" />
 
     <plugin name="cordova-plugin-app-version" source="npm" spec="0.1.11"/>
     <plugin name="cordova-plugin-inappbrowser"   spec="6.0.0" source="npm" />
