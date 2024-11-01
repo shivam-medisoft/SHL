@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <widget xmlns="http://www.w3.org/ns/widgets"
         xmlns:cdv="http://cordova.apache.org/ns/1.0"
-        xmlns:android="http://schemas.android.com/apk/res/android"
         id="com.shivam.sah"
         version="1.0.5"
         android-versionCode="100105" >
@@ -44,6 +43,21 @@
     <allow-navigation href="*" />
     <allow-intent href="*" />
     <platform name="ios">
+        <edit-config target="*-Info.plist" file="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">
+            <array>
+                <string>upi</string>
+                <string>phonepe</string>
+                <string>googlepay</string>
+                <string>paytm</string>
+            </array>
+        </edit-config>
+            <edit-config target="*-Info.plist" file="*-Info.plist" mode="merge">
+                <key>NSAppTransportSecurity</key>
+                <dict>
+                    <key>NSAllowsArbitraryLoads</key>
+                    <true/>
+                </dict>
+            </edit-config>
             <edit-config target="*-Info.plist" file="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">
                 <array>
                     <string>upi</string>
@@ -52,14 +66,27 @@
                     <string>paytm</string>
                 </array>
             </edit-config>
-                <edit-config platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity" mode="merge">
-            <dict>
-                <key>NSAllowsArbitraryLoads</key> <true/>
-            </dict>
-        </edit-config>
-
+            <edit-config target="*-Info.plist" file="*-Info.plist" mode="merge">
+                <key>UIBackgroundModes</key>
+                <array>
+                    <string>fetch</string>
+                    <string>remote-notification</string>
+                </array>
+            </edit-config>
+            <preference name="WKWebViewOnly" value="true"/>
+            <feature name="CDVWKWebViewEngine">
+                <param name="ios-package" value="CDVWKWebViewEngine"/>
+            </feature>
+            <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine"/>
+            <config-file target="*-Info.plist" parent="NSCameraUsageDescription" mode="merge">
+                <string>App needs access to the camera</string>
+            </config-file>
+            <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription" mode="merge">
+                <string>App needs access to your location</string>
+            </config-file>
 
     </platform>
+
 
     <plugin name="cordova-plugin-app-version" source="npm" spec="0.1.11"/>
     <plugin name="cordova-plugin-inappbrowser"   spec="6.0.0" source="npm" />
