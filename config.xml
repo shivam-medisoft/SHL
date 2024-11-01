@@ -58,6 +58,16 @@
                 <string>paytm</string>
             </array>
         </edit-config>
+        <edit-config parent="CFBundleURLTypes" target="*-Info.plist" file="*-Info.plist" mode="merge">
+            <array>
+                <dict>
+                    <key>CFBundleURLSchemes</key>
+                    <array>
+                        <string>phonepe</string>
+                    </array>
+                </dict>
+            </array>
+        </edit-config>
         <edit-config target="*-Info.plist" file="*-Info.plist" mode="merge">
             <key>NSAppTransportSecurity</key>
             <dict>
