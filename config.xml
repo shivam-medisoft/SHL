@@ -44,8 +44,7 @@
     <allow-navigation href="*" />
     <allow-intent href="*" />
     <platform name="ios">
-            <edit-config target="*-Info.plist" file="*-Info.plist"  mode="merge">
-                <key>LSApplicationQueriesSchemes</key>
+            <edit-config target="*-Info.plist" file="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">
                 <array>
                     <string>upi</string>
                     <string>phonepe</string>
