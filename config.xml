@@ -59,15 +59,15 @@
     <plugin name="cordova-plugin-file" source="npm" spec="6.0.2" />
     <plugin name="cordova-plugin-geolocation" source="npm" spec="4.0.2"/>
     <platform name="ios">
-            <edit-config target="platforms/ios/SHL/Info.plist" parent="LSApplicationQueriesSchemes">
+            <edit-config target="*-Info.plist" parent="LSApplicationQueriesSchemes">
                 <array>
-<!--                    <string>upi</string>-->
+                    <string>upi</string>
                     <string>phonepe</string>
-<!--                    <string>googlepay</string>-->
-<!--                    <string>paytm</string>-->
+                    <string>googlepay</string>
+                    <string>paytm</string>
                 </array>
             </edit-config>
-                <edit-config platform="ios" target="platforms/ios/SHL/Info.plist" parent="NSAppTransportSecurity">
+                <edit-config platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity">
             <dict>
                 <key>NSAllowsArbitraryLoads</key> <true/>
             </dict>
