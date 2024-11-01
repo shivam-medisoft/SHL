@@ -154,10 +154,10 @@
     <access origin="content:///*" />
     <access origin="*" subdomains="true"/>
     <access launch-external="yes" origin="whatsapp://*" />
-    <access origin="upi://*"/>
-    <access origin="phonepe://*"/>
-    <access origin="googlepay://*"/>
-    <access origin="paytm://*"/>
+    <access origin="upi://*" launch-external="yes" />
+    <access origin="phonepe://*" launch-external="yes" />
+    <access origin="googlepay://*" launch-external="yes" />
+    <access origin="paytm://*" launch-external="yes" />
 
     <access origin="tel:*" launch-external="yes" />
 
