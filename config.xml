@@ -115,6 +115,7 @@
     </plugin>
 
     <plugin name= "cordova-plugin-device" source="npm" spec="2.0.3"/>
+    <plugin name= "Cordova Universal Links Plugin" source="npm" spec="1.2.1"/>
     <plugin name= "cordova-plugin-network-information" source="npm" spec="2.0.2"/>
 <!--    <plugin name= "cordova-custom-config" source="npm" spec="5.1.1"/>-->
     <plugin name= "cordova-plugin-networkinterfaces" source="npm" spec="2.0.0"/>
