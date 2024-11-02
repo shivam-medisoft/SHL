@@ -107,7 +107,7 @@
     <plugin name="cordova-plugin-whitelist" source="npm" spec="1.3.5"/>
     <plugin name="cordova-plugin-app-version" source="npm" spec="0.1.11"/>
     <plugin name="cordova-plugin-upi" source="npm" spec="1.0.4"/>
-<!--    <plugin name="cordova-plugin-ionic-webview" source="npm" spec="5.0.1"/>-->
+    <plugin name="cordova-plugin-ionic-webview" source="npm" spec="5.0.1"/>
     <preference name="AllowedSchemes" value="phonepe,upi,googlepay,paytm" />
 
     <plugin name="cordova-plugin-inappbrowser"   spec="6.0.0" source="npm" />
