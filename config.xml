@@ -88,11 +88,11 @@
                     <string>remote-notification</string>
                 </array>
             </edit-config>
-            <preference name="WKWebViewOnly" value="true"/>
-            <feature name="CDVWKWebViewEngine">
-                <param name="ios-package" value="CDVWKWebViewEngine"/>
-            </feature>
-            <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine"/>
+<!--            <preference name="WKWebViewOnly" value="true"/>-->
+<!--            <feature name="CDVWKWebViewEngine">-->
+<!--                <param name="ios-package" value="CDVWKWebViewEngine"/>-->
+<!--            </feature>-->
+<!--            <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine"/>-->
             <config-file target="*-Info.plist" parent="NSCameraUsageDescription" mode="merge">
                 <string>App needs access to the camera</string>
             </config-file>
@@ -112,7 +112,7 @@
 
     <plugin name="cordova-plugin-inappbrowser"   spec="6.0.0" source="npm" />
     <plugin name="cordova-plugin-customurlscheme" spec="*" >
-        <variable name="URL_SCHEME" value="upi" />
+        <variable name="URL_SCHEME" value="phonepe" />
     </plugin>
 
     <plugin name= "cordova-plugin-device" source="npm" spec="2.0.3"/>
