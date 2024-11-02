@@ -111,6 +111,7 @@
     <preference name="AllowedSchemes" value="phonepe,upi,googlepay,paytm" />
 
     <plugin name="cordova-plugin-inappbrowser"   spec="6.0.0" source="npm" />
+    <plugin name="cordova-plugin-customurlscheme"   spec="5.0.2" source="npm" URL_SCHEME="phonepe" />
     <plugin name= "cordova-plugin-device" source="npm" spec="2.0.3"/>
     <plugin name= "cordova-plugin-network-information" source="npm" spec="2.0.2"/>
 <!--    <plugin name= "cordova-custom-config" source="npm" spec="5.1.1"/>-->
