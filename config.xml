@@ -217,8 +217,8 @@
 
 <!--        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/baghicons/ios/shl76.png"/>-->
     <platform name="android">
-        <splash src="resources/baghicons/ios/shl60.png" density="land-hdpi"/>
-        <splash src="resources/baghicons/ios/shl120.png" density="land-ldpi"/>
+        <splash src="resources/baghicons/ios/shl60.png" density="hdpi"/>
+        <splash src="resources/baghicons/ios/shl120.png" density="ldpi"/>
         <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/baghicons/ios/shl76.png"/>
     </platform>
     </platform>
