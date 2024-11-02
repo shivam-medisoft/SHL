@@ -80,13 +80,6 @@
                     <string>remote-notification</string>
                 </array>
             </edit-config>
-        <universal-links>
-            <host name="*" scheme="phonepe">
-                <path url="phonepe://*"/>
-                <path url="upi://*"/>
-                <path url="googlepay://*"/>
-            </host>
-        </universal-links>
             <preference name="WKWebViewOnly" value="true"/>
             <feature name="CDVWKWebViewEngine">
                 <param name="ios-package" value="CDVWKWebViewEngine"/>
@@ -105,8 +98,9 @@
 <!--    <plugin name="cordova-plugin-allow-navigation" source="npm" spec="1.7.2"/>-->
     <plugin name="cordova-plugin-whitelist" source="npm" spec="1.3.5"/>
     <plugin name="cordova-plugin-app-version" source="npm" spec="0.1.11"/>
-    <plugin name="cordova-plugin-ionic-webview" source="npm" spec="5.0.1"/>
-    <preference name="AllowedSchemes" value="phonepe,upi,googlepay,paytm" />
+    <plugin name="cordova-plugin-upi" source="npm" spec="1.0.4"/>
+<!--    <plugin name="cordova-plugin-ionic-webview" source="npm" spec="5.0.1"/>-->
+<!--    <preference name="AllowedSchemes" value="phonepe,upi,googlepay,paytm" />-->
     <plugin name="cordova-plugin-inappbrowser"   spec="6.0.0" source="npm" />
     <plugin name= "cordova-plugin-device" source="npm" spec="2.0.3"/>
     <plugin name= "cordova-plugin-network-information" source="npm" spec="2.0.2"/>
