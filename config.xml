@@ -52,12 +52,12 @@
     <allow-navigation href="*" />
     <allow-intent href="*" />
     <platform name="ios">
-            <edit-config target="NSAppTransportSecurity" file="*-Info.plist" mode="merge">
+            <config-file target="NSAppTransportSecurity" file="*-Info.plist" >
                 <dict>
                     <key>NSAllowsArbitraryLoads</key>
                     <true/>
                 </dict>
-            </edit-config>
+            </config-file>
             <edit-config target="LSApplicationQueriesSchemes" file="*-Info.plist" mode="merge">
                 <array>
                     <string>upi</string>
