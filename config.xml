@@ -34,7 +34,7 @@
 <!--    <plugin name="cordova.plugins.diagnostic" spec="6.0.2"/>-->
 <!--    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />-->
     <preference name="stay-in-webview" value="false" />
-    <preference name="webviewbounce" value="false" />
+    <preference name="webviewbounce" value="true" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="scheme" value="app" />
