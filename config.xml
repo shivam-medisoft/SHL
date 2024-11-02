@@ -39,7 +39,6 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="scheme" value="app" />
     <preference name="hostname" value="localhost" />
-    <access origin="*" />
     <access origin="phonepe:*" launch-external="yes" />
     <access origin="upi:*" launch-external="yes" />
     <access origin="googlepay:*" launch-external="yes" />
@@ -49,7 +48,7 @@
     <allow-intent href="upi:*" />
     <allow-intent href="googlepay:*" />
     <allow-intent href="paytm:*" />
-
+    <access origin="*" />
     <allow-navigation href="*" />
     <allow-intent href="*" />
     <platform name="ios">
