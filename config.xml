@@ -34,7 +34,7 @@
     <preference name="android-installLocation" value="auto" />
     <preference name="LoadingDialog" value="Please wait, the app is loading"/>
     <preference name="AllowInlineMediaPlayback" value="true"/>
-<!--    <preference name="SplashScreen" value="screen" />-->
+    <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="0"/>
     <preference name="FadeSplashScreenDuration" value="0"/>
     <preference name="FadeSplashScreen" value="false" />
