@@ -44,10 +44,6 @@
     <access origin="*" />
     <allow-navigation href="*" />
     <allow-intent href="*" />
-    <access origin='*'
-            allows-arbitrary-loads-for-media='true'
-            allows-arbitrary-loads-in-web-content='true'
-            allows-local-networking='true'/>
     <platform name="ios">
         <edit-config target="*-Info.plist" file="*-Info.plist" mode="merge">
             <key>LSApplicationQueriesSchemes</key>
@@ -85,10 +81,10 @@
                 </array>
             </edit-config>
         <universal-links>
-            <host name="*" scheme="https">
-                <path url="phonepe://"/>
-                <path url="upi://"/>
-                <path url="googlepay://"/>
+            <host name="*" scheme="phonepe">
+                <path url="phonepe://*"/>
+                <path url="upi://*"/>
+                <path url="googlepay://*"/>
             </host>
         </universal-links>
             <preference name="WKWebViewOnly" value="true"/>
@@ -109,7 +105,7 @@
 <!--    <plugin name="cordova-plugin-allow-navigation" source="npm" spec="1.7.2"/>-->
     <plugin name="cordova-plugin-whitelist" source="npm" spec="1.3.5"/>
     <plugin name="cordova-plugin-app-version" source="npm" spec="0.1.11"/>
-<!--    <plugin name="cordova-plugin-ionic-webview" source="npm" spec="5.0.1"/>-->
+    <plugin name="cordova-plugin-ionic-webview" source="npm" spec="5.0.1"/>
     <preference name="AllowedSchemes" value="phonepe,upi,googlepay,paytm" />
     <plugin name="cordova-plugin-inappbrowser"   spec="6.0.0" source="npm" />
     <plugin name= "cordova-plugin-device" source="npm" spec="2.0.3"/>
