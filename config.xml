@@ -214,6 +214,9 @@
         <!--        <icon src="resources/baghicons/ios/100by100.png" width="50" height="50" />-->
         <!--        <icon src="resources/baghicons/ios/1024by1024.png" width="1024" height="1024" />-->
 
+
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/baghicons/ios/shl76.png"/>
+
     </platform>
     <access origin="*"/>
     <access origin="content:///*" />
