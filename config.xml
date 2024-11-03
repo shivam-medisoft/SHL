@@ -71,13 +71,13 @@
 <!--                    </dict>-->
 <!--                </array>-->
 <!--            </config-file>-->
-            <config-file target="*-Info.plist" parent="NSAppTransportSecurity" mode="merge">
+            <edit-config target="*-Info.plist" parent="NSAppTransportSecurity" mode="merge">
                 <dict>
                     <key>NSAllowsArbitraryLoads</key>
                     <true/>
                 </dict>
-            </config-file>
-            <config-file target="*-Info.plist" parent="CFBundleURLTypes" mode="merge">
+            </edit-config>
+            <edit-config target="*-Info.plist" parent="CFBundleURLTypes" mode="merge">
                 <array>
                     <dict>
                         <key>CFBundleURLSchemes</key>
@@ -89,19 +89,19 @@
                         </array>
                     </dict>
                 </array>
-            </config-file>
+            </edit-config>
         <edit-config target="*-Info.plist" parent="UIBackgroundModes" mode="merge">
             <array>
                 <string>fetch</string>
                 <string>remote-notification</string>
             </array>
         </edit-config>
-        <config-file target="*-Info.plist" parent="NSCameraUsageDescription" mode="merge">
+        <edit-config target="*-Info.plist" parent="NSCameraUsageDescription" mode="merge">
             <string>App needs access to the camera</string>
-        </config-file>
-        <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription" mode="merge">
+        </edit-config>
+        <edit-config target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription" mode="merge">
             <string>App needs access to your location</string>
-        </config-file>
+        </edit-config>
     </platform>
 
     <plugin name="cordova-plugin-whitelist" source="npm" spec="1.3.5"/>
