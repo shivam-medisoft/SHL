@@ -50,25 +50,12 @@
     <allow-intent href="*" />
 
         <platform name="ios">
-<!--            <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">-->
-<!--                <array>-->
-<!--                    <string>upi</string>-->
-<!--                    <string>phonepe</string>-->
-<!--                    <string>googlepay</string>-->
-<!--                    <string>paytm</string>-->
-<!--                </array>-->
-<!--            </config-file>-->
             <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">
                 <array>
-                    <dict>
-                        <key>LSApplicationQueriesSchemes</key>
-                        <array>
-                            <string>upi</string>
-                            <string>phonepe</string>
-                            <string>googlepay</string>
-                            <string>paytm</string>
-                        </array>
-                    </dict>
+                    <string>upi</string>
+                    <string>phonepe</string>
+                    <string>googlepay</string>
+                    <string>paytm</string>
                 </array>
             </config-file>
             <edit-config target="*-Info.plist" parent="NSAppTransportSecurity" mode="merge">
