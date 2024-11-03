@@ -49,34 +49,34 @@
     <allow-navigation href="*" />
     <allow-intent href="*" />
 
-    <platform name="ios">
-        <config-file target="*-Info.plist" parent="NSAppTransportSecurity" mode="merge">
-            <dict>
-                <key>NSAllowsArbitraryLoads</key>
-                <true/>
-            </dict>
-        </config-file>
-        <edit-config target="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">
-            <array>
-                <string>upi</string>
-                <string>phonepe</string>
-                <string>googlepay</string>
-                <string>paytm</string>
-            </array>
-        </edit-config>
-        <edit-config target="*-Info.plist" parent="CFBundleURLTypes" mode="merge">
-            <array>
+        <platform name="ios">
+            <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">
+                <array>
+                    <string>upi</string>
+                    <string>phonepe</string>
+                    <string>googlepay</string>
+                    <string>paytm</string>
+                </array>
+            </config-file>
+            <config-file target="*-Info.plist" parent="NSAppTransportSecurity" mode="merge">
                 <dict>
-                    <key>CFBundleURLSchemes</key>
-                    <array>
-                        <string>phonepe</string>
-                        <string>upi</string>
-                        <string>googlepay</string>
-                        <string>paytm</string>
-                    </array>
+                    <key>NSAllowsArbitraryLoads</key>
+                    <true/>
                 </dict>
-            </array>
-        </edit-config>
+            </config-file>
+            <config-file target="*-Info.plist" parent="CFBundleURLTypes" mode="merge">
+                <array>
+                    <dict>
+                        <key>CFBundleURLSchemes</key>
+                        <array>
+                            <string>upi</string>
+                            <string>phonepe</string>
+                            <string>googlepay</string>
+                            <string>paytm</string>
+                        </array>
+                    </dict>
+                </array>
+            </config-file>
         <edit-config target="*-Info.plist" parent="UIBackgroundModes" mode="merge">
             <array>
                 <string>fetch</string>
