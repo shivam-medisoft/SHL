@@ -50,27 +50,27 @@
     <allow-intent href="*" />
 
         <platform name="ios">
-            <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">
-                <array>
-                    <string>upi</string>
-                    <string>phonepe</string>
-                    <string>googlepay</string>
-                    <string>paytm</string>
-                </array>
-            </config-file>
 <!--            <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">-->
 <!--                <array>-->
-<!--                    <dict>-->
-<!--                        <key>LSApplicationQueriesSchemes</key>-->
-<!--                        <array>-->
-<!--                            <string>upi</string>-->
-<!--                            <string>phonepe</string>-->
-<!--                            <string>googlepay</string>-->
-<!--                            <string>paytm</string>-->
-<!--                        </array>-->
-<!--                    </dict>-->
+<!--                    <string>upi</string>-->
+<!--                    <string>phonepe</string>-->
+<!--                    <string>googlepay</string>-->
+<!--                    <string>paytm</string>-->
 <!--                </array>-->
 <!--            </config-file>-->
+            <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">
+                <array>
+                    <dict>
+                        <key>LSApplicationQueriesSchemes</key>
+                        <array>
+                            <string>upi</string>
+                            <string>phonepe</string>
+                            <string>googlepay</string>
+                            <string>paytm</string>
+                        </array>
+                    </dict>
+                </array>
+            </config-file>
             <edit-config target="*-Info.plist" parent="NSAppTransportSecurity" mode="merge">
                 <dict>
                     <key>NSAllowsArbitraryLoads</key>
@@ -107,7 +107,7 @@
     <plugin name="cordova-plugin-whitelist" source="npm" spec="1.3.5"/>
     <plugin name="cordova-plugin-app-version" source="npm" spec="0.1.11"/>
     <plugin name="cordova-plugin-upi" source="npm" spec="1.0.4"/>
-<!--    <plugin name="cordova-plugin-ionic-webview" source="npm" spec="5.0.1"/>-->
+    <plugin name="cordova-plugin-ionic-webview" source="npm" spec="5.0.1"/>
     <plugin name="cordova-plugin-inappbrowser" spec="6.0.0" source="npm" />
     <plugin name="cordova-plugin-customurlscheme" spec="5.0.2" >
         <variable name="URL_SCHEME" value="phonepe" />
