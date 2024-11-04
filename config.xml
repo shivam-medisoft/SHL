@@ -98,7 +98,7 @@
     <plugin name="cordova-plugin-ionic-webview" source="npm" spec="5.0.1"/>
     <plugin name="cordova-plugin-inappbrowser" spec="6.0.0" source="npm" />
     <plugin name="cordova-plugin-device" source="npm" spec="2.0.3"/>
-    <plugin name="cordova-universal-links-plugin" source="npm" spec="1.2.1" />
+<!--    <plugin name="cordova-universal-links-plugin" source="npm" spec="1.2.1" />-->
     <plugin name="cordova-plugin-network-information" source="npm" spec="2.0.2"/>
     <plugin name="cordova-plugin-networkinterfaces" source="npm" spec="2.0.0"/>
     <plugin name="cordova-plugin-wkwebview-file-xhr" source="npm" spec="3.0.0"/>
