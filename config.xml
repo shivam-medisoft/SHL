@@ -8,7 +8,7 @@
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
         Apache Cordova Team
     </author>
-    <content src="app.html" />
+    <content src="app.html"/>
     <preference name="permissions" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="prerendered-icon" value="true" />
@@ -111,11 +111,11 @@
     <!--    <splash src="res/drawable/android/icon.png" density="xxhdpi"/>-->
     <!--    <splash src="res/drawable/android/icon.png" density="xxxhdpi"/> -->
 
-    <!--    <splash src="res/drawable/android/shl48.png" density="mdpi"/>-->
-    <!--    <splash src="res/drawable/android/shl72.png" density="hdpi"/>-->
-    <!--    <splash src="res/drawable/android/shl96.png" density="xhdpi"/>-->
-    <!--    <splash src="res/drawable/android/shl152.png" density="xxhdpi"/>-->
-    <!--    <splash src="res/drawable/android/shl167.png" density="xxxhdpi"/>-->
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/drawable/android/shl48.png" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/drawable/android/shl72.png" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/drawable/android/shl96.png" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/drawable/android/shl152.png" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/drawable/android/shl167.png" />
     <!--        <splash src="resources/baghicons/android/icon.png" />-->
     <!--        <splash src="resources/baghicons/android/shl 48.png" density="mdpi"/>-->
     <!--        <splash src="resources/baghicons/android/shl72.png" density="hdpi"/>-->
@@ -123,92 +123,100 @@
     <!--        <splash src="resources/baghicons/android/shl152.png" density="xxhdpi"/>-->
     <!--        <splash src="resources/baghicons/android/shl167.png" density="xxxhdpi"/>-->
     <!--    <plugin name="cordova-plugin-sms-retriever-manager" source="npm" />-->
-    <!--        <resource-file src="google-services.json" target="app/google-services.json" />-->
-    <preference name="hostname" value="localhost" />
-    <preference name="AndroidInsecureFileModeEnabled" value="true" />
-    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
+    <platform name="android">
+        <resource-file src="google-services.json" target="app/google-services.json" />
+        <preference name="hostname" value="localhost" />
+        <preference name="AndroidInsecureFileModeEnabled" value="true" />
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
 
-        <activity android:hardwareAccelerated="true" />
-        <service android:exported="true"/>
-        <receiver android:exported="true"/>
-        <application android:usesCleartextTraffic="true" />
-    </edit-config>
-    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-        <application android:networkSecurityConfig="@xml/network_security_config" />
-        <application android:usesCleartextTraffic="true" />
-        <application android:requestLegacyExternalStorage="true" />
-    </edit-config>
-    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/activity">
-        <uses-permission android:name="android.permission.CAMERA" />
-        <uses-feature android:name="android.hardware.camera" android:required="true" />
-        <uses-feature android:name="android.hardware.camera.autofocus" />
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <activity android:hardwareAccelerated="true" />
+            <service android:exported="true"/>
+            <receiver android:exported="true"/>
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:networkSecurityConfig="@xml/network_security_config" />
+            <application android:usesCleartextTraffic="true" />
+            <application android:requestLegacyExternalStorage="true" />
+        </edit-config>
+        <platform name="android">
+            <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/activity">
+                <uses-permission android:name="android.permission.CAMERA" />
+                <uses-feature android:name="android.hardware.camera" android:required="true" />
+                <uses-feature android:name="android.hardware.camera.autofocus" />
+                <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+                <uses-permission android:name="android.permission.INTERNET" />
+                <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    </edit-config>
-    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-        <application android:usesCleartextTraffic="true"/>
-    </edit-config>
-    <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
-        <string>need to photo library access to get pictures from there</string>
-    </edit-config>
-    <resource-file src="resources/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
-    <!--        <icon src="resources/baghicons/android/icon.png" />-->
-    <!--        <icon src="resources/baghicons/android/icon.png" density="ldpi"/>-->
-    <!--        <icon src="resources/baghicons/android/icon.png" density="mdpi"/>-->
-    <!--        <icon src="resources/baghicons/android/icon.png" density="hdpi"/>-->
-    <!--        <icon src="resources/baghicons/android/icon.png" density="xhdpi"/>-->
+            </edit-config>
+        </platform>
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+        <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+            <string>need to photo library access to get pictures from there</string>
+        </edit-config>
+        <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
+        <!--        <icon src="resources/baghicons/android/icon.png" />-->
+        <!--        <icon src="resources/baghicons/android/icon.png" density="ldpi"/>-->
+        <!--        <icon src="resources/baghicons/android/icon.png" density="mdpi"/>-->
+        <!--        <icon src="resources/baghicons/android/icon.png" density="hdpi"/>-->
+        <!--        <icon src="resources/baghicons/android/icon.png" density="xhdpi"/>-->
 
-    />
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.InAppBrowser" />
-    </feature>
-    <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.CameraLauncher" />
-    </feature>
-    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+        />
+        <feature name="InAppBrowser">
+            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+        </feature>
+        <feature name="Camera">
+            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+        </feature>
+        <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
 
-    <preference name="AllowUntrustedCerts" value="on" />
-    <preference name="InterceptRemoteRequests" value="all" />
-    <preference name="NativeXHRLogging" value="full" />
+        <preference name="AllowUntrustedCerts" value="on" />
+        <preference name="InterceptRemoteRequests" value="all" />
+        <preference name="NativeXHRLogging" value="full" />
 
-    <preference name="allowFileAccessFromFileURLs" value="true" />
-    <preference name="allowUniversalAccessFromFileURLs" value="true" />
-
-
-
-    <icon src="icons/android/shl180.png" width="180" height="180" />
-    <!-- iPhone / iPod Touch  -->
-    <!--        <icon src="resources/baghicons/ios/Icon-App-60x60@3x.png" width="180" height="180" />-->
-    <!-- iPhone / iPod Touch  -->
-    <icon src="icons/android/shl60.png" width="60" height="60" />
-    <icon src="icons/android/shl120.png" width="120" height="120" />
-    <!-- iPad -->
-    <icon src="icons/android/shl76.png"  width="76" height="76" />
-    <icon src="icons/android/shl152.png" width="152" height="152" />
-    <!-- Settings Icon -->
-    <icon src="icons/android/shl29.png" width="29" height="29" />
-    <icon src="icons/android/shl58.png" width="58" height="58" />
-    <!-- Spotlight Icon -->
-    <icon src="icons/android/shl40.png" width="40" height="40" />
-    <icon src="icons/android/shl80.png" width="80" height="80" />
-    <icon src="icons/android/shl120.png" width="120" height="120" />
-
-    <!--        <icon src="resources/baghicons/ios/Icon-App-83.5x83.5@2x.png"  width="167" height="167" />-->
-    <!--<icon src="resources/baghicons/ios/57by57.png" width="57" height="57" />-->
-    <icon src="icons/android/shl114.png"  width="114" height="114" />
-    <!-- iPad -->
-    <icon src="icons/android/shl72.png" width="72" height="72" />
-    <icon src="icons/android/shl87.png" width="87" height="87" />
-    <!-- iPad Spotlight and Settings Icon -->
-    <icon src="icons/android/shl50.png" width="50" height="50" />
-    <!--        <icon src="resources/baghicons/ios/100by100.png" width="50" height="50" />-->
-    <!--        <icon src="resources/baghicons/ios/1024by1024.png" width="1024" height="1024" />-->
+        <preference name="allowFileAccessFromFileURLs" value="true" />
+        <preference name="allowUniversalAccessFromFileURLs" value="true" />
 
 
-    <!--        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="cons/android/shl76.png"/>-->
 
+        <icon src="resources/baghicons/ios/shl180.png" width="180" height="180" />
+        <!-- iPhone / iPod Touch  -->
+        <!--        <icon src="resources/baghicons/ios/Icon-App-60x60@3x.png" width="180" height="180" />-->
+        <!-- iPhone / iPod Touch  -->
+        <icon src="resources/baghicons/ios/shl60.png" width="60" height="60" />
+        <icon src="resources/baghicons/ios/shl120.png" width="120" height="120" />
+        <!-- iPad -->
+        <icon src="resources/baghicons/ios/shl76.png"  width="76" height="76" />
+        <icon src="resources/baghicons/ios/shl152.png" width="152" height="152" />
+        <!-- Settings Icon -->
+        <icon src="resources/baghicons/ios/shl29.png" width="29" height="29" />
+        <icon src="resources/baghicons/ios/shl58.png" width="58" height="58" />
+        <!-- Spotlight Icon -->
+        <icon src="resources/baghicons/ios/shl40.png" width="40" height="40" />
+        <icon src="resources/baghicons/ios/shl80.png" width="80" height="80" />
+        <icon src="resources/baghicons/ios/shl120.png" width="120" height="120" />
+
+        <!--        <icon src="resources/baghicons/ios/Icon-App-83.5x83.5@2x.png"  width="167" height="167" />-->
+        <!--<icon src="resources/baghicons/ios/57by57.png" width="57" height="57" />-->
+        <icon src="resources/baghicons/ios/shl114.png"  width="114" height="114" />
+        <!-- iPad -->
+        <icon src="resources/baghicons/ios/shl72.png" width="72" height="72" />
+        <icon src="resources/baghicons/ios/shl87.png" width="87" height="87" />
+        <!-- iPad Spotlight and Settings Icon -->
+        <icon src="resources/baghicons/ios/shl50.png" width="50" height="50" />
+        <!--        <icon src="resources/baghicons/ios/100by100.png" width="50" height="50" />-->
+        <!--        <icon src="resources/baghicons/ios/1024by1024.png" width="1024" height="1024" />-->
+
+
+        <!--        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/baghicons/ios/shl76.png"/>-->
+        <platform name="android">
+            <splash src="resources/baghicons/ios/shl60.png" density="hdpi"/>
+            <splash src="resources/baghicons/ios/shl120.png" density="ldpi"/>
+            <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/baghicons/ios/shl76.png"/>
+        </platform>
+    </platform>
     <access origin="*"/>
     <access origin="content:///*" />
     <access uri="*" subdomains="true" />
@@ -232,8 +240,5 @@
     <allow-intent href="*" />
     <allow-navigation href="*" />
     <access origin="*"/>
-    <allow-intent href="whatsapp:*" />
-    <allow-intent href="market:*" />
-    <preference name="android-build-tool" value="gradle" />
-
+        <allow-intent href="market:*" />
 </widget>
