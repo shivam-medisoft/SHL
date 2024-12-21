@@ -21,17 +21,14 @@ and open the template in the editor.
                     cordova.getAppVersion.getAppName(function (name) {
                     //confirm("name="+name);
                     console.log("name+"+name);
-                            apppath = "http://shl.myemrhub.com/";
-                         // apppath = "https://app.shivamhms.com/DEVLITE/";
-                          //  apppath = "https://shpl.sahyadrihospitals.com:8443/APP/";
-                           //    apppath = "https://hdpuat.sahyadrihospitals.com/uatapp/";
-                           //  apppath = "https://hdpuat.sahyadrihospitals.com/APPP/";
+                            //apppath = "http://bch.myemrhub.com/";
+                              apppath = "https://bcuat.breachcandyhospital.org:8543/109/";
+                            //  apppath = "http://192.168.0.60:8081/neosoft/";
                              apppage = "sahyadri_index.html";
                             localStorage.appname = "shl";
-
+                        localStorage.apporginalname = "bch";
                         localStorage.newappath = apppath;
                         localStorage.newapppage =apppage;
-                        localStorage.apporginalname =name;
                         location.href = "appintronew.html";
                     });
                 } catch (err) {

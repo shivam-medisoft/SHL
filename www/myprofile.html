@@ -69,6 +69,18 @@ and open the template in the editor.
 .ucloadimg{display:none;}
         </style>
         <script>
+            document.addEventListener('deviceready', function() {
+              const appOriginalName = localStorage.getItem('apporginalname');
+            try{
+            if (appOriginalName == "bch") {
+             document.getElementById('loadicon').src = 'images/'+localStorage.apporginalname+'/bchLoader.gif';
+             } else {
+             console.error('apporginalname not found in localStorage');
+             // Optionally, set a default image if localStorage is empty
+             document.getElementById('loadicon').src = 'images/default/xda2.gif';
+ }
+ }catch(error){}
+ }, false);
             $(document).ready(function (){
 
                     try{
@@ -101,7 +113,7 @@ and open the template in the editor.
     </head>
     <body style="" onclick="rightclick();">
         <div id="mydiv" style="display:none;">
-            <img src="images/xda2.gif" class="imgnload commonloadimg" style="border-radius: 50%;">
+            <img id="loadicon" class="imgnload commonloadimg" style="border-radius: 50%;">
               <img src="images/sdrcload.gif" class="imgnload ucloadimg" style="border-radius: 50%;">
         </div>
             <div class="divforsearch">

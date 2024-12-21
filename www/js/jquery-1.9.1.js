@@ -9385,6 +9385,19 @@
 
 })(window);
 
+function loadericon(){
+const appOriginalName = localStorage.getItem('apporginalname');
+           if (appOriginalName) {
+           // const imagePath = `images/${appOriginalName}/bchLoader.gif`;
+
+            // Set the src attribute of the first image
+            document.getElementById('loader').src = 'images/'+localStorage.apporginalname+'/bchLoader.gif';
+            } else {
+            console.error('apporginalname not found in localStorage');
+            // Optionally, set a default image if localStorage is empty
+            document.getElementById('dynamicImage').src = 'images/default/xda2.gif';
+}
+}
 function loadjsfile(filename) {
     try{
     filename = localStorage.ipadrs + "/mobilejs/" + filename;

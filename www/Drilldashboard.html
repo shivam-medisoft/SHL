@@ -51,67 +51,76 @@ and open the template in the editor.
         <link rel="alternate stylesheet" type="text/css" title="skyblue" href="themeCSS/stylesSkyblue.css?version=1">
         <link rel="alternate stylesheet" type="text/css" title="yellownew" href="themeCSS/stylesYellow.css?version=1">-->
         <script>
-            
-       var cssFilesArr = ["styles.css", "stylesGreentheme.css",  
-"stylesBluetheme.css", "stylesTealtheme.css",  
-"stylesdarkorangetheme.css", "stylesGraytheme.css", "stylesPeach.css",  
-"stylesPink.css", "stylesPurple.css", "stylesRed.css",  
-"stylesSkyblue.css", "stylesYellow.css"];
-   var cssFilesTitle = ["orange", "green", "blue", "teal", "yellow",  
-"gray", "peach", "pink", "purple", "red", "skyblue", "yellownew"];
-function loadcssfiles(cssFilesArr){
-for(var x = 0; x < cssFilesArr.length; x++) {
-   var fileref=document.createElement("link");
-   fileref.setAttribute("rel", "stylesheet");
-   fileref.setAttribute("type", "text/css");
-   fileref.setAttribute("title", cssFilesTitle[x]);
-cssFilesArr[x] = localStorage.ipadrs + "/themeCSS/" + cssFilesArr[x] + "?version=1";
-   fileref.setAttribute("href", cssFilesArr[x]);
-   document.getElementsByTagName("head")[0].appendChild(fileref);
+            document.addEventListener('deviceready', function() {
+              const appOriginalName = localStorage.getItem('apporginalname');
+            if (appOriginalName == "bch") {
+             document.getElementById('loadicon').src = 'images/'+localStorage.apporginalname+'/bchLoader.gif';
+             } else {
+             console.error('apporginalname not found in localStorage');
+             // Optionally, set a default image if localStorage is empty
+             document.getElementById('loadicon').src = 'images/default/xda2.gif';
+ }
+ }, false);
+        var cssFilesArr = ["styles.css", "stylesGreentheme.css",
+ "stylesBluetheme.css", "stylesTealtheme.css",
+ "stylesdarkorangetheme.css", "stylesGraytheme.css", "stylesPeach.css",
+ "stylesPink.css", "stylesPurple.css", "stylesRed.css",
+ "stylesSkyblue.css", "stylesYellow.css"];
+    var cssFilesTitle = ["orange", "green", "blue", "teal", "yellow",
+ "gray", "peach", "pink", "purple", "red", "skyblue", "yellownew"];
+ function loadcssfiles(cssFilesArr){
+ for(var x = 0; x < cssFilesArr.length; x++) {
+    var fileref=document.createElement("link");
+    fileref.setAttribute("rel", "stylesheet");
+    fileref.setAttribute("type", "text/css");
+    fileref.setAttribute("title", cssFilesTitle[x]);
+ cssFilesArr[x] = localStorage.ipadrs + "/themeCSS/" + cssFilesArr[x] + "?version=1";
+    fileref.setAttribute("href", cssFilesArr[x]);
+    document.getElementsByTagName("head")[0].appendChild(fileref);
 
-  }
-   var i, link_tag ;
-  var isExists = 0;
-     var css_title = localStorage.themecolor;
-     if(css_title != undefined && css_title != ""){
-         for (i = 0, link_tag = document.getElementsByTagName("link"); i < link_tag.length ; i++ ) {
-             if ((link_tag[i].rel.indexOf( "stylesheet" ) !== -1) &&
-                 link_tag[i].title) {
-                 link_tag[i].disabled = true ;
-                 if (link_tag[i].title === css_title) {
-                     link_tag[i].disabled = false ;
-                     isExists = 1;
-                 }
-             }
+   }
+    var i, link_tag ;
+   var isExists = 0;
+      var css_title = localStorage.themecolor;
+      if(css_title != undefined && css_title != ""){
+          for (i = 0, link_tag = document.getElementsByTagName("link"); i < link_tag.length ; i++ ) {
+              if ((link_tag[i].rel.indexOf( "stylesheet" ) !== -1) &&
+                  link_tag[i].title) {
+                  link_tag[i].disabled = true ;
+                  if (link_tag[i].title === css_title) {
+                      link_tag[i].disabled = false ;
+                      isExists = 1;
+                  }
+              }
+          }
+      }
+      if(isExists == 0){
+          var color = localStorage.themecolor;
+          color = color.replace("%23","#");
+          //confirm(color);
+
+             try{
+            var appname=localStorage.appname;
+           if(appname=="dashboard"){
+              chnagecssnew(color);
          }
-     }
-     if(isExists == 0){
-         var color = localStorage.themecolor;
-         color = color.replace("%23","#");
-         //confirm(color);
-        
-            try{
-           var appname=localStorage.appname;
-          if(appname=="dashboard"){
-             chnagecssnew(color);
-        }
-            }catch(err){}
-         //confirm(cssdata);
-     }
-}
-$(document).ready(function () {
-      try{
-           var appname=localStorage.appname;
-          if(appname=="dashboard"){
-                loadcssfiles(cssFilesArr);
-        }
-            }catch(err){}
-             if (localStorage.appname === 'sdrc'){
-                            debugger;
-                     $('.commonloadimg').css('display','none');
-                      $('.ucloadimg').css('display','inline-block');
-                }
-                });
+             }catch(err){}
+          //confirm(cssdata);
+      }
+ }
+ $(document).ready(function () {
+       try{
+            var appname=localStorage.appname;
+           if(appname=="dashboard"){
+                 loadcssfiles(cssFilesArr);
+         }
+             }catch(err){}
+              if (localStorage.appname === 'sdrc'){
+                             debugger;
+                      $('.commonloadimg').css('display','none');
+                       $('.ucloadimg').css('display','inline-block');
+                 }
+                 });
         </script>
          <style>
              #mydiv1 {               
@@ -206,7 +215,7 @@ $(document).ready(function () {
     </head>
     <body>
         <div id="mydiv" class="mydivjsp" style="display: none">
-           <img src="images/xda2.gif" class="imgnload commonloadimg" style="border-radius: 50%;">
+           <img id="loadicon" class="imgnload commonloadimg" style="border-radius: 50%;">
               <img src="images/sdrcload.gif" class="imgnload ucloadimg" style="border-radius: 50%;">
        </div>
        <div id='data'></div>

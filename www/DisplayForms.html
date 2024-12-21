@@ -56,7 +56,16 @@ and open the template in the editor.
 <script>
      loadappjsfile("DisplayForm.js");
      loadcssfile1("fh-displayForm.css");
-     
+      document.addEventListener('deviceready', function() {
+              const appOriginalName = localStorage.getItem('apporginalname');
+            if (appOriginalName == "bch") {
+             document.getElementById('loadicon').src = 'images/'+localStorage.apporginalname+'/bchLoader.gif';
+             } else {
+             console.error('apporginalname not found in localStorage');
+             // Optionally, set a default image if localStorage is empty
+             document.getElementById('loadicon').src = 'images/default/xda2.gif';
+ }
+ }, false);
      $(document).ready(function(){
          debugger;
          try{
@@ -360,7 +369,7 @@ border-top: none;
     </head>
     <body class="displayformbody">
            <div id="mydiv" style="display:none;">
-               <img src="images/xda2.gif" class="imgnload commonloadimg" width="80" height="80" style="border-radius: 50%;">
+               <img id="loadicon" class="imgnload commonloadimg" width="80" height="80" style="border-radius: 50%;">
                 <img src="images/sdrcload.gif" class="imgnload ucloadimg" width="80" height="80" style="border-radius: 50%;">
             </div>
           <div class="divforsearch">

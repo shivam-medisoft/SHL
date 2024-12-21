@@ -16,6 +16,19 @@ and open the template in the editor.
         <link href="css/bxsliderforappintro.css" rel="stylesheet" type="text/css"/>
  <script>
              var errorcnt=0;
+ document.addEventListener('deviceready', function() {
+             const appOriginalName = localStorage.getItem('apporginalname');
+           if (appOriginalName) {
+           // const imagePath = `images/${appOriginalName}/bchLoader.gif`;
+
+            // Set the src attribute of the first image
+            document.getElementById('loader').src = 'images/'+localStorage.apporginalname+'/bchLoader.gif';
+            } else {
+            console.error('apporginalname not found in localStorage');
+            // Optionally, set a default image if localStorage is empty
+            document.getElementById('dynamicImage').src = 'images/default/xda2.gif';
+}
+}, false);
             function loading() {
                 debugger;
                 if(sessionStorage.home!=undefined && sessionStorage.home=="1"){
@@ -132,7 +145,7 @@ and open the template in the editor.
                 dt = "&mrno="+localStorage.mrno;
             }
                 $.ajax({
-                    url: localStorage.appurl + '/admin/appIntronew.jsp?webformid=' + formid  + "&appName=" + appName+dt,
+                    url: localStorage.appurl + '/admin/appIntronew.jsp?webformid=' + formid  +"&appnamorg="+localStorage.apporginalname+"&appName=" + appName+dt,
                     type: 'POST',
                     success: function (responseText) {
                         $('#divIntro').html(responseText);
@@ -393,12 +406,13 @@ select.goog-te-combo option[value=hi] {display: block;}*/
     <body onload="loading()">
         <div id="divIntro">
             <div id="mydiv">
-                <img src="images/xda2.gif" class="imgnload commonloadimg" style="border-radius: 50%;">
+                <img  class="imgnload commonloadimg" id ="loader" style="border-radius: 50%;">
                   <img src="images/sdrcload.gif" class="imgnload ucloadimg"  style="border-radius: 50%;">
             </div>
         </div>
 <!--       <div id="google_translate_element">
-            
+
+
         </div>  -->
         
         <div id="myNav" class="overlay">

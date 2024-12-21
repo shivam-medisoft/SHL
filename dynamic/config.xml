@@ -3,8 +3,8 @@
     xmlns="http://www.w3.org/ns/widgets"
     xmlns:cdv="http://cordova.apache.org/ns/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>Breach Candy Hospital</name>
-    <description>BCH offers comprehensive clinical services under one roof with an active Transplant Program. The hospital provides round the clock network of Emergency services , Diagnostic services, a Blood Bank facility and a Pharmacy supported by a team of expert senior clinical consultants working in a full-time capacity. The active association with over 150 clinical consultants adds a unique strength to BAGH and enables us to achieve the highest outcomes for our patients capacity.</description>
+    <name>{{APP_NAME}}</name>
+    <description>{{APP_DESCRIPTION}}</description>
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
         Shivam Medisoft Services Pvt. Ltd.
     </author>
@@ -136,7 +136,7 @@
 
         <preference name="allowFileAccessFromFileURLs" value="true" />
         <preference name="allowUniversalAccessFromFileURLs" value="true" />
-        <icon src="resources/bchicons/android/icon.png" />
+        <icon src="resources/{{ICON_PATH}}/android/icon.png" />
         <platform name="android">
             <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/bchicons/android/icon.png"/>
         </platform>

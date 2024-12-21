@@ -23,6 +23,16 @@ and open the template in the editor.
         <link href="css/FontFamillyloading.css" rel="stylesheet" type="text/css"/>
         
         <script>
+            document.addEventListener('deviceready', function() {
+              const appOriginalName = localStorage.getItem('apporginalname');
+            if (appOriginalName == "bch") {
+             document.getElementById('loadicon').src = 'images/'+localStorage.apporginalname+'/bchLoader.gif';
+             } else {
+             console.error('apporginalname not found in localStorage');
+             // Optionally, set a default image if localStorage is empty
+             document.getElementById('loadicon').src = 'images/default/xda2.gif';
+ }
+ }, false);
             $(document).ready(function () {
               
              if (localStorage.appname === 'sdrc'){
@@ -46,7 +56,7 @@ and open the template in the editor.
     </head>
     <body style="padding-top:5px;">
         <div id="mydiv" style="display:none;">
-             <img src="images/xda2.gif" class="imgnload commonloadimg" style="border-radius: 50%;">
+             <img id="loadicon" class="imgnload commonloadimg" style="border-radius: 50%;">
               <img src="images/sdrcload.gif" class="imgnload ucloadimg" style="border-radius: 50%;">
         </div>
         <div id="divAttachments">

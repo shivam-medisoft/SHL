@@ -1,12 +1,27 @@
 {
-  "name": "Sahyadri Hospitals",
-  "version": "1.0.3",
-  "homepage": "app.html",
-  "description": "SHL Patient App",
-  "dependencies": {
-    "cordova-android": "^13.0.0"
+  "name": "Breach Candy Hospital",
+  "version": "1.0.0",
+  "homepage": "https://github.com/shivam-medisoft/SHL#readme",
+  "description": "bch Patient App",
+  "devDependencies": {
+    "cordova-android": "^13.0.0",
+    "cordova-plugin-datepicker": "https://github.com/VitaliiBlagodir/cordova-plugin-datepicker",
+    "cordova-plugin-device": "https://github.com/apache/cordova-plugin-device.git",
+    "cordova-plugin-device-motion": "https://github.com/apache/cordova-plugin-device-motion.git",
+    "cordova-plugin-dialogs": "https://github.com/apache/cordova-plugin-dialogs.git",
+    "cordova-plugin-inappbrowser": "https://github.com/apache/cordova-plugin-inappbrowser.git",
+    "cordova-plugin-keyboard": "https://github.com/cjpearson/cordova-plugin-keyboard",
+    "cordova-plugin-market": "https://github.com/xmartlabs/cordova-plugin-market",
+    "cordova-plugin-network-information": "https://github.com/apache/cordova-plugin-network-information.git",
+    "cordova-plugin-networkinterface": "github:salbahra/NetworkInterfacePlugin",
+    "cordova-plugin-networkinterfaces": "^2.0.0",
+    "cordova-plugin-phonedialer": "^0.3.1",
+    "cordova-plugin-spinner-dialog": "github:Paldom/SpinnerDialog",
+    "cordova-plugin-splashscreen": "https://github.com/apache/cordova-plugin-splashscreen.git",
+    "cordova-plugin-statusbar": "https://github.com/apache/cordova-plugin-statusbar.git",
+    "NetworkInterfacePlugin": "https://github.com/salbahra/NetworkInterfacePlugin.git",
+    "SpinnerDialog": "https://github.com/Paldom/SpinnerDialog.git"
   },
-  "devDependencies": {},
   "scripts": {},
   "repository": {
     "type": "git",
@@ -20,17 +35,42 @@
   "bugs": {
     "url": "https://github.com/shivam-medisoft/SHL/issues"
   },
-  "homepage": "https://github.com/shivam-medisoft/SHL#readme",
   "cordova": {
     "platforms": [
       "android"
     ],
-    "plugins":{
+    "plugins": {
       "cordova-plugin-networkinterfaces": {},
       "cordova-plugin-android-permissions": {},
-      "cordova-plugin-android-device-information":{},
-      "cordova-plugin-camera" : {}
+      "cordova-plugin-android-device-information": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-file": {},
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-badge": {},
+      "cordova-plugin-phonedialer": {},
+      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-upi": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-device-motion": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-network-information": {},
+      "NetworkInterfacePlugin": {},
+      "cordova-plugin-androidx": {},
+      "cordova-plugin-androidx-adapter": {},
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-advanced-http": {},
+      "cordova-plugin-app-version": {},
+      "cordova-plugin-datepicker": {},
+      "SpinnerDialog": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-keyboard": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-market": {},
+      "cordova-plugin-file-opener2": {},
+      "cordova-plugin-networkinterface": {},
+      "com.teamnemitoff.phonedialer": {},
+      "cordova-plugin-spinner-dialog": {}
     }
-
   }
 }
