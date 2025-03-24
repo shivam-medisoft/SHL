@@ -22,7 +22,11 @@ and open the template in the editor.
            // const imagePath = `images/${appOriginalName}/bchLoader.gif`;
 
             // Set the src attribute of the first image
+            if(appOriginalName === "bch"){
             document.getElementById('loader').src = 'images/'+localStorage.apporginalname+'/bchLoader.gif';
+            } else{
+             document.getElementById('dynamicImage').src = 'images/default/xda2.gif';
+            }
             } else {
             console.error('apporginalname not found in localStorage');
             // Optionally, set a default image if localStorage is empty
