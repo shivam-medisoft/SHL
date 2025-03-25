@@ -44,7 +44,7 @@
     <!--    <preference name="CustomURLScheme" value="mycoolapp" />-->
     <!--    <plugin name="cordova.plugins.diagnostic" />-->
     <!--    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />-->
-    <plugin name="cordova-plugin-file" source="npm" />
+<!--    <plugin name="cordova-plugin-file" source="npm" />-->
     <!--    <plugin name="upi-intent" source="npm" />-->
     <!--    <plugin name="cordova-plugin-customurlscheme" source="npm" />-->
     <plugin name="cordova-plugin-geolocation" source="npm"/>
@@ -81,7 +81,7 @@
     <plugin name="NetworkInterfacePlugin" spec="https://github.com/salbahra/NetworkInterfacePlugin.git" source="git" />
     <!--    <plugin name="cordova-plugin-file-transfer" spec="https://github.com/Priyansu431/cordova-plugin-file-transfer.git" />-->
     <plugin name="cordova-plugin-androidx" source="npm"/>
-    <plugin name="cordova-plugin-camera" source="git" spec="https://github.com/DaedalusDev/cordova-plugin-camera.git"/>
+<!--    <plugin name="cordova-plugin-camera" source="git" spec="https://github.com/DaedalusDev/cordova-plugin-camera.git"/>-->
     <plugin name="cordova-plugin-androidx-adapter" source="npm"/>
     <plugin name="cordova-plugin-file-transfer" source="npm"/>
     <!--    <plugin name="cordova-plugin-splashscreen" source="npm" spec="6.0.1"/>-->
@@ -98,7 +98,7 @@
     <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" source="git" />
     <plugin name="cordova-plugin-market" spec="https://github.com/xmartlabs/cordova-plugin-market" source="git" />
     <!--    <plugin name="cordova-plugin-qr-barcode-scanner" source="npm" />-->
-    <plugin name="cordova-plugin-camera" source="npm"  />
+<!--    <plugin name="cordova-plugin-camera" source="npm"  />-->
     <plugin name="cordova-plugin-file-opener2" source="npm" />
     <plugin name="cordova-plugin-android-permissions" source="npm">
         <variable name="storage" value="would like to access storage." />
@@ -127,8 +127,6 @@
                 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
                 <uses-permission android:name="android.permission.INTERNET" />
                 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-                <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-                <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
             </edit-config>
         </platform>
 
