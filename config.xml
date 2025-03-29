@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.shivam.sah" version="1.0.6" android-versionCode="100007"
+<widget id="com.shivam.sah" version="1.0.7" android-versionCode="100007"
     xmlns="http://www.w3.org/ns/widgets"
     xmlns:cdv="http://cordova.apache.org/ns/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -24,7 +24,7 @@
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-targetSdkVersion" value="34"/>
-    <preference name="android-minSdkVersion" value="24" />
+    <preference name="android-minSdkVersion" value="29" />
     <preference name="android-compileSdkVersion" value="34" />
     <preference name="android-installLocation" value="auto" />
     <preference name="LoadingDialog" value="Please wait, the app is loading"/>
@@ -48,19 +48,19 @@
     <!--    <plugin name="upi-intent" source="npm" />-->
     <!--    <plugin name="cordova-plugin-customurlscheme" source="npm" />-->
     <plugin name="cordova-plugin-geolocation" source="npm"/>
-    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
-        <string>to take pictures/scan barcodes</string>
-    </edit-config>
-    <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
-        <string>to get pictures</string>
-    </edit-config>
-    <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
-        <string>need location access to find things nearby</string>
-    </edit-config>
+<!--    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">-->
+<!--        <string>to take pictures/scan barcodes</string>-->
+<!--    </edit-config>-->
+<!--    <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">-->
+<!--        <string>to get pictures</string>-->
+<!--    </edit-config>-->
+<!--    <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">-->
+<!--        <string>need location access to find things nearby</string>-->
+<!--    </edit-config>-->
 
-    <edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
-        <string>need photo library access to save pictures there</string>
-    </edit-config>
+<!--    <edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">-->
+<!--        <string>need photo library access to save pictures there</string>-->
+<!--    </edit-config>-->
     <plugin name="cordova-plugin-badge" source="npm"  />
     <plugin name="cordova-plugin-phonedialer" source="npm" />
     <plugin name="cordova-plugin-x-socialsharing" source="npm" />
@@ -105,7 +105,6 @@
     </plugin>
     <platform name="android">
         <resource-file src="google-services.json" target="app/google-services.json" />
-        <preference name="hostname" value="localhost" />
         <preference name="AndroidInsecureFileModeEnabled" value="true" />
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
 
@@ -161,10 +160,10 @@
         <splash src="resources/shlicons/android/icon.png" density="hdpi" />
         <splash src="resources/shlicons/android/icon.png" density="xhdpi" />
     </platform>
-    <plugin name="cordova-plugin-geolocation" source="npm"/>
+<!--    <plugin name="cordova-plugin-geolocation" source="npm"/>-->
 
-    <access origin="*"/>
-    <access origin="content:///*" />
+<!--    <access origin="*"/>-->
+<!--    <access origin="content:///*" />-->
     <access uri="*" subdomains="true" />
     <access launch-external="yes" origin="whatsapp://*" />
     <access origin="tel:*" launch-external="yes" />
@@ -185,7 +184,7 @@
     <allow-navigation href="data:*" />
     <allow-intent href="*" />
     <allow-navigation href="*" />
-    <access origin="*"/>
+<!--    <access origin="*"/>-->
 
     <platform name="android">
         <allow-intent href="whatsapp:*" />
