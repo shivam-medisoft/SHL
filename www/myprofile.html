@@ -70,9 +70,9 @@ and open the template in the editor.
         </style>
         <script>
             document.addEventListener('deviceready', function() {
-              const appOriginalName = localStorage.getItem('apporginalname');
+              const appOriginalName = localStorage.getItem("apporginalname");
             try{
-            if (appOriginalName == "bch") {
+            if (appOriginalName !== "shl") {
              document.getElementById('loadicon').src = 'images/'+localStorage.apporginalname+'/bchLoader.gif';
              } else {
              console.error('apporginalname not found in localStorage');
