@@ -2,7 +2,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets"
         xmlns:cdv="http://cordova.apache.org/ns/1.0"
         id="com.shivam.sah"
-        version="1.0.6"
+        version="1.0.7"
         android-versionCode="100106">
     <name>Sahyadri Hospitals</name>
     <description>
@@ -36,60 +36,9 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="scheme" value="app" />
     <preference name="hostname" value="localhost" />
-
-    <access origin="phonepe:*" launch-external="yes" />
-    <access origin="upi:*" launch-external="yes" />
-    <access origin="googlepay:*" launch-external="yes" />
-    <access origin="paytm:*" launch-external="yes" />
-    <allow-intent href="phonepe:*" />
-    <allow-intent href="upi:*" />
-    <allow-intent href="googlepay:*" />
-    <allow-intent href="paytm:*" />
     <access origin="*" />
     <allow-navigation href="*" />
     <allow-intent href="*" />
-
-        <platform name="ios">
-                <edit-config target="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="merge">
-                    <array>
-                        <string>upi</string>
-                        <string>phonepe</string>
-                        <string>googlepay</string>
-                        <string>paytm</string>
-                    </array>
-                </edit-config>
-                <edit-config target="*-Info.plist" parent="NSAppTransportSecurity" mode="merge">
-                    <dict>
-                        <key>NSAllowsArbitraryLoads</key>
-                        <true/>
-                    </dict>
-                </edit-config>
-                <edit-config target="*-Info.plist" parent="CFBundleURLTypes" mode="merge">
-                    <array>
-                        <dict>
-                            <key>CFBundleURLSchemes</key>
-                            <array>
-                                <string>upi</string>
-                                <string>phonepe</string>
-                                <string>googlepay</string>
-                                <string>paytm</string>
-                            </array>
-                        </dict>
-                    </array>
-                </edit-config>
-            <edit-config target="*-Info.plist" parent="UIBackgroundModes" mode="merge">
-            <array>
-                <string>fetch</string>
-                <string>remote-notification</string>
-            </array>
-        </edit-config>
-        <edit-config target="*-Info.plist" parent="NSCameraUsageDescription" mode="merge">
-            <string>App needs access to the camera</string>
-        </edit-config>
-        <edit-config target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription" mode="merge">
-            <string>App needs access to your location</string>
-        </edit-config>
-    </platform>
 
     <plugin name="cordova-plugin-whitelist" source="npm" spec="1.3.5"/>
     <plugin name="cordova-plugin-app-version" source="npm" spec="0.1.11"/>
