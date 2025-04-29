@@ -22,7 +22,21 @@ and open the template in the editor.
 	<link href="bootstrap-3.3.5-dist/css/bootstrap-switch.css" rel="stylesheet" type="text/css"/>
         <link href="css/settingsCSS.css" rel="stylesheet" type="text/css"/>
         <script>
-              loadcssfile("notificationdaboardmenubtnapp.css");
+            document.addEventListener('deviceready', function() {
+             const appOriginalName = localStorage.getItem('apporginalname');
+           if (appOriginalName) {
+            if(appOriginalName === "bch"){
+            document.getElementById('loadicon').src = 'images/'+localStorage.apporginalname+'/bchLoader.gif';
+            } else{
+             document.getElementById('loadicon').src = 'images/default/xda2.gif';
+            }
+            } else {
+            console.error('apporginalname not found in localStorage');
+            // Optionally, set a default image if localStorage is empty
+            document.getElementById('loadicon').src = 'images/default/xda2.gif';
+}
+}, false);
+            loadcssfile("notificationdaboardmenubtnapp.css");
 	      loadjsfile("notificationdaboardmenubtn.js");
               loadjs("simplepeer.min.js");
              var cssFilesArr = ["styles.css", "stylesGreentheme.css",  
@@ -269,8 +283,7 @@ margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
                 </div>
         </header>
 	<div style="display: none;" id="mydiv" >
-            <img src="images/xda2.gif" class="imgnload commonloadimg" alt="">
-             <img src="images/sdrcload.gif" class="imgnload ucloadimg" alt="">
+            <img  id = "loadicon" class="imgnload commonloadimg" alt="">
         </div>
         <div class="displayforms" id="displayforms"> 
             <label  id="norecord" style="display:none;">No Record Found </label>              

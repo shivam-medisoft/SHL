@@ -1,12 +1,42 @@
 {
   "name": "Sahyadri Hospitals",
-  "version": "1.0.7",
-  "homepage": "app.html",
-  "description": "SHL Patient App",
-  "dependencies": {
-    "cordova-android": "^13.0.0"
+  "version": "1.0.5",
+  "homepage": "https://github.com/shivam-medisoft/SHL#readme",
+  "description": "bch Patient App",
+  "devDependencies": {
+    "cordova-android": "^13.0.0",
+    "cordova-plugin-advanced-http": "^3.3.1",
+    "cordova-plugin-android-permissions": "^1.1.5",
+    "cordova-plugin-androidx": "^3.0.0",
+    "cordova-plugin-androidx-adapter": "^1.1.3",
+    "cordova-plugin-app-version": "^0.1.14",
+    "cordova-plugin-badge": "^0.8.9",
+    "cordova-plugin-camera": "github:DaedalusDev/cordova-plugin-camera",
+    "cordova-plugin-datepicker": "github:VitaliiBlagodir/cordova-plugin-datepicker",
+    "cordova-plugin-device": "github:apache/cordova-plugin-device",
+    "cordova-plugin-device-motion": "github:apache/cordova-plugin-device-motion",
+    "cordova-plugin-dialogs": "github:apache/cordova-plugin-dialogs",
+    "cordova-plugin-file": "^8.1.3",
+    "cordova-plugin-file-opener2": "^4.0.0",
+    "cordova-plugin-file-transfer": "^2.0.0",
+    "cordova-plugin-geolocation": "^5.0.0",
+    "cordova-plugin-inappbrowser": "github:apache/cordova-plugin-inappbrowser",
+    "cordova-plugin-keyboard": "github:cjpearson/cordova-plugin-keyboard",
+    "cordova-plugin-market": "github:xmartlabs/cordova-plugin-market",
+    "cordova-plugin-network-information": "github:apache/cordova-plugin-network-information",
+    "cordova-plugin-networkinterface": "github:salbahra/NetworkInterfacePlugin",
+    "cordova-plugin-phonedialer": "^0.3.1",
+    "cordova-plugin-spinner-dialog": "github:Paldom/SpinnerDialog",
+    "cordova-plugin-splashscreen": "github:apache/cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar": "github:apache/cordova-plugin-statusbar",
+    "cordova-plugin-upi": "^1.0.4",
+    "cordova-plugin-x-socialsharing": "^6.0.4",
+    "es6-promise-plugin": "^4.2.2",
+    "NetworkInterfacePlugin": "https://github.com/salbahra/NetworkInterfacePlugin.git",
+    "SpinnerDialog": "https://github.com/Paldom/SpinnerDialog.git",
+    "cordova-filechooser": "https://github.com/ihadeed/cordova-filechooser.git",
+    "cordova-plugin-datepicker-android": "https://github.com/chenfengjw163/cordova-plugin-datepicker-android"
   },
-  "devDependencies": {},
   "scripts": {},
   "repository": {
     "type": "git",
@@ -20,16 +50,53 @@
   "bugs": {
     "url": "https://github.com/shivam-medisoft/SHL/issues"
   },
-  "homepage": "https://github.com/shivam-medisoft/SHL#readme",
   "cordova": {
     "platforms": [
       "android"
     ],
-    "plugins":{
-      "cordova-plugin-networkinterfaces": {},
-      "cordova-plugin-android-permissions": {},
-      "cordova-plugin-android-device-information":{},
-      "cordova-plugin-camera" : {}
+    "plugins": {
+      "cordova-plugin-file": {
+        "ANDROIDX_WEBKIT_VERSION": "1.4.0"
+      },
+      "cordova-plugin-geolocation": {
+        "GPS_REQUIRED": "true"
+      },
+      "cordova-plugin-badge": {},
+      "cordova-plugin-phonedialer": {},
+      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-upi": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-device-motion": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-network-information": {},
+      "NetworkInterfacePlugin": {},
+      "cordova-plugin-androidx": {},
+      "cordova-plugin-camera": {
+        "ANDROIDX_CORE_VERSION": "1.6.+"
+      },
+      "cordova-plugin-androidx-adapter": {},
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-advanced-http": {
+        "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1"
+      },
+      "cordova-plugin-app-version": {},
+      "cordova-plugin-datepicker": {},
+      "SpinnerDialog": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-keyboard": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-market": {},
+      "cordova-plugin-file-opener2": {},
+      "cordova-plugin-android-permissions": {
+        "storage": "would like to access storage."
+      },
+      "com.teamnemitoff.phonedialer": {},
+      "cordova-plugin-networkinterface": {},
+      "cordova-plugin-spinner-dialog": {},
+      "cordova-filechooser": {},
+      "cordova-plugin-datepicker-android": {}
     }
-  }
+  },
+  "dependencies": {}
 }

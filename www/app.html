@@ -19,14 +19,11 @@ and open the template in the editor.
                 try {
                     var backgroundcolor = "", apppath = "",apppage="";
                     cordova.getAppVersion.getAppName(function (name) {
-                    //confirm("name="+name);
-                    console.log("name+"+name);
-                            apppath = "http://shl.myemrhub.com/";
-                            //  apppath = "https://bcuat.breachcandyhospital.org:8543/109/";
-                            //  apppath = "http://192.168.0.60:8081/neosoft/";
+                             //apppath = "https://bchcron.breachcandyhospital.org:8544/chorn1/";
+                             apppath = "http://bch.myemrhub.com/";
                              apppage = "sahyadri_index.html";
-                            localStorage.appname = "shl";
-                        localStorage.apporginalname = "shl";
+                       localStorage.appname = "shl";
+                        localStorage.apporginalname = "bch";
                         localStorage.newappath = apppath;
                         localStorage.newapppage =apppage;
                         location.href = "appintronew.html";

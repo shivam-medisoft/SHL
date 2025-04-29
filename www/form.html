@@ -34,6 +34,20 @@ and open the template in the editor.
         <link rel="alternate stylesheet" type="text/css" title="skyblue" href="themeCSS/stylesSkyblue.css?version=1">
         <link rel="alternate stylesheet" type="text/css" title="yellownew" href="themeCSS/stylesYellow.css?version=1">-->
         <script>
+            document.addEventListener('deviceready', function() {
+             const appOriginalName = localStorage.getItem('apporginalname');
+           if (appOriginalName) {
+            if(appOriginalName === "bch"){
+            document.getElementById('loadicon').src = 'images/'+localStorage.apporginalname+'/bchLoader.gif';
+            } else{
+             document.getElementById('loadicon').src = 'images/default/xda2.gif';
+            }
+            } else {
+            console.error('apporginalname not found in localStorage');
+            // Optionally, set a default image if localStorage is empty
+            document.getElementById('loadicon').src = 'images/default/xda2.gif';
+}
+}, false);
             loadjsfile("templatemob.js");
             loadjsfile("template.js");
 	    loadjsfile("form.js?version=2");
@@ -154,8 +168,8 @@ body{-webkit-overflow-scrolling:touch;
         <div id="divgraphs">
         </div>   
         <div id="mydiv" style="display: block">
-            <img src="images/xda2.gif" class="imgnload commonloadimg" style="border-radius: 50%;">
-            <img src="images/sdrcload.gif" class="imgnload ucloadimg" style="border-radius: 50%;">
+            <img  id = "loadicon" class="imgnload commonloadimg" style="border-radius: 50%;">
+            <img  class="imgnload ucloadimg" style="border-radius: 50%;">
         </div>
     </body>
 </html>

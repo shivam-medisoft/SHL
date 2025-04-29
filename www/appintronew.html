@@ -17,20 +17,16 @@ and open the template in the editor.
  <script>
              var errorcnt=0;
  document.addEventListener('deviceready', function() {
-             const appOriginalName = localStorage.getItem('apporginalname');
-           if (appOriginalName) {
+             const appOriginalName = localStorage.getItem("apporginalname");
+           if (appOriginalName == "bch") {
            // const imagePath = `images/${appOriginalName}/bchLoader.gif`;
 
             // Set the src attribute of the first image
-            if(appOriginalName === "bch"){
             document.getElementById('loader').src = 'images/'+localStorage.apporginalname+'/bchLoader.gif';
-            } else{
-             document.getElementById('dynamicImage').src = 'images/default/xda2.gif';
-            }
             } else {
             console.error('apporginalname not found in localStorage');
             // Optionally, set a default image if localStorage is empty
-            document.getElementById('dynamicImage').src = 'images/default/xda2.gif';
+            document.getElementById('loader').src = 'images/default/xda2.gif';
 }
 }, false);
             function loading() {

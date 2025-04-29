@@ -203,103 +203,100 @@ for(var k=0;k<dbIn.length;k++){
             });
         }
             function deldubmrnorec() {
-                debugger;
-                var str ="";
-                var dbIn = [];
-               // alert("hi");
-                 try{
-                 var platform = device.platform.toString();
+            debugger;
+            var str ="";
+            var dbIn = [];
+           // alert("hi");
+             try{
+             var platform = device.platform.toString();
 //                  alert("platform    "+platform);
-                 }catch(err){
-                 var platform = 'ios';
-                 }
-                try{
-                 // for browser    if(platform.toLowerCase() == "android" || platform == "browser"){
-                    if(platform.toLowerCase() == "android"){
-                var db = window.openDatabase("Database", "1.0", "SHIVAMDB", 200000);
-                db.transaction(queryDBDEL, errorCB);
-                         }else{
-                    dbIn = JSON.parse(localStorage.getItem('DBIonicnew'));
-                   // var divdatanew = myfamilycount(dbIn);
-                   // alert("divdata"+divdatanew);
-                    var ig = 0;
-                    var color="";
-                    for(var k=0;k<dbIn.length;k++){
-                        if (k % 5 == 0) {
-                            color = "bg-aqua";
-                        } else if (k % 5 == 1) {
-                            color = "bg-red";
-                        } else if (k % 5 == 2) {
-                            color = "bg-blue";
-                        } else if (k % 5 == 3) {
-                            color = "bg-yellow";
-                        } else if (k % 5 == 4) {
-                            color = "bg-green";
-                        }
-                         var name = dbIn[k]["name"];
-                        const nam = name.split(" ");
-                        var initial = nam[0].charAt(0);
-                          var initial2="";
-                          var inName="";
-                        try{
-                         initial2 = nam[1].charAt(0);
-                        inName = initial+""+initial2;
-                       }catch(erre){
-                      // alert(erre);
-                       inName = initial;
-                       }
+             }catch(err){
+             var platform = 'ios';
+             }
+            try{
+             // for browser    if(platform.toLowerCase() == "android" || platform == "browser"){
+
+                dbIn = JSON.parse(localStorage.getItem('DBIonicnew'));
+               // var divdatanew = myfamilycount(dbIn);
+               // alert("divdata"+divdatanew);
+                var ig = 0;
+                var color="";
+                for(var k=0;k<dbIn.length;k++){
+                    if (k % 5 == 0) {
+                        color = "bg-aqua";
+                    } else if (k % 5 == 1) {
+                        color = "bg-red";
+                    } else if (k % 5 == 2) {
+                        color = "bg-blue";
+                    } else if (k % 5 == 3) {
+                        color = "bg-yellow";
+                    } else if (k % 5 == 4) {
+                        color = "bg-green";
+                    }
+                     var name = dbIn[k]["name"];
+                    const nam = name.split(" ");
+                    var initial = nam[0].charAt(0);
+                      var initial2="";
+                      var inName="";
+                    try{
+                     initial2 = nam[1].charAt(0);
+                    inName = initial+""+initial2;
+                   }catch(erre){
+                  // alert(erre);
+                   inName = initial;
+                   }
 //                         alert("name  "+inName);
 //                        document.getElementById('profileimage').innerHTML=initial+initial2;
-                str = str + " <div   class='row mainrow' onclick=\"loginew('','" + dbIn[k]["mrno"] + "','" + dbIn[k]["patpwd"] + "','" + dbIn[k]["name"].trim().replace(/ /g, '&nbsp;').replace(".",". ") + "','1','','')\";> ";
-                    //  str = str + " <div   class='row mainrow' onclick=\"login(dbIn[k]["mrno"] + ',' + dbIn[k]["patpwd"] )\";> ";
+            str = str + " <div   class='row mainrow' onclick=\"loginew('','" + dbIn[k]["mrno"] + "','" + dbIn[k]["patpwd"] + "','" + dbIn[k]["name"].trim().replace(/ /g, '&nbsp;').replace(".",". ") + "','1','','')\";> ";
+                //  str = str + " <div   class='row mainrow' onclick=\"login(dbIn[k]["mrno"] + ',' + dbIn[k]["patpwd"] )\";> ";
 //                         str = str+"<div class='row mainrow'> onclick="\login(dbIn[k]["mrno"])\";>";
-                        str = str + "<div class='col-xs-2 col-sm-1 pad icon-container'>";
-                       // str = <span class=" + color + ">" + toReportCaseTwoWords(dbIn[k]["name"]) + "</span></div>"
-                        if (ig === 1) {
-                            //str = str + " <div class='imgiconp'><img src="  "  class='imgform' alt=''/></div>"
-                        } else {
-                            str = str + "<div class='spantxtclr'>";
-                            str = str + "<span class=" + color + ">"+inName+"</span></div>";
-                          // str = str + "<div class='spantxtclr' id='profileimage'><label>"+inName+"</label></div>";
-                          // str = str + "<span class=" ">"  "</span></div>";
-                        }
-                        str = str + "</div>";
-                        str = str + "<div class='col-xs-8 col-sm-8 pad main-container'>";
-                        str = str + "<div class='col-sm-12 pad divin12' onclick=\"loginnew('','" + dbIn[k]["mrno"] + "','" + dbIn[k]["patpwd"] + "','" + dbIn[k]["name"].trim().replace(/ /g, '&nbsp;') + "','1','',localStorage.appwebformid)\";>";
-                        str = str + "<label class='lblpatientName'>" +dbIn[k]["name"].replace(".",". ").toLowerCase()+ "</label>";
-                       str = str + "<label class='lblmrno'>" + dbIn[k]["mrno"]+ "</label>";
-                       str = str + "<label class='lblpwd' style='display:none'>" + dbIn[k]["patpwd"] + "</label>";
-                       str = str + "<label class='lbllogintype' style='display:none'></label>";
-                        str = str + " </div>";
-                        str = str + "</div>";
-                     //   str = str + "<div class='col-sm-1 iconmark pad ' style='cursor:pointer;' onclick=rightclick(this,'divs" + i + "','" + i + "','" + dbIn[k]["mrno"] + "','" + results.rows.item(i).pid + "') ><span ><i class='glyphicon glyphicon-option-vertical iclr'></span></i>";
+                    str = str + "<div class='col-xs-2 col-sm-1 pad icon-container'>";
+                   // str = <span class=" + color + ">" + toReportCaseTwoWords(dbIn[k]["name"]) + "</span></div>"
+                    if (ig === 1) {
+                        //str = str + " <div class='imgiconp'><img src="  "  class='imgform' alt=''/></div>"
+                    } else {
+                        str = str + "<div class='spantxtclr'>";
+                        str = str + "<span class=" + color + ">"+inName+"</span></div>";
+                      // str = str + "<div class='spantxtclr' id='profileimage'><label>"+inName+"</label></div>";
+                      // str = str + "<span class=" ">"  "</span></div>";
+                    }
+                    str = str + "</div>";
+                    str = str + "<div class='col-xs-8 col-sm-8 pad main-container'>";
+                    str = str + "<div class='col-sm-12 pad divin12' onclick=\"loginnew('','" + dbIn[k]["mrno"] + "','" + dbIn[k]["patpwd"] + "','" + dbIn[k]["name"].trim().replace(/ /g, '&nbsp;') + "','1','',localStorage.appwebformid)\";>";
+                    str = str + "<label class='lblpatientName'>" +dbIn[k]["name"].replace(".",". ").toLowerCase()+ "</label>";
+                   str = str + "<label class='lblmrno'>" + dbIn[k]["mrno"]+ "</label>";
+                   str = str + "<label class='lblpwd' style='display:none'>" + dbIn[k]["patpwd"] + "</label>";
+                   str = str + "<label class='lbllogintype' style='display:none'></label>";
+                    str = str + " </div>";
+                    str = str + "</div>";
+                 //   str = str + "<div class='col-sm-1 iconmark pad ' style='cursor:pointer;' onclick=rightclick(this,'divs" + i + "','" + i + "','" + dbIn[k]["mrno"] + "','" + results.rows.item(i).pid + "') ><span ><i class='glyphicon glyphicon-option-vertical iclr'></span></i>";
 //                        str = str + "<div class='col-sm-1 iconmark pad ' style='cursor:pointer;' onclick=deleteuser('divs" + k + "','" + k + "','" + dbIn[k]["mrno"] + "','')><span ><i class='glyphicon glyphicon-trash iclr'></span></i>";
-                        str = str + "<div class='col-sm-1 iconmark pad ' style='cursor:pointer;' onclick=deleteDBIonic('" + dbIn[k]["mrno"] + "')><span ><i class='glyphicon glyphicon-trash iclr'></span></i>";
+                    str = str + "<div class='col-sm-1 iconmark pad ' style='cursor:pointer;' onclick=deleteDBIonic('" + dbIn[k]["mrno"] + "')><span ><i class='glyphicon glyphicon-trash iclr'></span></i>";
 //                 str = str + "<div style='display:none;'  id='divs" +k+"' class='dropdownCont' onclick=deleteuser('divs" + k + "','" + k + "','" + dbIn[k]["mrno"] + "','')><div class='dcWrapper' id='editor-options'><div><label class='lblalrtms'>Delete</label> </div> </div></div>";
-                    str = str + "<div style='display:none;'  id='divs" +k+"' class='dropdownCont' onclick=deleteDBIonic('" + dbIn[k]["mrno"] + "')><div class='dcWrapper' id='editor-options'><div><label class='lblalrtms'>Delete</label> </div> </div></div>";
-                        str = str + "</div>";
-                        str = str + "</div>";
-                    }
-                   $('.container-fluid').html(str);
-                 // document.getElementById('profilecolor').style.backgroundColor='green';
-                  //  document.getElementById('profileimage').innerHTML=inName;
-    for(var k=0;k<dbIn.length;k++){
-    //   confirm(dbIn[k].toString());
-        var mrn = dbIn[k]["mrno"];
-        var patname = dbIn[k]["name"];
-        var patemail = dbIn[k]["patemail"];
-        var patmob = dbIn[k]["patmob"];
-        var patpwd = dbIn[k]["patpwd"];
-        //std = mrn;
-        //std = "<div>"+mrn+"</div>"+"<div>"+patname+"</div>"+;
-    }
-                    }
-                } catch(err){
-                alert("addusersvf :"+err);
+                str = str + "<div style='display:none;'  id='divs" +k+"' class='dropdownCont' onclick=deleteDBIonic('" + dbIn[k]["mrno"] + "')><div class='dcWrapper' id='editor-options'><div><label class='lblalrtms'>Delete</label> </div> </div></div>";
+                    str = str + "</div>";
+                    str = str + "</div>";
                 }
+               $('.container-fluid').html(str);
+             // document.getElementById('profilecolor').style.backgroundColor='green';
+              //  document.getElementById('profileimage').innerHTML=inName;
+for(var k=0;k<dbIn.length;k++){
+//   confirm(dbIn[k].toString());
+    var mrn = dbIn[k]["mrno"];
+    var patname = dbIn[k]["name"];
+    var patemail = dbIn[k]["patemail"];
+    var patmob = dbIn[k]["patmob"];
+    var patpwd = dbIn[k]["patpwd"];
+    //std = mrn;
+    //std = "<div>"+mrn+"</div>"+"<div>"+patname+"</div>"+;
+}
 
-
+            } catch(err){
+            //alert("addusersvf :"+err);
             }
+
+
+        }
             function queryDBDEL(tx) {
                 debugger;
                 tx.executeSql('CREATE TABLE IF NOT EXISTS patSignUpnew(pid INTEGER PRIMARY KEY AUTOINCREMENT,patname TEXT,patmobile TEXT,patemail TEXT,patuid TEXT,patpwd TEXT,patlogintype TEXT,patloginurl TEXT )');
@@ -627,7 +624,7 @@ for(var k=0;k<dbIn.length;k++){
             } else if(appName === 'ujalacygnus'){
                 loadcssfile("ujalacygnus-addusersVF.css");
             } else if(appName === 'shl'){
-                loadcssfile("sahyadri-addusersVF.css?version=16");
+                loadcssfile("sahyadri-addusersVF.css?version=17");
             }else if(appName === 'sdrc'){
                 loadcssfile("sdrc-addusersVF.css?version=1");
             }else if(appName === 'bagh'){

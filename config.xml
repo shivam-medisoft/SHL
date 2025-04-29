@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='utf-8' standalone="no"?>
-<widget id="com.shivam.bch" version="1.0.0"
-xmlns="http://www.w3.org/ns/widgets"
-xmlns:cdv="http://cordova.apache.org/ns/1.0"
-xmlns:android="http://schemas.android.com/apk/res/android">
-<name>Breach Candy Hospital</name>
-<description>BCH offers comprehensive clinical services under one roof with an active Transplant Program. The hospital provides round the clock network of Emergency services , Diagnostic services, a Blood Bank facility and a Pharmacy supported by a team of expert senior clinical consultants working in a full-time capacity. The active association with over 150 clinical consultants adds a unique strength to BAGH and enables us to achieve the highest outcomes for our patients capacity.</description>
-<author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-    Apache Cordova Team
-    Shivam Medisoft Services Pvt. Ltd.
-</author>
-<content src="app.html"/>
+<widget id="com.shivam.bch" version="1.0.5"
+    xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Breach Candy Hospital</name>
+    <description>BCH offers comprehensive clinical services under one roof with an active Transplant Program. The hospital provides round the clock network of Emergency services , Diagnostic services, a Blood Bank facility and a Pharmacy supported by a team of expert senior clinical consultants working in a full-time capacity. The active association with over 150 clinical consultants adds a unique strength to BAGH and enables us to achieve the highest outcomes for our patients capacity.</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+        Shivam Medisoft Services Pvt. Ltd.
+    </author>
+    <content src="app.html"/>
     <preference name="permissions" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="prerendered-icon" value="true" />
@@ -45,7 +45,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     <!--    <preference name="CustomURLScheme" value="mycoolapp" />-->
     <!--    <plugin name="cordova.plugins.diagnostic" />-->
     <!--    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />-->
-    <plugin name="cordova-plugin-file" source="npm" />
+<!--    <plugin name="cordova-plugin-file" source="npm" />-->
     <!--    <plugin name="upi-intent" source="npm" />-->
     <!--    <plugin name="cordova-plugin-customurlscheme" source="npm" />-->
     <plugin name="cordova-plugin-geolocation" source="npm"/>
@@ -58,7 +58,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     <!--    </plugin>-->
 
     <!--    <plugin name= "cordova-plugin-print-pdf" source="npm"/>-->
-    <!--    <plugin name="cordova-filechooser" spec="https://github.com/ihadeed/cordova-filechooser.git" source="git" />-->
+        <plugin name="cordova-filechooser" spec="https://github.com/ihadeed/cordova-filechooser.git" source="git" />
     <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-device.git" source="git" />
     <plugin name="cordova-plugin-device-motion" spec="https://github.com/apache/cordova-plugin-device-motion.git" source="git" />
     <!--    &lt;!&ndash; <plugin name="cordova-plugin-device-orientation" spec="https://github.com/apache/cordova-plugin-device-orientation.git" source="git" /> &ndash;&gt;-->
@@ -66,10 +66,10 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     <plugin name="cordova-plugin-dialogs" spec="https://github.com/apache/cordova-plugin-dialogs.git" source="git" />
     <plugin name="cordova-plugin-splashscreen" spec="https://github.com/apache/cordova-plugin-splashscreen.git" source="git" />
     <plugin name="cordova-plugin-network-information" spec="https://github.com/apache/cordova-plugin-network-information.git" source="git" />
-    <plugin name="NetworkInterfacePlugin" spec="https://github.com/salbahra/NetworkInterfacePlugin.git" source="git" />
-    <!--    <plugin name="cordova-plugin-file-transfer" spec="https://github.com/Priyansu431/cordova-plugin-file-transfer.git" />-->
+<!--    <plugin name="NetworkInterfacePlugin" spec="https://github.com/salbahra/NetworkInterfacePlugin.git" source="git" />-->
+        <plugin name="cordova-plugin-file-transfer" spec="https://github.com/Priyansu431/cordova-plugin-file-transfer.git" />
     <plugin name="cordova-plugin-androidx" source="npm"/>
-    <plugin name="cordova-plugin-camera" source="git" spec="https://github.com/DaedalusDev/cordova-plugin-camera.git"/>
+<!--    <plugin name="cordova-plugin-camera" source="git" spec="https://github.com/DaedalusDev/cordova-plugin-camera.git"/>-->
     <plugin name="cordova-plugin-androidx-adapter" source="npm"/>
     <plugin name="cordova-plugin-file-transfer" source="npm"/>
     <!--    <plugin name="cordova-plugin-splashscreen" source="npm" spec="6.0.1"/>-->
@@ -86,77 +86,77 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" source="git" />
     <plugin name="cordova-plugin-market" spec="https://github.com/xmartlabs/cordova-plugin-market" source="git" />
     <!--    <plugin name="cordova-plugin-qr-barcode-scanner" source="npm" />-->
-    <plugin name="cordova-plugin-camera" source="npm"  />
+<!--    <plugin name="cordova-plugin-camera" source="npm"  />-->
     <plugin name="cordova-plugin-file-opener2" source="npm" />
-    <plugin name="cordova-plugin-android-permissions" source="npm">
-        <variable name="storage" value="would like to access storage." />
-    </plugin>
-<platform name="android">
-    <resource-file src="google-services.json" target="app/google-services.json" />
-    <preference name="hostname" value="localhost" />
-    <preference name="AndroidInsecureFileModeEnabled" value="true" />
-    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
-
-        <activity android:hardwareAccelerated="true" />
-        <service android:exported="true"/>
-        <receiver android:exported="true"/>
-        <application android:usesCleartextTraffic="true" />
-    </edit-config>
-    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-        <application android:networkSecurityConfig="@xml/network_security_config" />
-        <application android:usesCleartextTraffic="true" />
-        <application android:requestLegacyExternalStorage="true" />
-    </edit-config>
+<!--    <plugin name="cordova-plugin-android-permissions" source="npm">-->
+<!--        <variable name="storage" value="would like to access storage." />-->
+<!--    </plugin>-->
     <platform name="android">
-        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/activity">
-            <uses-permission android:name="android.permission.CAMERA" />
-            <uses-feature android:name="android.hardware.camera" android:required="true" />
-            <uses-feature android:name="android.hardware.camera.autofocus" />
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.INTERNET" />
-            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <resource-file src="google-services.json" target="app/google-services.json" />
+        <preference name="hostname" value="localhost" />
+        <preference name="AndroidInsecureFileModeEnabled" value="true" />
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
 
+            <activity android:hardwareAccelerated="true" />
+            <service android:exported="true"/>
+            <receiver android:exported="true"/>
+            <application android:usesCleartextTraffic="true" />
         </edit-config>
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:networkSecurityConfig="@xml/network_security_config" />
+            <application android:usesCleartextTraffic="true" />
+            <application android:requestLegacyExternalStorage="true" />
+        </edit-config>
+        <platform name="android">
+            <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/activity">
+                <uses-permission android:name="android.permission.CAMERA" />
+                <uses-feature android:name="android.hardware.camera" android:required="true" />
+                <uses-feature android:name="android.hardware.camera.autofocus" />
+                <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+                <uses-permission android:name="android.permission.INTERNET" />
+                <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+            </edit-config>
+        </platform>
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true"/>
+        </edit-config>
+
+        <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
+        <!--        <icon src="resources/baghicons/android/icon.png" />-->
+        <!--        <icon src="resources/baghicons/android/icon.png" density="ldpi"/>-->
+        <!--        <icon src="resources/baghicons/android/icon.png" density="mdpi"/>-->
+        <!--        <icon src="resources/baghicons/android/icon.png" density="hdpi"/>-->
+        <!--        <icon src="resources/baghicons/android/icon.png" density="xhdpi"/>-->
+
+        />
+        <feature name="InAppBrowser">
+            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+        </feature>
+        <feature name="Camera">
+            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+        </feature>
+        <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+
+        <preference name="AllowUntrustedCerts" value="on" />
+        <preference name="InterceptRemoteRequests" value="all" />
+        <preference name="NativeXHRLogging" value="full" />
+
+        <preference name="allowFileAccessFromFileURLs" value="true" />
+        <preference name="allowFileAccessFromFileURLs" value="true" />
+        <preference name="allowUniversalAccessFromFileURLs" value="true" />
+
+
+
+
+        <!--        <icon src="resources/baghicons/ios/100by100.png" width="50" height="50" />-->
+        <!--        <icon src="resources/baghicons/ios/1024by1024.png" width="1024" height="1024" />-->
+
+
+        <!--        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/baghicons/ios/shl76.png"/>-->
+        <icon src="resources/bchicons/android/icon.png" />
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/bchicons/android/icon.png"/>
     </platform>
-    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-        <application android:usesCleartextTraffic="true"/>
-    </edit-config>
-
-    <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
-    <!--        <icon src="resources/baghicons/android/icon.png" />-->
-    <!--        <icon src="resources/baghicons/android/icon.png" density="ldpi"/>-->
-    <!--        <icon src="resources/baghicons/android/icon.png" density="mdpi"/>-->
-    <!--        <icon src="resources/baghicons/android/icon.png" density="hdpi"/>-->
-    <!--        <icon src="resources/baghicons/android/icon.png" density="xhdpi"/>-->
-
-    />
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.InAppBrowser" />
-    </feature>
-    <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.CameraLauncher" />
-    </feature>
-    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
-
-    <preference name="AllowUntrustedCerts" value="on" />
-    <preference name="InterceptRemoteRequests" value="all" />
-    <preference name="NativeXHRLogging" value="full" />
-
-    <preference name="allowFileAccessFromFileURLs" value="true" />
-    <preference name="allowFileAccessFromFileURLs" value="true" />
-    <preference name="allowUniversalAccessFromFileURLs" value="true" />
-
-
-
-
-    <!--        <icon src="resources/baghicons/ios/100by100.png" width="50" height="50" />-->
-    <!--        <icon src="resources/baghicons/ios/1024by1024.png" width="1024" height="1024" />-->
-
-
-    <!--        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/baghicons/ios/shl76.png"/>-->
-    <icon src="resources/bchicons/android/icon.png" />
-    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/bchicons/android/icon.png"/>
-</platform>
     <access origin="*"/>
     <access origin="content:///*" />
     <access uri="*" subdomains="true" />

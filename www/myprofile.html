@@ -69,10 +69,11 @@ and open the template in the editor.
 .ucloadimg{display:none;}
         </style>
         <script>
+            debugger;
             document.addEventListener('deviceready', function() {
               const appOriginalName = localStorage.getItem("apporginalname");
             try{
-            if (appOriginalName !== "shl") {
+            if (appOriginalName == "bch") {
              document.getElementById('loadicon').src = 'images/'+localStorage.apporginalname+'/bchLoader.gif';
              } else {
              console.error('apporginalname not found in localStorage');
